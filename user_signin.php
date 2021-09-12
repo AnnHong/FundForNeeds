@@ -87,7 +87,7 @@ span.psw {
   </div>
 
   <div class="container" style="background-color:#f1f1f1">
-      <p>Don't have an account? <a href="user_signup.html">Register Now.</a>.</p>
+      <p>Don't have an account? <a href="user_signup.php">Register Now.</a>.</p>
     <span class="psw">Forgot <a href="#">password?</a></span>
   </div>
 </form>

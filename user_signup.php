@@ -85,7 +85,7 @@ a {
 </head>
 <body>
 
-<form action="processUser.php" method="POST" style="border:1px solid #ccc">
+<form action="processUser.php" method="POST">
   <div class="container">
     <h1>Sign Up</h1>
     <p>Please fill in this form to create an account.</p>
@@ -109,7 +109,7 @@ a {
   </div>
 
   <div class="container signin">
-    <p>Already have an account? <a href="user_signin.html">Sign in</a>.</p>
+    <p>Already have an account? <a href="user_signin.php">Sign in</a>.</p>
   </div>
 </form>
 </body>
