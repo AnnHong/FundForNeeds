@@ -71,7 +71,7 @@ span.psw {
 
 <h2>Fund For Needs</h2>
 
-<form action="/action_page.php" method="post">
+<form action="processUser.php" method="post">
 
   <div class="container">
     <label for="email"><b>Email</b></label>
@@ -81,13 +81,13 @@ span.psw {
     <input type="password" placeholder="Enter Password" name="psw" required>
 
     <div class="clearfix">
-      <button type="submit" class="signinbtn">Sign In</button>
+      <button type="submit" class="signinbtn" name="signin">Sign In</button>
       <button type="button" class="cancelbtn">Cancel</button>
     </div>
   </div>
 
   <div class="container" style="background-color:#f1f1f1">
-    <button type="button" class="signupbtn" onclick="user_signup.html">Sign Up</button>
+      <p>Don't have an account? <a href="user_signup.html">Register Now.</a>.</p>
     <span class="psw">Forgot <a href="#">password?</a></span>
   </div>
 </form>
