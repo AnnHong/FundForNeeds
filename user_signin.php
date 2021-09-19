@@ -42,7 +42,7 @@ button:hover {
 
 span.psw {
   float: right;
-  padding-top: 16px;
+  padding-top: 0px;
 }
 
 .clearfix::after {
@@ -68,10 +68,8 @@ span.psw {
 </style>
 </head>
 <body>
-
 <h2>Fund For Needs</h2>
-
-<form action="processUser.php" method="post">
+<form action="processUser.php" method="post" style="margin:100px 500px 75px 500px;">
 
   <div class="container">
     <label for="email"><b>Email</b></label>
@@ -87,8 +85,7 @@ span.psw {
   </div>
 
   <div class="container" style="background-color:#f1f1f1">
-      <p>Don't have an account? <a href="user_signup.php">Register Now.</a>.</p>
-    <span class="psw">Forgot <a href="#">password?</a></span>
+      <p>Don't have an account? <a href="user_signup.php">Register Now</a> <span class="psw">Forgot <a href="#">password?</a></span></p>
   </div>
 </form>
 
