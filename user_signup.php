@@ -85,7 +85,7 @@ a {
 </head>
 <body>
 
-<form action="processUser.php" method="POST">
+<form action="processUser.php" method="POST" style="margin:25px 500px 75px 500px;">
   <div class="container">
     <h1>Sign Up</h1>
     <p>Please fill in this form to create an account.</p>
