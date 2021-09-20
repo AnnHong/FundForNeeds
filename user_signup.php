@@ -104,7 +104,7 @@ a {
 
     <div class="clearfix">
       <button type="submit" class="signupbtn" name = "signupbtn">Sign Up</button>
-      <button type="button" class="cancelbtn">Cancel</button>
+      <button type="button" class="cancelbtn" onclick="user_signin.php">Cancel</button>
     </div>
   </div>
 
