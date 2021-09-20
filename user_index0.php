@@ -3,7 +3,7 @@
 <head>
   <link rel = "icon" href = "FundForNeedsV2.png">
 </head>
-<title>Fund For Needs(Admin Version)</title>
+<title>Fund For Needs</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="index.css">
@@ -19,27 +19,32 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
 <div class="w3-top">
  <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
   <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
-  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-theme-d4"><i class="fa fa-home w3-margin-right"></i>Home</a>
+  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-theme-d4"><i class="fa fa-home w3-margin-right"></i>Logo</a>
   <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="News"><i class="fa fa-globe"></i></a>
   <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Account Settings"><i class="fa fa-user"></i></a>
   <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Messages"><i class="fa fa-envelope"></i></a>
   <div class="w3-dropdown-hover w3-hide-small">
     <button class="w3-button w3-padding-large" title="Notifications"><i class="fa fa-bell"></i><span class="w3-badge w3-right w3-small w3-green">3</span></button>
+
     <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:300px">
       <a href="#" class="w3-bar-item w3-button">One new friend request</a>
       <a href="#" class="w3-bar-item w3-button">Ann Hong posted on your wall</a>
       <a href="#" class="w3-bar-item w3-button">Zhi Hao Donates your post</a>
     </div>
   </div>
-  <div class="w3-dropdown-hover w3-button w3-hide-small w3-right w3-padding-large w3-hover-white">
 
-    <button class="w3-button w3-padding-large" name = "account" title="My Account"></button>
-      <img src="avatar2.png" class="w3-circle" style="height:23px;width:23px" alt="Avatar">
+<div class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white">
 
-      <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:300px">
-        <a href="Admin_Login.php" class="w3-bar-item w3-button">Sign Out</a>
-      </div>
+  <button class="w3-button w3-padding-large" title="My Account"></button>
+    <img src="avatar2.png" class="w3-circle" style="height:23px;width:23px" alt="Avatar">
+
+    <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:300px">
+      <a href="#" class="w3-bar-item w3-button">Sign Out</a>
+
     </div>
+  </div>
+
+  </a>
  </div>
 </div>
 

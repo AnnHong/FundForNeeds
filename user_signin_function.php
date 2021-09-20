@@ -15,13 +15,13 @@ function signin()
         $con = mysqli_connect("localhost", "funforneeds", "funforneeds", "funforneeds");
 
 		$email = $_POST['email'];
-		$password = $_POST['pwd'];
+		$password = $_POST['password'];
 
 		if(!$con){
 			echo mysqli_error();
 		}else{
 			//echo '<br>connected';
-			$sql = "select * from user WHERE email = '$email' AND pwd = '$password'";
+			$sql = "select * from user WHERE email = '$email' AND password = '$password'";
 			$qry = mysqli_query($con,$sql);
 			$count = mysqli_num_rows($qry);
 
