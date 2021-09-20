@@ -102,7 +102,7 @@ a {
 
     <div class="clearfix">
       <button type="submit" class="resetbtn" name = "resetbtn">Reset Password</button>
-      <button type="button" class="cancelbtn">Cancel</button>
+      <button type="button" class="cancelbtn" onclick="location.href = 'user_signin.php';">Cancel</button>
     </div>
   </div>
 

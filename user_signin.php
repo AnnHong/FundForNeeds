@@ -80,7 +80,7 @@ span.psw {
 
     <div class="clearfix">
       <button type="submit" class="signinbtn" name="signin">Sign In</button>
-      <button type="button" class="cancelbtn">Cancel</button>
+      <button type="button" class="cancelbtn" onclick="location.href = 'index.php';">Cancel</button>
     </div>
   </div>
 
