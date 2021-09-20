@@ -9,10 +9,10 @@ function Addnewuser()
 	else
 	{
 		$email = $_POST['email'];
-		$password = $_POST['password'];
+		$psw = $_POST['psw'];
     $psw_repeat = $_POST['psw_repeat'];
 
-		$sql = "insert into customer(email,psw,psw_repeat)
+		$sql = "insert into user(email,psw,psw_repeat)
 						   values('$email','$psw','$psw_repeat')";
 
 	    echo $sql;
