@@ -9,11 +9,11 @@ function Addnewuser()
 	else
 	{
 		$email = $_POST['email'];
-		$psw = $_POST['psw'];
-    $psw_repeat = $_POST['psw_repeat'];
+		$password = $_POST['password'];
+    $password_repeat = $_POST['password_repeat'];
 
-		$sql = "insert into user(email,psw,psw_repeat)
-						   values('$email','$psw','$psw_repeat')";
+		$sql = "insert into user(email,password,password_repeat)
+						   values('$email','$password','$password_repeat')";
 
 	    echo $sql;
 		//3.run insert query

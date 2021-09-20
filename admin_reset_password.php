@@ -94,11 +94,11 @@ a {
     <label for="email"><b>Email</b></label>
     <input type="text" placeholder="Enter Email" name="email"  required>
 
-    <label for="psw"><b>New Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw"  required>
+    <label for="password"><b>New Password</b></label>
+    <input type="password" placeholder="Enter Password" name="password"  required>
 
-    <label for="psw-repeat"><b>Repeat New Password</b></label>
-    <input type="password" placeholder="Repeat Password" name="psw_repeat"  required>
+    <label for="password-repeat"><b>Repeat New Password</b></label>
+    <input type="password" placeholder="Repeat Password" name="password_repeat"  required>
 
     <div class="clearfix">
       <button type="submit" class="resetbtn" name = "resetbtn">Reset Password</button>

@@ -40,7 +40,7 @@ button:hover {
   padding: 16px;
 }
 
-span.psw {
+span.password {
   float: right;
   padding-top: 0px;
 }
@@ -57,7 +57,7 @@ span.psw {
 }
 
 @media screen and (max-width: 300px) {
-  span.psw {
+  span.password {
      display: block;
      float: none;
   }
@@ -66,26 +66,27 @@ span.psw {
   }
 }
 </style>
+
 </head>
 <body>
 <h2>Fund For Needs</h2>
-<form action="processUser.php" method="post" style="margin:100px 500px 75px 500px;">
+<form action="signin.php" method="post" style="margin:100px 500px 75px 500px;">
 
   <div class="container">
     <label for="email"><b>Email</b></label>
     <input type="text" placeholder="Enter Email" name="email" required>
 
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
+    <label for="password"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="password" required>
 
     <div class="clearfix">
-      <button type="submit" class="signinbtn" name="signin">Sign In</button>
+      <button type="submit" class="signinbtn" name="signinbtn">Sign In</button>
       <button type="button" class="cancelbtn" onclick="location.href = 'index.php';">Cancel</button>
     </div>
   </div>
 
   <div class="container" style="background-color:#f1f1f1">
-      <p>Don't have an account? <a href="user_signup.php">Register Now</a> <span class="psw">Forgot <a href="user_reset_password.php">password?</a></span></p>
+      <p>Don't have an account? <a href="user_signup.php">Register Now</a> <span class="password">Forgot <a href="user_reset_password.php">password?</a></span></p>
   </div>
 </form>
 

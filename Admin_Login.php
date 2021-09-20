@@ -39,14 +39,14 @@ button:hover {
   padding: 16px;
 }
 
-span.psw {
+span.password {
   float: right;
   padding-top: 16px;
 }
 
 /* Change styles for span and cancel button on extra small screens */
 @media screen and (max-width: 300px) {
-  span.psw {
+  span.password {
      display: block;
      float: none;
   }
@@ -66,15 +66,15 @@ span.psw {
     <label for="admin_id"><b>Admin ID</b></label>
     <input type="text" placeholder="Enter Admin ID" name="admin_id" required>
 
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
+    <label for="password"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="password" required>
 
     <button type="submit" class="signinbtn">Login</button>
   </div>
 
   <div class="container" style="background-color:#f1f1f1">
     <button type="button" class="cancelbtn">Cancel</button>
-    <span class="psw">Forgot <a href="admin_reset_password.php">password?</a></span>
+    <span class="password">Forgot <a href="admin_reset_password.php">password?</a></span>
   </div>
 </form>
 
