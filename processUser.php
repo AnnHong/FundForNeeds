@@ -1,7 +1,7 @@
 <?php
 include "user.php";
 
-if(isSet($_POST['signupbtn']))
+if(isSet($_POST['signupbtn']) )
 {
   Addnewuser();
   echo "<script>
@@ -14,5 +14,8 @@ if(isSet($_POST['signupbtn']))
   			alert('Your are sign out already.');
   			window.location.href='index.php';
   			</script>";
+
+}else if(isSet($_POST['back'])){
+  header("Location:user_signup.php");
 }
  ?>

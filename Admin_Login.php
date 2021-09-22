@@ -69,7 +69,7 @@ span.password {
     <label for="password"><b>Password</b></label>
     <input type="password" placeholder="Enter Password" name="password" required>
 
-    <button type="submit" class="signinbtn">Login</button>
+    <button type="submit" class="signinbtn" name="signinbtn">Login</button>
   </div>
 
   <div class="container" style="background-color:#f1f1f1">

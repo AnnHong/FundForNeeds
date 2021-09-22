@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-if(isSet($_POST['signinbtn']))
+  if(isSet($_POST['signinbtn']))
 {
   login();
   echo "<script>
@@ -29,7 +29,7 @@ function login()
         $userRecord=mysqli_fetch_assoc($qry);
         $_SESSION['admin_id']=$userRecord['admin_id'];
         $_SESSION['password']=$userRecord['password'];
-				header("Location: Admin_HomePage.php");
+				header("Location: Admin_HomePage.html");
 			}else{
 				echo '<br>signin failed';
 			}
