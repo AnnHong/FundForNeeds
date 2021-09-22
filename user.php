@@ -41,7 +41,7 @@ function Addnewuser()
 
 				'; // Our message above including the link
 
-				$headers = 'From:noreply@fundforneeds.com' . "\r\n"; // Set from headers
+				$headers = "From:noreply@fundforneeds.com\r\n"; // Set from headers
 				mail($to, $subject, $message, $headers); // Send our email
 			return "Record has been successfully added";
 
