@@ -17,5 +17,9 @@ if(isSet($_POST['signupbtn']) )
 
 }else if(isSet($_POST['back'])){
   header("Location:user_signup.php");
+
+}else if(isset($_POST['resetbtn']) && $_POST['email'])
+{
+  resetpassword();
 }
  ?>

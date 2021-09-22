@@ -12,11 +12,17 @@ if(isset($_GET['email']) && !empty($_GET['email']) AND isset($_GET['token']) && 
     $update = $con->query("UPDATE users SET verified = 1 WHERE token = '$token' LIMIT 1");
 
     if($update){
-      echo "Success";
+      echo
+      "<script>
+      			alert('Your email has been verified successfully.');
+      			window.location.href='user_signin.php';
+      			</script>";
+
     }else{
       echo $mysqli->error;
     }
   }else{
+
     echo "This account invalid or already verified";
   }
 }

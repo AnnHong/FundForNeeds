@@ -37,7 +37,7 @@ function Addnewuser()
 				------------------------
 
 				Please click this link to activate your account:
-				http://localhost/MastersFundForNeeds/verify.php?email='.$email.'&token='.$token.'
+				http://localhost/MasterFundForNeeds/verify.php?email='.$email.'&token='.$token.'
 
 				'; // Our message above including the link
 
@@ -48,4 +48,3 @@ function Addnewuser()
 			}
 	}
 }
- ?>
