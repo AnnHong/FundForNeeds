@@ -101,7 +101,7 @@ a {
     <input type="password" placeholder="Repeat Password" name="password_repeat"  required>
 
     <div class="clearfix">
-      <button type="submit" class="resetbtn" name = "resetbtn">Reset Password</button>
+      <button type="submit" class="resetbtn" name = "adminresetbtn">Reset Password</button>
       <button type="button" class="cancelbtn" onclick="Admin_Login.php">Cancel</button>
     </div>
   </div>
