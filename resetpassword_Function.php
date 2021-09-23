@@ -45,7 +45,10 @@ $result = mysqli_query($con,$sql);
       $headers = "From:noreply@fundforneeds.com\r\n"; // Set from headers
       mail($to, $subject, $message, $headers); // Send our email
 
-      echo 'Message has been sent';
+      echo  "<script>
+              alert('The reset password link is sent to your email.Please check your email.');
+              window.location.href='user_signin.php';
+              </script>";;
 
     }
 
