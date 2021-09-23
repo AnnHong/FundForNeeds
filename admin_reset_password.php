@@ -52,7 +52,7 @@ button:hover {
   background-color: #f44336;
 }
 
-.resetbtn, .cancelbtn {
+.adminresetbtn, .cancelbtn {
   float: left;
   width: 50%;
 }
@@ -85,7 +85,7 @@ a {
 </head>
 <body>
 
-<form action="processUser.php" method="POST" style="margin:25px 500px 75px 500px;">
+<form action="processAdmin.php" method="POST" style="margin:25px 500px 75px 500px;">
   <div class="container">
     <h1>Reset Password</h1>
     <p>Please fill in this form to reset your password.</p>
