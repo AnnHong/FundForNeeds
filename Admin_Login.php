@@ -63,8 +63,8 @@ span.password {
 <form action="processAdmin.php" method="post">
 
   <div class="container">
-    <label for="admin_id"><b>Admin ID</b></label>
-    <input type="text" placeholder="Enter Admin ID" name="admin_id" required>
+    <label for="admin_email"><b>Admin Email</b></label>
+    <input type="text" placeholder="Enter Admin Email" name="admin_email" required>
 
     <label for="password"><b>Password</b></label>
     <input type="password" placeholder="Enter Password" name="password" required>
