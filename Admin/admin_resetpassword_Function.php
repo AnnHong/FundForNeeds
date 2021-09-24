@@ -13,15 +13,15 @@ function adminresetpassword()
 if(!$con){
   echo mysqli_error();
 }else{
-  $email=$_POST['email'];
+  $admin_email=$_POST['admin_email'];
 
-$sql = "SELECT * FROM admin WHERE email='$email'";
+$sql = "SELECT * FROM admin WHERE admin_email='$admin_email'";
 $result = mysqli_query($con,$sql);
 
   if(mysqli_num_rows($result) >0){
 
     $reset_token = time(). md5($email);
-    $sql = "UPDATE admin SET reset_token='$reset_token' WHERE email='$email'";
+    $sql = "UPDATE admin SET reset_token='$reset_token' WHERE admin_email='$admin_email'";
 
 
     if(!mysqli_query($con,$sql))
@@ -30,7 +30,7 @@ $result = mysqli_query($con,$sql);
       return mysqli_error($con);
 
     }else{
-      $to      = $email; // Send email to our user
+      $to      = $admin_email; // Send email to our user
       $subject = 'Reset Password'; // Give the email a subject
       $message = '
 
@@ -38,7 +38,7 @@ $result = mysqli_query($con,$sql);
       You are one step away from resetting your password.
 
       Please click this link to reset the password:
-      http://localhost/MasterFundForNeeds/resetpassword.php?email='.$email.'&reset_token='.$reset_token.'
+      http://localhost/MasterFundForNeeds/Admin/resetpassword.php?email='.$admin_email.'&reset_token='.$reset_token.'
 
       '; // Our message above including the link
 
@@ -47,7 +47,7 @@ $result = mysqli_query($con,$sql);
 
       echo  "<script>
               alert('The reset password link is sent to your email.Please check your email.');
-              window.location.href='Admin_Login.php';
+              window.location.href='/MasterFundForNeeds/Admin/Admin_Login.php';
               </script>";;
 
     }

@@ -60,7 +60,7 @@ span.password {
 
 <h2>Fund For Needs</h2>
 
-<form action="processAdmin.php" method="post">
+<form action="/MasterFundForNeeds/Admin/processAdmin.php" method="post">
 
   <div class="container">
     <label for="admin_email"><b>Admin Email</b></label>
@@ -74,7 +74,9 @@ span.password {
 
   <div class="container" style="background-color:#f1f1f1">
     <button type="button" class="cancelbtn">Cancel</button>
-    <span class="password">Forgot <a href="admin_reset_password.php">password?</a></span>
+
+    <span class="password">Create  <a href="/MasterFundForNeeds/Admin/admin_verifyemail.php">New Admin ID</a></span><br>
+    <span class="password">Forgot <a href="/MasterFundForNeeds/Admin/Admin_resetpassword.php">password?</a></span>
   </div>
 </form>
 
