@@ -96,7 +96,7 @@ a {
     <label for="password"><b>Password</b></label>
     <input type="password" placeholder="Enter password" name="password"  required>
 
-    <label for="password"><b>Email</b></label>
+    <label for="password"><b>Repeat Password</b></label>
       <input type="password" placeholder="Enter repeat password" name="repeat_password"  required>
     <div class="clearfix">
       <button type="submit" class="verifybtn" name = "verify">Verify</button>
