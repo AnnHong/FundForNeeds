@@ -31,7 +31,7 @@ $result = mysqli_query($con,$sql);
 
     }else{
       $to      = $admin_email; // Send email to our user
-      $subject = 'Reset Password'; // Give the email a subject
+      $subject = 'Admin Reset Password'; // Give the email a subject
       $message = '
 
 

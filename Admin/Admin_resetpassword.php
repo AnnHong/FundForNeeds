@@ -87,7 +87,7 @@ a {
 
 <form action="admin_resetpassword_Function.php" method="POST" style="margin:25px 500px 75px 500px;">
   <div class="container">
-    <h1>Reset Password</h1>
+    <h1>Admin Reset Password</h1>
     <p>Please fill in this form to reset your password.</p>
     <hr>
     <label for="email"><b>Email</b></label>

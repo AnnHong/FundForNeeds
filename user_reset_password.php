@@ -84,9 +84,10 @@ a {
 </style>
 </head>
 <body>
-
+<title>User Reset Password</title>
 <form action="resetpassword_Function.php" method="POST" style="margin:25px 500px 75px 500px;">
   <div class="container">
+
     <h1>Reset Password</h1>
     <p>Please fill in this form to reset your password.</p>
     <p>The link will be given to your email</p>

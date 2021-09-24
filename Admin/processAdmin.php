@@ -73,10 +73,10 @@ function verifyemailadmin(){
     }
     else{
         $to      = $admin_email; // Send email to our user
-        $subject = 'Email Verification'; // Give the email a subject
+        $subject = 'Admin Email Verification'; // Give the email a subject
         $message = '
 
-        Your email has been verified.
+        Your admin email has been verified.
 
         ------------------------
         Email: '.$admin_email.'
