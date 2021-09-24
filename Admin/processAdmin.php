@@ -12,7 +12,7 @@ session_start();
 }else if(isSet($_POST['verify'])){
   verifyemailadmin();
 
-  "<script>
+  echo "<script>
         alert('Please go your email to verify.')
   			window.location.href='/MasterFundForNeeds/Admin/Admin_Login.php';
   			</script>";

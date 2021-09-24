@@ -85,7 +85,7 @@ a {
 </head>
 <body>
 
-<form action="" method="POST" style="margin:25px 500px 75px 500px;">
+<form action="admin_resetpassword_Function.php" method="POST" style="margin:25px 500px 75px 500px;">
   <div class="container">
     <h1>Reset Password</h1>
     <p>Please fill in this form to reset your password.</p>
@@ -96,7 +96,7 @@ a {
 
     <div class="clearfix">
       <button type="submit" class="verifybtn" name = "adminresetbtn">Reset Password</button>
-  
+
       <button type="button" class="cancelbtn" onclick="location.href = '/MasterFundForNeeds/Admin/Admin_Login.php';">Cancel</button>
     </div>
   </div>

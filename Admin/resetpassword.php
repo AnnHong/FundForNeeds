@@ -4,7 +4,7 @@ $admin_email = $_GET['admin_email'];
 $reset_token = $_GET['reset_token'];
 
 $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
-$sql = "SELECT * FROM admin WHERE aadmin_email ='$admin_email'";
+$sql = "SELECT * FROM admin WHERE admin_email ='$admin_email'";
 $result = mysqli_query($con,$sql);
 
 if(mysqli_num_rows($result) >0){

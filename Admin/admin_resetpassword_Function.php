@@ -38,7 +38,7 @@ $result = mysqli_query($con,$sql);
       You are one step away from resetting your password.
 
       Please click this link to reset the password:
-      http://localhost/MasterFundForNeeds/Admin/resetpassword.php?email='.$admin_email.'&reset_token='.$reset_token.'
+      http://localhost/MasterFundForNeeds/Admin/resetpassword.php?admin_email='.$admin_email.'&reset_token='.$reset_token.'
 
       '; // Our message above including the link
 
