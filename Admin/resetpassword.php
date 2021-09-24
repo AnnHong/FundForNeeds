@@ -13,7 +13,7 @@ if(mysqli_num_rows($result) >0){
   if($admin->reset_token == $reset_token){
     ?>
     <h2>Fund For Needs</h2>
-    <form method="POST" action="/MasterFundForNeeds/Admin/new-password.php" style="margin:100px 500px 75px 500px;">
+    <form method="POST" action="new-password.php" style="margin:100px 500px 75px 500px;">
 <meta name="viewport" content="width=device-width, initial-scale=1">
         <input type="hidden" name="admin_email" value="<?php echo $admin_email; ?>">
         <input type="hidden" name="reset_token" value="<?php echo $reset_token; ?>">

@@ -97,7 +97,7 @@ a {
     <div class="clearfix">
       <button type="submit" class="verifybtn" name = "adminresetbtn">Reset Password</button>
 
-      <button type="button" class="cancelbtn" onclick="location.href = '/MasterFundForNeeds/Admin/Admin_Login.php';">Cancel</button>
+      <button type="button" class="cancelbtn" onclick="location.href = 'Admin_Login.php';">Cancel</button>
     </div>
   </div>
 </form>

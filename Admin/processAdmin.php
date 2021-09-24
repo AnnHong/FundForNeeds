@@ -14,7 +14,7 @@ session_start();
 
   echo "<script>
         alert('Please go your email to verify.')
-  			window.location.href='/MasterFundForNeeds/Admin/Admin_Login.php';
+  			window.location.href='Admin_Login.php';
   			</script>";
 
 }
@@ -91,7 +91,7 @@ function verifyemailadmin(){
         $headers = "From:noreply@fundforneeds.com\r\n"; // Set from headers
         mail($to, $subject, $message, $headers); // Send our email
       return "Record has been successfully added";
-      header("Location:/MasterFundForNeeds/Admin/Admin_Login.php");
+      header("Location:Admin_Login.php");
 
       }
   }

@@ -85,7 +85,7 @@ a {
 </head>
 <body>
 
-<form action="/MasterFundForNeeds/Admin/processAdmin.php" method="POST" style="margin:25px 500px 75px 500px;">
+<form action="processAdmin.php" method="POST" style="margin:25px 500px 75px 500px;">
   <div class="container">
     <h1>Create New Admin ID</h1>
     <p>Please fill in this form to verify your email.</p>
@@ -100,7 +100,7 @@ a {
       <input type="password" placeholder="Enter repeat password" name="repeat_password"  required>
     <div class="clearfix">
       <button type="submit" class="verifybtn" name = "verify">Verify</button>
-      <button type="button" class="cancelbtn"  onclick="location.href = '/MasterFundForNeeds/Admin/Admin_Login.php';">Cancel</button>
+      <button type="button" class="cancelbtn"  onclick="location.href = 'Admin_Login.php';">Cancel</button>
     </div>
   </div>
 </form>

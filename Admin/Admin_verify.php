@@ -15,7 +15,7 @@ if(isset($_GET['admin_email']) && !empty($_GET['admin_email']) AND isset($_GET['
       echo
       "<script>
       			alert('Your email has been verified successfully.');
-      			window.location.href='/MasterFundForNeeds/Admin/Admin_Login.php';
+      			window.location.href='Admin_Login.php';
       			</script>";
 
     }else{

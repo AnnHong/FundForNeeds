@@ -18,7 +18,7 @@ if (mysqli_num_rows($result) > 0)
         //echo "Password has been changed";
         echo  "<script>
           			alert('Your password has been changed.');
-          			window.location.href='/MasterFundForNeeds/Admin/Admin_Login.php';
+          			window.location.href='Admin_Login.php';
           			</script>";;
     }
     else
