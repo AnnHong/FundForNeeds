@@ -3,69 +3,11 @@
 <head>
   <link rel = "icon" href = "FundForNeedsV2.png">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {font-family: Arial, Helvetica, sans-serif;}
-form {border: 3px solid #f1f1f1;}
-
-input[type=text], input[type=password] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-}
-
-button {
-  background-color: #04AA6D;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  opacity: 0.9;
-}
-
-button:hover {
-  opacity: 1;
-}
-
-.cancelbtn {
-  padding: 14px 20px;
-  background-color: #f44336;
-}
-
-.container {
-  padding: 16px;
-}
-
-span.password {
-  float: right;
-  padding-top: 0px;
-}
-
-.clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-.signupbtn {
-  width: auto;
-  padding: 10px 18px;
-}
-
-@media screen and (max-width: 300px) {
-  span.password {
-     display: block;
-     float: none;
-  }
-  .signinbtn, .cancelbtn {
-     width: 100%;
-  }
-}
-</style>
+<link rel="stylesheet" href="index.css">
+<link rel="stylesheet" href="index_theme.css">
+<link rel='stylesheet' href='index_font.css'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="user_signin.css">
 
 </head>
 <body>
@@ -89,6 +31,25 @@ span.password {
       <p>Don't have an account? <a href="user_signup.php">Register Now</a> <span class="password">Forgot <a href="user_reset_password.php">password?</a></span></p>
   </div>
 </form>
+<div>
+  <footer class="w3-container w3-theme-d3 w3-padding-16">
+    <h5>Footer</h5>
+    <a href="contact_us.html">Contact Us</a>
+  </footer>
 
+  <footer class="w3-container w3-theme-d5">
+    <div class="copyright" align="center">
+    <script>
+      document.write('&copy;' );
+      document.write(' 2021 - ');
+      document.write(new Date().getFullYear());
+      document.write(' Fund For Needs - All Rights Reserved.');
+      document.write('<br/>Last Updated : ');
+      document.write(document.lastModified);
+    </script>
+  </div>
+
+  </footer>
+</div>
 </body>
 </html>
