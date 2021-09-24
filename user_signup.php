@@ -84,7 +84,7 @@ a {
 </style>
 </head>
 <body>
-
+<title>User Register</title>
 <form action="processUser.php" method="POST" style="margin:25px 500px 75px 500px;">
   <div class="container">
     <h1>Sign Up</h1>
