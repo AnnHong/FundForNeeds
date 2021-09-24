@@ -47,7 +47,7 @@ $result = mysqli_query($con,$sql);
 
       echo  "<script>
               alert('The reset password link is sent to your email.Please check your email.');
-              window.location.href='user_signin.php';
+              window.location.href='Admin_Login.php';
               </script>";;
 
     }
