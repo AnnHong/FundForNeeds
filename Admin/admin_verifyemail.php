@@ -84,7 +84,7 @@ a {
 </style>
 </head>
 <body>
-
+<title>Create New Admin ID</title>
 <form action="processAdmin.php" method="POST" style="margin:25px 500px 75px 500px;">
   <div class="container">
     <h1>Create New Admin ID</h1>

@@ -57,7 +57,7 @@ span.password {
 </style>
 </head>
 <body>
-
+<title>Admin Login</title>
 <h2>Fund For Needs</h2>
 
 <form action="processAdmin.php" method="post">

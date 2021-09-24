@@ -13,10 +13,11 @@ function resetpassword()
 if(!$con){
   echo mysqli_error();
 }else{
+  
   $email=$_POST['email'];
 
-$sql = "SELECT * FROM users WHERE email='$email'";
-$result = mysqli_query($con,$sql);
+  $sql = "SELECT * FROM users WHERE email='$email'";
+  $result = mysqli_query($con,$sql);
 
   if(mysqli_num_rows($result) >0){
 
