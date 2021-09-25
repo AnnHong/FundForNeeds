@@ -82,8 +82,8 @@
               <img src="nature.jpg" style="width:100%" alt="Nature" class="w3-margin-bottom">
           </div>
         </div>
-        <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>  Donate</button>
-        <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>  Comment</button>
+        <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom" onclick="window.location.href='user_signin.php';"><i class="fa fa-thumbs-up"></i>  Donate</button>
+        <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom" onclick="window.location.href='user_signin.php';"><i class="fa fa-comment"></i>  Comment</button>
       </div>
 
       <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
@@ -92,8 +92,8 @@
         <h4>Sheng Earn</h4><br>
         <hr class="w3-clear">
         <p>Hello everyone, I need some money for my children to further thier degree study.</p>
-        <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>  Donate</button>
-        <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>  Comment</button>
+        <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom" onclick="window.location.href='user_signin.php';"><i class="fa fa-thumbs-up"></i>  Donate</button>
+        <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom" onclick="window.location.href='user_signin.php';"><i class="fa fa-comment"></i>  Comment</button>
       </div>
 
       <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
@@ -104,8 +104,8 @@
         <p>Please...I'm really need your help</p>
         <img src="nature.jpg" style="width:100%" class="w3-margin-bottom">
         <p>Hello everyone, I need some money for my children to further thier degree study.</p>
-        <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>  Donate</button>
-        <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>  Comment</button>
+        <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom" onclick="window.location.href='user_signin.php';"><i class="fa fa-thumbs-up"></i>  Donate</button>
+        <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom" onclick="window.location.href='user_signin.php';"><i class="fa fa-comment"></i>  Comment</button>
       </div>
 
     <!-- End Middle Column -->
