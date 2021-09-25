@@ -49,7 +49,7 @@
   <br><br>
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 
-  <div class="col">
+  <div class="col" style="float: right; width: 80%;">
     <div class="row">
       <div class="col mb-3">
         <div class="card">
