@@ -71,6 +71,10 @@
                       </button>
                     </div>
                   </div>
+                  <div class="text-center text-sm-right">
+                    <span class="badge badge-secondary">Front-end Programmer</span>
+                    <div class="text-muted"><small>Joined 07 June 2021</small></div>
+                  </div>
                 </div>
               </div>
               <ul class="nav nav-tabs">
