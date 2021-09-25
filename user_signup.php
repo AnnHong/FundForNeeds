@@ -31,11 +31,9 @@
   <a href="user_signin.php" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="Sign In" style="background-color: #04AA6D; color: white;">Sign In</a>
  </div>
 </div>
-<form action="processUser.php" method="POST" style="margin:25px 500px 75px 500px;">
+<form action="processUser.php" method="POST" style="margin:25px 500px 25px 500px;">
   <div class="container">
-    <h1>Sign Up</h1>
-    <p>Please fill in this form to create an account.</p>
-    <hr>
+    <br><br>
 
     <label for="email"><b>Email</b></label>
     <input type="text" placeholder="Enter Email" name="email"  required>
@@ -45,9 +43,10 @@
 
     <label for="password-repeat"><b>Repeat Password</b></label>
     <input type="password" placeholder="Repeat Password" name="password_repeat"  required>
-    <hr>
+
     <input type="checkbox" name=check required>
     <label for="check">  By creating an account you agree to our <a href="tnc.html">Terms & Conditions</a>.</label>
+    <br>
     <div class="clearfix" style="margin: 8px 0; width:100%;">
       <button type="submit" class="signupbtn" name = "signupbtn">Sign Up</button>
       <button type="button" class="cancelbtn" onclick="location.href = 'user_signin.php';">Cancel</button>
@@ -58,7 +57,7 @@
     <p>Already have an account? <a href="user_signin.php">Sign in</a>.</p>
   </div>
 </form>
-<div>
+<div style="padding-top: 33px;">
   <footer class="w3-container w3-theme-d3 w3-padding-16">
   <div style="text-align:center;">
     <a href="tnc.html" style="color: white;">Terms and Conditions</a>&emsp;
