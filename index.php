@@ -62,7 +62,7 @@
             <div class="w3-container w3-padding">
               <h6 class="w3-opacity">Post to ask for donation</h6>
               <p contenteditable="true" class="w3-border w3-padding">Ask For Donation</p>
-              <button type="button" class="w3-button w3-theme"><i class="fa fa-pencil"></i>  Post</button>
+              <button type="button" class="w3-button w3-theme" onclick="window.location.href='user_signin.php';"><i class="fa fa-pencil"></i>  Post</button>
             </div>
           </div>
         </div>
