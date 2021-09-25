@@ -31,9 +31,7 @@
       <a href="#" class="w3-bar-item w3-button">Zhi Hao Donates your post</a>
     </div>
   </div>
-  <a href="user_signin.php" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="Sign In">
-    <button type="button" name="signinbtn">Sign In</button>
-  </a>
+  <a href="user_signin.php" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="Sign In" style="background-color: #04AA6D; color: white;">Sign In</a>
  </div>
 </div>
 
@@ -119,15 +117,6 @@
 <!-- End Page Container -->
 </div>
 <br>
-
-<!-- Footer -->
-<footer class="w3-container w3-theme-d3 w3-padding-16">
-  <h5>Footer</h5>
-</footer>
-
-<footer class="w3-container w3-theme-d5">
-  <p>Powered by <a href="fundforneeds" target="_blank">Fund For Needs</a></p>
-</footer>
 
 <script>
 // Accordion

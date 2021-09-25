@@ -8,19 +8,31 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="tnc.css">
 </head>
-<body>
-    <div class="w3-top">
-     <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
-      <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
-      <a href="index.php" class="w3-bar-item w3-button w3-padding-large w3-theme-d4"><i class="fa fa-home w3-margin-right"></i>FundForNeeds</a>
-      <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="News"><i class="fa fa-globe"></i></a>
-      <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Account Settings"><i class="fa fa-user"></i></a>
-      <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Messages"><i class="fa fa-envelope"></i></a>
-      <a href="user_signin.php" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="Sign In">
-        <button type="button" name="signinbtn">Sign In</button>
-      </a>
-     </div>
+<title>Terms & Conditions</title>
+
+<body class="w3-theme-l5">
+  <div class="w3-top">
+   <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+    <a href="user_index.php" class="w3-bar-item w3-button w3-padding-large w3-theme-d4"><i class="fa fa-home w3-margin-right"></i>Fund For Needs</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="News"><i class="fa fa-globe"></i></a>
+    <a href="User_Profile.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Account Settings"><i class="fa fa-user"></i></a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Messages"><i class="fa fa-envelope"></i></a>
+
+    <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-button w3-padding-large" title="Notifications"><i class="fa fa-bell"></i><span class="w3-badge w3-right w3-small w3-green">3</span></button>
+
+      <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:300px">
+        <a href="#" class="w3-bar-item w3-button">One new friend request</a>
+        <a href="#" class="w3-bar-item w3-button">Ann Hong posted on your wall</a>
+        <a href="#" class="w3-bar-item w3-button">Zhi Hao Donates your post</a>
+      </div>
     </div>
+
+    <a href="user_signin.php" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="Sign In" style="background-color: #04AA6D; color: white;">Sign In</a>
+   </div>
+  </div>
+<br><br>
 <div>
   <div style="margin:3%;">
     <h2><strong>Terms and Conditions</strong></h2>
@@ -147,15 +159,16 @@
 
     <p>As long as the website and the information and services on the website are provided free of charge, we will not be liable for any loss or damage of any nature.</p>
   </div>
-  <div style="width:25%; margin: auto;">
-    <button type="submit"  name="back" onclick="goBack()">Back</button>
 
-    <script>
-      function goBack() {
-        window.history.back();
-      }
-    </script>
-  </div>
+</div>
+<div style="width:25%; margin: auto;">
+  <button type="submit"  name="back" onclick="goBack()" style="background-color: #04AA6D; color: white;">Back</button>
+
+  <script>
+    function goBack() {
+      window.history.back();
+    }
+  </script>
 </div>
 <br>
 <div>
@@ -166,7 +179,6 @@
     <a href="about_us.html">About Us</a>&emsp;
   </div>
   </footer>
-
   <footer class="w3-container w3-theme-d5">
     <div class="copyright" align="center">
     <script>
