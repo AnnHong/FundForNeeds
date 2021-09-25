@@ -100,7 +100,7 @@ a {
     <label for="password-repeat"><b>Repeat Password</b></label>
     <input type="password" placeholder="Repeat Password" name="password_repeat"  required>
     <hr>
-    <input type="checkbox" name=check>
+    <input type="checkbox" name=check required>
     <label for="check">  By creating an account you agree to our <a href="tnc.html">Terms & Conditions</a>.</label>
     <div class="clearfix">
       <button type="submit" class="signupbtn" name = "signupbtn">Sign Up</button>
