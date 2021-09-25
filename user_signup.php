@@ -28,14 +28,7 @@
     </div>
   </div>
 
-  <div class="w3-dropdown-hover w3-button w3-hide-small w3-right w3-padding-large ">
-    <button class="w3-button w3-padding-large" name = "account" title="My Account"></button>
-      <img src="avatar2.png" class="w3-circle" style="height:23px;width:23px" alt="Avatar">
-
-      <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:150px">
-        <a href="index.php" class="w3-bar-item w3-button">Sign Out</a>
-      </div>
-    </div>
+  <a href="user_signin.php" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="Sign In" style="background-color: #04AA6D; color: white;">Sign In</a>
  </div>
 </div>
 <form action="processUser.php" method="POST" style="margin:25px 500px 75px 500px;">
