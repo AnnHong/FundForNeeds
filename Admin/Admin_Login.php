@@ -13,9 +13,9 @@
 <div class="w3-top">
  <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
   <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
-  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-theme-d4"><i class="fa fa-home w3-margin-right"></i>Home</a>
+  <a href="Admin_Login.php" class="w3-bar-item w3-button w3-padding-large w3-theme-d4"><i class="fa fa-home w3-margin-right"></i>Fund For Needs</a>
   <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="News"><i class="fa fa-globe"></i></a>
-  <a href="admin_profile.php" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Account Settings"><i class="fa fa-user"></i></a>
+  <a href="Admin_Login.php" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Account Settings"><i class="fa fa-user"></i></a>
   <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Messages"><i class="fa fa-envelope"></i></a>
   <div class="w3-dropdown-hover w3-hide-small">
     <button class="w3-button w3-padding-large" title="Notifications"><i class="fa fa-bell"></i><span class="w3-badge w3-right w3-small w3-green">3</span></button>
@@ -25,28 +25,20 @@
       <a href="#" class="w3-bar-item w3-button">Zhi Hao Donates your post</a>
     </div>
   </div>
-    <div class="w3-dropdown-hover w3-button w3-hide-small w3-right w3-padding-large ">
-      <button class="w3-button w3-padding-large" name = "account" title="My Account"></button>
-        <img src="avatar2.png" class="w3-circle" style="height:23px;width:23px" alt="Avatar">
-
-        <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:150px">
-          <a href="Admin_Login.php" class="w3-bar-item w3-button">Sign Out</a>
-
-        </div>
-      </div>
+    <a href="Admin_Login.php" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="Sign In" style="background-color: #04AA6D; color: white;">Sign In</a>
  </div>
 </div>
 
-<form action="processAdmin.php" method="post">
+<form action="processAdmin.php" method="post" style="padding-top:100px;">
 
   <div class="container">
-    <label for="admin_email"><b>Admin Email</b></label>
+    <label for="admin_email" ><b>Admin Email</b></label>
     <input type="text" placeholder="Enter Admin Email" name="admin_email" required>
 
     <label for="password"><b>Password</b></label>
     <input type="password" placeholder="Enter Password" name="password" required>
-
-    <button type="submit" class="signinbtn" name="login">Login</button>
+    <br><br>
+    <button type="submit" class="signinbtn" name="login" style="margin: 8px 0; width:100%;">Login</button>
   </div>
 
   <div class="container" style="background-color:#f1f1f1">
@@ -56,7 +48,7 @@
 
   </div>
 </form>
-<div style="padding-top: 207px;">
+<div style="padding-top: 166px;">
   <footer class="w3-container w3-theme-d3 w3-padding-16">
   <div style="text-align:center;">
     <a href="admin_tnc.php">Terms and Conditions</a>&emsp;

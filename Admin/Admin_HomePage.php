@@ -18,7 +18,7 @@
 <div class="w3-top">
  <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
   <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
-  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-theme-d4"><i class="fa fa-home w3-margin-right"></i>Funds For Needs</a>
+  <a href="Admin_HomePage.php" class="w3-bar-item w3-button w3-padding-large w3-theme-d4"><i class="fa fa-home w3-margin-right"></i>Fund For Needs</a>
   <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="News"><i class="fa fa-globe"></i></a>
   <a href="admin_profile.php" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Account Settings"><i class="fa fa-user"></i></a>
   <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Messages"><i class="fa fa-envelope"></i></a>
@@ -221,8 +221,8 @@ function openNav() {
 <div>
   <footer class="w3-container w3-theme-d3 w3-padding-16">
   <div style="text-align:center;">
-    <a href="admin_tnc.php">Terms and Conditions</a>&emsp;
-    <a href="admin_aboutus.php">About Us</a>&emsp;
+    <a href="login_tnc.php">Terms and Conditions</a>&emsp;
+    <a href="login_aboutus.php">About Us</a>&emsp;
   </div>
   </footer>
   <footer class="w3-container w3-theme-d5">
