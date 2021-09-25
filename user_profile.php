@@ -46,7 +46,7 @@
   </div>
   <br><br>
 
-  <div class="col" style="float: right; width: 80%;">
+  <div class="col">
     <div class="row">
       <div class="col mb-3">
         <div class="card">
