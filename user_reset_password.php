@@ -31,7 +31,7 @@
   <a href="user_signin.php" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="Sign In" style="background-color: #04AA6D; color: white;">Sign In</a>
  </div>
 </div>
-<form action="resetpassword_Function.php" method="POST" style="margin:170px 500px 75px 500px;">
+<form action="resetpassword_Function.php" method="POST" style="margin:100px 500px 75px 500px;">
   <div class="container">
     <label for="email"><b>Email</b></label>
     <input type="text" placeholder="Enter Email" name="email"  required>
@@ -48,7 +48,7 @@
   </div>
 </form>
 
-<div style="padding-top: 58px;">
+<div style="padding-top: 152px;">
   <footer class="w3-container w3-theme-d3 w3-padding-16">
   <div style="text-align:center;">
     <a href="tnc.html" style="color: white;">Terms and Conditions</a>&emsp;
@@ -66,7 +66,9 @@
       document.write(' Fund For Needs - All Rights Reserved.');
       document.write('<br/>Last Updated : ');
       document.write(document.lastModified);
-    </script>
+      </script>
+    </div>
+    </footer>
   </div>
 </body>
 </html>
