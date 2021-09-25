@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel = "icon" href = "FundForNeedsV2.png">
 </head>
 <title>Fund For Needs</title>
 <meta charset="UTF-8">
@@ -40,7 +39,7 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
 
     <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:150px">
       <a href="index.php" class="w3-bar-item w3-button">Sign Out</a>
-    
+
     </div>
   </div>
  </div>

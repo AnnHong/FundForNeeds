@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel = "icon" href = "FundForNeedsV2.png">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="index.css">
 <link rel="stylesheet" href="index_theme.css">
 <link rel='stylesheet' href='index_font.css'>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="user_signin.css">
-
 </head>
 <body>
   <title>User Sign In</title>
@@ -34,8 +32,11 @@
 </form>
 <div>
   <footer class="w3-container w3-theme-d3 w3-padding-16">
-    <h5>Footer</h5>
-    <a href="contact_us.html">Contact Us</a>
+  <div style="text-align:center;">
+    <a href="tnc.html">Terms and Conditions</a>&emsp;
+    <a href="contact_us.html">Contact Us</a>&emsp;
+    <a href="about_us.html">About Us</a>&emsp;
+  </div>
   </footer>
 
   <footer class="w3-container w3-theme-d5">
