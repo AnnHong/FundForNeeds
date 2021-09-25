@@ -187,9 +187,9 @@ body{
 <div>
   <footer class="w3-container w3-theme-d3 w3-padding-16">
   <div style="text-align:center;">
-    <a href="user_tnc.php">Terms and Conditions</a>&emsp;
-    <a href="user_contactus.php">Contact Us</a>&emsp;
-    <a href="user_aboutus.php">About Us</a>&emsp;
+    <a href="user_tnc.php" style="color:white;">Terms and Conditions</a>&emsp;
+    <a href="user_contactus.php" style="color:white;">Contact Us</a>&emsp;
+    <a href="user_aboutus.php" style="color:white;">About Us</a>&emsp;
   </div>
   </footer>
   <footer class="w3-container w3-theme-d5">
