@@ -2,11 +2,40 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="index.css">
+<link rel="stylesheet" href="index_theme.css">
+<link rel='stylesheet' href='index_font.css'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="admin_login.css">
+<title>Admin Login</title>
 </head>
 <body>
-<title>Admin Login</title>
-<h2>Fund For Needs</h2>
+<div class="w3-top">
+ <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
+  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-theme-d4"><i class="fa fa-home w3-margin-right"></i>Home</a>
+  <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="News"><i class="fa fa-globe"></i></a>
+  <a href="admin_profile.php" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Account Settings"><i class="fa fa-user"></i></a>
+  <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Messages"><i class="fa fa-envelope"></i></a>
+  <div class="w3-dropdown-hover w3-hide-small">
+    <button class="w3-button w3-padding-large" title="Notifications"><i class="fa fa-bell"></i><span class="w3-badge w3-right w3-small w3-green">3</span></button>
+    <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:300px">
+      <a href="#" class="w3-bar-item w3-button">One new friend request</a>
+      <a href="#" class="w3-bar-item w3-button">Ann Hong posted on your wall</a>
+      <a href="#" class="w3-bar-item w3-button">Zhi Hao Donates your post</a>
+    </div>
+  </div>
+    <div class="w3-dropdown-hover w3-button w3-hide-small w3-right w3-padding-large ">
+      <button class="w3-button w3-padding-large" name = "account" title="My Account"></button>
+        <img src="avatar2.png" class="w3-circle" style="height:23px;width:23px" alt="Avatar">
+
+        <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:150px">
+          <a href="Admin_Login.php" class="w3-bar-item w3-button">Sign Out</a>
+
+        </div>
+      </div>
+ </div>
+</div>
 
 <form action="processAdmin.php" method="post">
 
@@ -22,17 +51,16 @@
 
   <div class="container" style="background-color:#f1f1f1">
     <button type="button" class="cancelbtn">Cancel</button>
+    <span class="password">Forgot <a href="Admin_resetpassword.php">password?</a>&emsp;</span>
+    <span class="password">Create  <a href="admin_verifyemail.php">New Admin ID</a>&emsp;|&emsp;</span>
 
-    <span class="password">Create  <a href="admin_verifyemail.php">New Admin ID</a></span><br>
-    <span class="password">Forgot <a href="Admin_resetpassword.php">password?</a></span>
   </div>
 </form>
-<div>
+<div style="padding-top: 207px;">
   <footer class="w3-container w3-theme-d3 w3-padding-16">
   <div style="text-align:center;">
-    <a href="tnc.html">Terms and Conditions</a>&emsp;
-    <a href="contact_us.html">Contact Us</a>&emsp;
-    <a href="about_us.html">About Us</a>&emsp;
+    <a href="admin_tnc.php">Terms and Conditions</a>&emsp;
+    <a href="admin_aboutus.php">About Us</a>&emsp;
   </div>
   </footer>
 
