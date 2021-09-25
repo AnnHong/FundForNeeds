@@ -25,12 +25,10 @@
     <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Messages"><i class="fa fa-envelope"></i></a>
 
     <div class="w3-dropdown-hover w3-hide-small">
-      <button class="w3-button w3-padding-large" title="Notifications"><i class="fa fa-bell"></i><span class="w3-badge w3-right w3-small w3-green">3</span></button>
+      <button class="w3-button w3-padding-large" title="Notifications"><i class="fa fa-bell"></i><span class="w3-badge w3-right w3-small w3-green">0</span></button>
 
       <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:300px">
-        <a href="#" class="w3-bar-item w3-button">One new friend request</a>
-        <a href="#" class="w3-bar-item w3-button">Ann Hong posted on your wall</a>
-        <a href="#" class="w3-bar-item w3-button">Zhi Hao Donates your post</a>
+      <a href="#" class="w3-bar-item w3-button">You have no notification yet.</a>
       </div>
     </div>
 
@@ -46,8 +44,6 @@
   </div>
   <br><br>
 
-  <div class="col">
-    <div class="row">
       <div class="col mb-3">
         <div class="card">
           <div class="card-body">
@@ -65,7 +61,7 @@
                     <h4 class="pt-sm-2 pb-1 mb-0 text-nowrap">YAP ZHI HAO</h4>
                     <p class="mb-0">@zhi__hao19</p>
                     <div class="mt-2">
-                      <button class="btn btn-primary " type="submit" style="background-color:#1EB37C; color: white;">
+                      <button class="btn btn-primary " type="submit" style="background-color:#57707D; color: white;">
                         <i class="fa fa-fw fa-camera"></i>
                         <span>Change Photo</span>
                       </button>
@@ -94,8 +90,8 @@
                           </div>
                           <div class="col">
                             <div class="form-group">
-                              <label>Staff ID</label>
-                              <input class="form-control" type="text" name="staffid" placeholder="zhi__hao19" value="zhi__hao19">
+                              <label>Username</label>
+                              <input class="form-control" type="text" name="username" placeholder="zhi__hao19" value="zhi__hao19">
                             </div>
                           </div>
                         </div>
@@ -155,7 +151,7 @@
                     </div>
                     <div class="row">
                       <div class="col d-flex justify-content-end">
-                        <button class="btn " type="submit" style="background-color:#1EB37C; color: white;">Save Changes</button>
+                        <button class="btn " type="submit" style="background-color:#57707D; color: white;">Save Changes</button>
                       </div>
                     </div>
                   </form>
