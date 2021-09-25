@@ -278,9 +278,9 @@ function openNav() {
 <div>
   <footer class="w3-container w3-theme-d3 w3-padding-16">
   <div style="text-align:center;">
-    <a href="tnc.html">Terms and Conditions</a>&emsp;
-    <a href="contact_us.html">Contact Us</a>&emsp;
-    <a href="about_us.html">About Us</a>&emsp;
+    <a href="user_tnc.php">Terms and Conditions</a>&emsp;
+    <a href="user_contactus.php">Contact Us</a>&emsp;
+    <a href="user_aboutus.php">About Us</a>&emsp;
   </div>
   </footer>
 
