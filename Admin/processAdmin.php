@@ -6,7 +6,7 @@ session_start();
   login();
   echo "<script>
         alert('You are logged in.Welcome.')
-  			window.location.href='Admin_HomePage.html';
+  			window.location.href='Admin_HomePage.php';
   			</script>";
 
 }else if(isSet($_POST['verify'])){
