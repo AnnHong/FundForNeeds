@@ -36,7 +36,7 @@
       <img src="avatar2.png" class="w3-circle" style="height:23px;width:23px" alt="Avatar">
 
       <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:150px">
-        <a href="Admin_HomePage.php" class="w3-bar-item w3-button">Sign Out</a>
+        <a href="Admin_Login.php" class="w3-bar-item w3-button">Sign Out</a>
       </div>
     </div>
    </div>
