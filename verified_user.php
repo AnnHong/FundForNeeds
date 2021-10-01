@@ -11,44 +11,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
-    /* The Modal (background) */
-    .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-    }
-
-    /* Modal Content */
-    .modal-content {
-    background-color: #fefefe;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 25%;
-    }
-
-    /* The Close Button */
-    .close {
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    color: red;
-    }
-
-    .close:hover,
-    .close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
+    .verified{
+      display: inline-block;
+      background-color: blue;
+      color: white;
+      padding: 0 10px 0 10px;
+      font-family: sans-serif;
+      border-radius: 50px;
     }
     </style>
 </head>
@@ -80,6 +49,8 @@
    </div>
   </div>
   <br><br>
+
+
       <div class="col mb-3">
         <div class="card">
           <div class="card-body">
@@ -94,64 +65,17 @@
                 </div>
                 <div class="col d-flex flex-column flex-sm-row justify-content-between mb-3">
                   <div class="text-center text-sm-left mb-2 mb-sm-0">
-                    <h4 class="pt-sm-2 pb-1 mb-0 text-nowrap">YAP ZHI HAO</h4>
+                      <h4 class="pt-sm-2 pb-1 mb-0 text-nowrap">YAP ZHI HAO</h4>
                     <div class="mt-2">
-                      <button class="btn" type="submit" style="background-color:#1EB37C; color: white;">
+                      <button class="btn" type="file" style="background-color:#1EB37C; color: white;">
                         <i class="fa fa-fw fa-camera"></i>
-                        <span>Change Photo</span>
+                        <span type="file">Change Photo</span>
                       </button>
                     </div>
 
-                    <div class="mt-2">
-
-                      <div>
-                        <!-- Trigger/Open The Modal -->
-                        <button id="myBtn" class="btn" style="background-color:#1EB37C; color: white;margin:15px 0 0 0;">Verify</button>
-
-                        <!-- The Modal -->
-                        <div id="myModal" class="modal">
-
-                          <!-- Modal content -->
-                          <div class="modal-content" style=" text-align:right !important;">
-                            <span class="close">&times;</span>
-                            <input type="file" name="Upload IC" value="Upload your IC" id="upload" hidden>
-                            <div style="display:inline-block;text-align:center;">
-                              <form action="/action_page.php">
-                                <input type="file" id="myFile" name="filename" style="margin:0 0 25px 100px;">
-                                <input type="submit" class="btn">
-                              </form>
-                            </div>
-                          </div>
-
-                        </div>
-                        <script>
-                    // Get the modal
-                    var modal = document.getElementById("myModal");
-
-                    // Get the button that opens the modal
-                    var btn = document.getElementById("myBtn");
-
-                    // Get the <span> element that closes the modal
-                    var span = document.getElementsByClassName("close")[0];
-
-                    // When the user clicks the button, open the modal
-                    btn.onclick = function() {
-                      modal.style.display = "block";
-                    }
-
-                    // When the user clicks on <span> (x), close the modal
-                    span.onclick = function() {
-                      modal.style.display = "none";
-                    }
-
-                    // When the user clicks anywhere outside of the modal, close it
-                    window.onclick = function(event) {
-                      if (event.target == modal) {
-                        modal.style.display = "none";
-                      }
-                    }
-                    </script>
-                      </div>
+                    <br>
+                    <div>
+                      <label class="verified">Verified</label>
                     </div>
                   </div>
                 </div>
@@ -233,7 +157,7 @@
                       </div>
                     </div>
                     <div class="row">
-                      <button class="btn " type="submit" style="background-color:#1EB37C; color: white;">Change Password</button>
+                      <button class="btn " type="submit" style="background-color:#1EB37C; color: white;">Save Changes</button>
                       <div class="col d-flex justify-content-end">
                         <button class="btn " type="submit" style="background-color:#1EB37C; color: white;">Save Changes</button>
                       </div>
