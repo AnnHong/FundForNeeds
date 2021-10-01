@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="index_theme.css">
   <link rel='stylesheet' href='index_font.css'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="user_tnc.css">
+  <link rel="stylesheet" href="admin_tnc.css">
 </head>
 <title>Terms & Conditions</title>
 
@@ -14,13 +14,13 @@
   <div class="w3-top">
    <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
     <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
-    <a href="Admin_HomePage.php" class="w3-bar-item w3-button w3-padding-large w3-theme-d4"><i class="fa fa-home w3-margin-right"></i>Fund For Needs</a>
+    <a href="Admin_HomePage.php" class="w3-bar-item w3-button w3-padding-large w3-theme-d4 w3-hover-white"><i class="fa fa-home w3-margin-right"></i>Fund For Needs</a>
     <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="News"><i class="fa fa-globe"></i></a>
-    <a href="admin_profile.php" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Account Settings"><i class="fa fa-user"></i></a>
+    <a href="user_list.php" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="User List"><i class="fa fa-user"></i></a>
     <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Messages"><i class="fa fa-envelope"></i></a>
 
     <div class="w3-dropdown-hover w3-hide-small">
-      <button class="w3-button w3-padding-large" title="Notifications"><i class="fa fa-bell"></i><span class="w3-badge w3-right w3-small w3-green">3</span></button>
+      <button class="w3-button w3-padding-large w3-hover-white" title="Notifications"><i class="fa fa-bell"></i><span class="w3-badge w3-right w3-small w3-green">3</span></button>
 
       <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:300px">
         <a href="#" class="w3-bar-item w3-button">One new friend request</a>
@@ -29,12 +29,11 @@
       </div>
     </div>
 
-    <div class="w3-dropdown-hover w3-button w3-hide-small w3-right w3-padding-large ">
-      <button class="w3-button w3-padding-large" name = "account" title="My Account"></button>
+    <div class="w3-dropdown-hover w3-button w3-hide-small w3-right w3-padding-large w3-hover-white">
         <img src="avatar2.png" class="w3-circle" style="height:23px;width:23px" alt="Avatar">
-
-        <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:150px">
-          <a href="index.php" class="w3-bar-item w3-button">Sign Out</a>
+        <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:150px;right:0px;">
+          <a href="admin_profile.php" class="w3-bar-item w3-button">My Profile</a>
+          <a href="admin_login.php" class="w3-bar-item w3-button">Sign Out</a>
         </div>
       </div>
    </div>
@@ -179,7 +178,7 @@
 </div>
 <br>
 <div>
-  <footer class="w3-container w3-theme-d3 w3-padding-16">
+  <footer class="w3-container w3-theme-d2 w3-padding-16">
   <div style="text-align:center;">
     <a href="login_tnc.php">Terms and Conditions</a>&emsp;
     <a href="login_aboutus.php">About Us</a>&emsp;
