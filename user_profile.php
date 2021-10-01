@@ -14,6 +14,62 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.1/dist/js/bootstrap.bundle.min.js"></script>
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+  <style>
+  /* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+background-color: #1E90FF;
+color: white;
+padding: 16px 20px;
+border: none;
+cursor: pointer;
+opacity: 0.8;
+position: fixed;
+width: 280px;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+display: none;
+position: fixed;
+border: 3px solid #f1f1f1;
+z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+max-width: 1000px;
+padding: 10px;
+background-color: white;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+background-color: #ddd;
+outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+background-color: #04AA6D;
+color: white;
+padding: 16px 20px;
+border: none;
+cursor: pointer;
+width: 100%;
+margin-bottom:10px;
+opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+opacity: 1;
+}
+  </style>
 </head>
 <body>
   <div class="w3-top">
@@ -69,6 +125,30 @@
                         <span>Change Photo</span>
                       </button>
                     </div>
+
+                    <button class="btn btn-primary" onclick="openForm()">Verify Account</button>
+
+                    <div class="form-popup" id="myForm">
+                      <form action="/action_page.php" class="form-container">
+                        <h1>Complete your profile to unlock receive and donate features.</h1>
+                        <p>Please insert the front and end of your <b>Identification card</b> and your <b>salary slip</b> </p>
+
+                          <input type="file" id="myFile" name="filename">
+
+                        <hr><button type="submit" class="btn">Submit</button>
+                        <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
+                      </form>
+                    </div>
+
+                    <script>
+                    function openForm() {
+                      document.getElementById("myForm").style.display = "block";
+                    }
+
+                    function closeForm() {
+                      document.getElementById("myForm").style.display = "none";
+                    }
+                    </script>
                   </div>
                 </div>
               </div>
