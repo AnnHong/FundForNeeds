@@ -10,33 +10,29 @@
     <meta charset="utf-8">
     <title>Admin Profile</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.1/dist/js/bootstrap.bundle.min.js"></script>
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
   <div class="w3-top">
    <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
     <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
-    <a href="Admin_HomePage.php" class="w3-bar-item w3-button w3-padding-large w3-theme-d4"><i class="fa fa-home w3-margin-right"></i>Fund For Needs</a>
+    <a href="Admin_HomePage.php" class="w3-bar-item w3-button w3-padding-large w3-theme-d4 w3-hover-white"><i class="fa fa-home w3-margin-right"></i> <b>Fund For Needs</b> </a>
     <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="News"><i class="fa fa-globe"></i></a>
-    <a href="admin_profile.php" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Account Settings"><i class="fa fa-user"></i></a>
+    <a href="user_list.php" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="User List"><i class="fa fa-user"></i></a>
     <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Messages"><i class="fa fa-envelope"></i></a>
 
     <div class="w3-dropdown-hover w3-hide-small">
-      <button class="w3-button w3-padding-large" title="Notifications"><i class="fa fa-bell"></i><span class="w3-badge w3-right w3-small w3-green">0</span></button>
+      <button class="w3-button w3-padding-large w3-hover-white" title="Notifications"><i class="fa fa-bell"></i><span class="w3-badge w3-right w3-small w3-green">0</span></button>
 
       <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:300px">
       <a href="#" class="w3-bar-item w3-button">You have no notification yet.</a>
       </div>
     </div>
 
-  <div class="w3-dropdown-hover w3-button w3-hide-small w3-right w3-padding-large ">
-    <button class="w3-button w3-padding-large" name = "account" title="My Account"></button>
+  <div class="w3-dropdown-hover w3-button w3-hide-small w3-right w3-padding-large w3-hover-white">
       <img src="avatar2.png" class="w3-circle" style="height:23px;width:23px" alt="Avatar">
-
-      <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:150px">
+      <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:150px;right:0px;">
+        <a href="admin_profile.php" class="w3-bar-item w3-button">My Profile</a>
         <a href="Admin_HomePage.php" class="w3-bar-item w3-button">Sign Out</a>
       </div>
     </div>
@@ -149,9 +145,12 @@
                         </div>
                       </div>
                     </div>
+
                     <div class="row">
+                      <button class="btn" type="submit" style="background-color:#57707D; color: white;">Change Password</button>
                       <div class="col d-flex justify-content-end">
-                        <button class="btn " type="submit" style="background-color:#57707D; color: white;">Save Changes</button>
+
+                        <button class="btn" type="submit" style="background-color:#57707D; color: white;">Save Changes</button>
                       </div>
                     </div>
                   </form>
@@ -185,7 +184,7 @@ body{
 }
 </style>
 <div>
-  <footer class="w3-container w3-theme-d3 w3-padding-16">
+  <footer class="w3-container w3-theme-d2 w3-padding-16">
   <div style="text-align:center;">
     <a href="admin_tnc.php" style="color:white;">Terms and Conditions</a>&emsp;
     <a href="admin_aboutus.php" style="color:white;">About Us</a>&emsp;
