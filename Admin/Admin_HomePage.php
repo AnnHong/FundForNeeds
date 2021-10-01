@@ -10,6 +10,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style>
   html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
+  .deletebutton{
+    background-color:#ff0028 !important;
+  }
   </style>
 </head>
 <body>
@@ -18,21 +21,22 @@
 <div class="w3-top">
  <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
   <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
-  <a href="Admin_HomePage.php" class="w3-bar-item w3-button w3-padding-large w3-theme-d4"><i class="fa fa-home w3-margin-right"></i>Fund For Needs</a>
+  <a href="Admin_HomePage.php" class="w3-bar-item w3-button w3-padding-large w3-theme-d4 w3-hover-white"><i class="fa fa-home w3-margin-right"></i><b>Fund For Needs</b></a>
   <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="News"><i class="fa fa-globe"></i></a>
-  <a href="admin_profile.php" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Account Settings"><i class="fa fa-user"></i></a>
+  <a href="user_list.php" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="User List"><i class="fa fa-user"></i></a>
   <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Messages"><i class="fa fa-envelope"></i></a>
   <div class="w3-dropdown-hover w3-hide-small">
-    <button class="w3-button w3-padding-large" title="Notifications"><i class="fa fa-bell"></i><span class="w3-badge w3-right w3-small w3-green">0</span></button>
+    <button class="w3-button w3-padding-large w3-hover-white" title="Notifications"><i class="fa fa-bell"></i><span class="w3-badge w3-right w3-small w3-green">0</span></button>
     <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:300px">
       <a href="#" class="w3-bar-item w3-button">You have no notification yet.</a>
     </div>
   </div>
-    <div class="w3-dropdown-hover w3-button w3-hide-small w3-right w3-padding-large ">
-      <button class="w3-button w3-padding-large" name = "account" title="My Account"></button>
+    <div class="w3-dropdown-hover w3-button w3-hide-small w3-right w3-padding-large w3-hover-white">
+
         <img src="avatar2.png" class="w3-circle" style="height:23px;width:23px" alt="Avatar">
 
-        <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:150px">
+        <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:150px;right: 0px;">
+          <a href="admin_profile.php" class="w3-bar-item w3-button">My Profile</a>
           <a href="Admin_Login.php" class="w3-bar-item w3-button">Sign Out</a>
 
         </div>
@@ -106,27 +110,6 @@
       </div>
       <br>
 
-      <!-- Interests -->
-      <div class="w3-card w3-round w3-white w3-hide-small">
-        <div class="w3-container">
-          <p>Interests</p>
-          <p>
-            <span class="w3-tag w3-small w3-theme-d5">News</span>
-            <span class="w3-tag w3-small w3-theme-d4">Music</span>
-            <span class="w3-tag w3-small w3-theme-d3">Labels</span>
-            <span class="w3-tag w3-small w3-theme-d2">Games</span>
-            <span class="w3-tag w3-small w3-theme-d1">Friends</span>
-            <span class="w3-tag w3-small w3-theme">Games</span>
-            <span class="w3-tag w3-small w3-theme-l1">Friends</span>
-            <span class="w3-tag w3-small w3-theme-l2">Food</span>
-            <span class="w3-tag w3-small w3-theme-l3">Design</span>
-            <span class="w3-tag w3-small w3-theme-l4">Art</span>
-            <span class="w3-tag w3-small w3-theme-l5">Photos</span>
-          </p>
-        </div>
-      </div>
-      <br>
-
     <!-- End Left Column -->
     </div>
 
@@ -159,7 +142,7 @@
               <img src="nature.jpg" style="width:100%" alt="Nature" class="w3-margin-bottom">
           </div>
         </div>
-        <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom">  Delete Post</button>
+        <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom deletebutton">  Delete Post</button>
       </div>
 
       <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
@@ -168,7 +151,7 @@
         <h4>Sheng Earn</h4><br>
         <hr class="w3-clear">
         <p>Hello everyone, I need some money for my children to further thier degree study.</p>
-        <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom">  Delete Post</button>
+        <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom deletebutton">  Delete Post</button>
       </div>
 
       <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
@@ -179,7 +162,7 @@
         <p>Please...I'm really need your help</p>
         <img src="nature.jpg" style="width:100%" class="w3-margin-bottom">
         <p>Hello everyone, I need some money for my children to further thier degree study.</p>
-        <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom">  Delete Post</button>
+        <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom deletebutton">  Delete Post</button>
       </div>
 
     <!-- End Middle Column -->
@@ -218,8 +201,8 @@ function openNav() {
   }
 }
 </script>
-<div>
-  <footer class="w3-container w3-theme-d3 w3-padding-16">
+<div class="w3-theme-d2">
+  <footer class="w3-container w3-padding-16">
   <div style="text-align:center;">
     <a href="login_tnc.php">Terms and Conditions</a>&emsp;
     <a href="login_aboutus.php">About Us</a>&emsp;
