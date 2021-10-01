@@ -76,7 +76,7 @@
               </ul>
               <div class="tab-content pt-3">
                 <div class="tab-pane active">
-                  <form class="form" novalidate="">
+                  <form class="form">
                     <div class="row">
                       <div class="col">
                         <div class="row">
@@ -161,21 +161,6 @@
         </div>
       </div>
 
-      <div class="col-12 col-md-3 mb-3">
-        <div >
-          <div class="card-body">
-            <div class="px-xl-3">
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</div>
-</div>
-
 <style type="text/css">
 body{
     margin-top:20px;
@@ -202,7 +187,6 @@ body{
       document.write(document.lastModified);
     </script>
   </div>
-
   </footer>
 </div>
 </body>
