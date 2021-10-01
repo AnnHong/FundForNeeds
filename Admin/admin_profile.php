@@ -13,6 +13,7 @@
 	<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.1/dist/js/bootstrap.bundle.min.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
   <div class="w3-top">
@@ -36,7 +37,7 @@
       <img src="avatar2.png" class="w3-circle" style="height:23px;width:23px" alt="Avatar">
 
       <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:150px">
-        <a href="Admin_Login.php" class="w3-bar-item w3-button">Sign Out</a>
+        <a href="Admin_HomePage.php" class="w3-bar-item w3-button">Sign Out</a>
       </div>
     </div>
    </div>
