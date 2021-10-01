@@ -10,21 +10,18 @@
     <meta charset="utf-8">
     <title>User Profile</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.1/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
   <div class="w3-top">
    <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
     <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
-    <a href="user_index.php" class="w3-bar-item w3-button w3-padding-large w3-theme-d4"><i class="fa fa-home w3-margin-right"></i>Fund For Needs</a>
+    <a href="user_index.php" class="w3-bar-item w3-button w3-padding-large w3-theme-d4 w3-hover-white"><i class="fa fa-home w3-margin-right"></i> <b>Fund For Needs</b> </a>
     <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="News"><i class="fa fa-globe"></i></a>
-    <a href="User_Profile.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Account Settings"><i class="fa fa-user"></i></a>
     <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Messages"><i class="fa fa-envelope"></i></a>
 
     <div class="w3-dropdown-hover w3-hide-small">
-      <button class="w3-button w3-padding-large" title="Notifications"><i class="fa fa-bell"></i><span class="w3-badge w3-right w3-small w3-green">3</span></button>
+      <button class="w3-button w3-padding-large w3-hover-white" title="Notifications"><i class="fa fa-bell"></i><span class="w3-badge w3-right w3-small w3-green">3</span></button>
 
       <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:300px">
         <a href="#" class="w3-bar-item w3-button">One new friend request</a>
@@ -33,11 +30,10 @@
       </div>
     </div>
 
-  <div class="w3-dropdown-hover w3-button w3-hide-small w3-right w3-padding-large ">
-    <button class="w3-button w3-padding-large" name = "account" title="My Account"></button>
+  <div class="w3-dropdown-hover w3-button w3-hide-small w3-right w3-padding-large w3-hover-white">
       <img src="avatar2.png" class="w3-circle" style="height:23px;width:23px" alt="Avatar">
-
-      <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:150px">
+      <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:150px;right:0px;">
+        <a href="user_profile.php" class="w3-bar-item w3-button">My Profile</a>
         <a href="index.php" class="w3-bar-item w3-button">Sign Out</a>
       </div>
     </div>
@@ -66,6 +62,12 @@
                       <button class="btn btn-primary " type="submit" style="background-color:#1EB37C; color: white;">
                         <i class="fa fa-fw fa-camera"></i>
                         <span>Change Photo</span>
+                      </button>
+                    </div>
+                    <div class="mt-2">
+                      <button class="btn btn-primary " type="submit" style="background-color:#1EB37C; color: white;">
+                        <i class="fa"></i>
+                        <span>Verify Account</span>
                       </button>
                     </div>
                   </div>
@@ -148,6 +150,7 @@
                       </div>
                     </div>
                     <div class="row">
+                      <button class="btn " type="submit" style="background-color:#1EB37C; color: white;">Save Changes</button>
                       <div class="col d-flex justify-content-end">
                         <button class="btn " type="submit" style="background-color:#1EB37C; color: white;">Save Changes</button>
                       </div>
@@ -169,7 +172,7 @@ body{
 </style>
 
 <div>
-  <footer class="w3-container w3-theme-d3 w3-padding-16">
+  <footer class="w3-container w3-theme-d2 w3-padding-16">
   <div style="text-align:center;">
     <a href="user_tnc.php" style="color:white;">Terms and Conditions</a>&emsp;
     <a href="user_contactus.php" style="color:white;">Contact Us</a>&emsp;
