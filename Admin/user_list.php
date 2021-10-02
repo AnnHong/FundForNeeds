@@ -75,19 +75,44 @@ tr:nth-child(even) {
 
 
     <h2 style="text-align:center;">List of Users</h2>
+<?php
+include 'user_list_function.php';
 
-    <table>
-      <tr>
-        <th>Full Name</th>
-        <th>Username</th>
-        <th>Email</th>
-        <th>Password</th>
-        <th>Verification Status</th>
-        <th>Verification</th>
-        <th>Modification</th>
-        <th>Deletion</th>
-      </tr>
-    </table>
+	$qryUserList = getListOfUser();
+
+  echo '<table>
+    <tr>
+    <th>No</th>
+      <th>Full Name</th>
+      <th>Username</th>
+      <th>Email</th>
+      <th>Password</th>
+      <th>IC File</th>
+      <th>Verification Status</th>
+      <th>Verification</th>
+      <th>Modification</th>
+      <th>Deletion</th>
+    </tr>';
+    $count=1;
+    while($row = mysqli_fetch_assoc($qryUserList)){
+
+      echo '<tr>';
+  						echo'<td>'.$count.'</td>';
+  					echo '<td>'.$row['fullname'].'</td>';
+  					echo '<td>'.$row['usernames'].'</td>';
+  					echo '<td>'.$row['email'].'</td>';
+  					echo '<td>'.$row['password'].'</td>';
+  					echo
+  						'</td>';
+              $count++;
+
+    }
+
+echo   '</table>';
+
+
+ ?>
+
 
   <!-- End Grid -->
   </div>

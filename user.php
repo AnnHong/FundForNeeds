@@ -11,10 +11,13 @@ function Addnewuser()
 		$email = $_POST['email'];
 		$password = $_POST['password'];
     $password_repeat = $_POST['password_repeat'];
+		$usernames = $_POST['usernames'];
+		$fullname= $_POST['fullname'];
+
 		$token = md5( rand(0,1000) );
 
-		$sql = "insert into users(email,password,token)
-						   values('$email','$password','$token')";
+		$sql = "insert into users(email,password,token,usernames,fullname)
+						   values('$email','$password','$token','$usernames','$fullname')";
 
 	    echo $sql;
 		//3.run insert query
