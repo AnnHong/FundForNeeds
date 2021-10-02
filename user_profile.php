@@ -117,6 +117,7 @@
                             <input type="file" name="Upload IC" value="Upload your IC" id="upload" hidden>
                             <div style="display:inline-block;text-align:center;">
                               <form action="/action_page.php">
+                                <b><p>Please upload your IC to verify.</p></b>
                                 <input type="file" id="myFile" name="filename" style="margin:0 0 25px 80px;">
                                 <input type="submit" class="btn">
                               </form>
