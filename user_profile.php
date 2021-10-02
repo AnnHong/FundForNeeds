@@ -116,10 +116,10 @@
                             <span class="close">&times;</span>
                             <input type="file" name="Upload IC" value="Upload your IC" id="upload" hidden>
                             <div style="display:inline-block;text-align:center;">
-                              <form action="/action_page.php">
+                              <form action="upload_img2.php" method="post" enctype="multipart/form-data">
                                 <b><p>Please upload your IC to verify.</p></b>
-                                <input type="file" id="myFile" name="filename" style="margin:0 0 25px 80px;">
-                                <input type="submit" class="btn">
+                                <input type="file" id="myFile" name="file_name" style="margin:0 0 25px 80px;">
+                                <input type="submit" name ="upload_button" class="btn">
                               </form>
                             </div>
                           </div>
