@@ -19,6 +19,14 @@
       font-family: sans-serif;
       border-radius: 50px;
     }
+
+    .icon{
+      position: absolute;
+      top:108px;
+      height: 15px;
+      width:15px;
+      border-radius: 50%;
+    }
     </style>
 </head>
 <body>
@@ -75,7 +83,7 @@
 
                     <br>
                     <div>
-                      <label class="verified">Verified</label>
+                      <label class="verified"><img src="check.png" alt="verified" class="icon">&emsp; Verified</label>
                     </div>
                   </div>
                 </div>
