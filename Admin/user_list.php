@@ -28,6 +28,16 @@ td, th {
 tr:nth-child(even) {
   background-color: #dddddd;
 }
+
+#design4{
+ background-color: red;
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  margin: 2px 2px;
+  cursor: pointer;
+}
   </style>
 </head>
 <body>
@@ -94,6 +104,7 @@ include 'user_list_function.php';
       <th>Deletion</th>
     </tr>';
     $count=1;
+
     while($row = mysqli_fetch_assoc($qryUserList)){
 
       echo '<tr>';
@@ -102,9 +113,30 @@ include 'user_list_function.php';
   					echo '<td>'.$row['usernames'].'</td>';
   					echo '<td>'.$row['email'].'</td>';
   					echo '<td>'.$row['password'].'</td>';
-  					echo
-  						'</td>';
-              $count++;
+            echo '<td>'.$row['file_name'].'</td>';
+echo '<td>'.$row['user_verify'].'</td>';
+            $emailSelected=$row['email'];
+
+
+  echo '<td style="text-align:center;"><form action="verifyUser.php" method="POST">';
+    echo '<input type="hidden" name="emailToVerify"
+      value="'.$emailSelected.'" >';
+
+    echo '<input type="submit" value="Verify"
+    name="verifyUserButton" id="design4">';
+  echo '</form>';
+
+  echo '<td>Edit</td>';
+        echo '<td style="text-align:center;"><form action="deleteUser.php" method="POST">';
+          echo '<input type="hidden" name="emailToDelete"
+            value="'.$emailSelected.'" >';
+
+          echo '<input type="submit" value="Delete"
+          name="deleteUserButton" id="design4">';
+        echo '</form>';
+
+        echo '</tr>';
+            $count++;
 
     }
 
