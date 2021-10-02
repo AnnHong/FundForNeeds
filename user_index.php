@@ -19,7 +19,7 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
  <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
   <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
   <a href="user_index.php" class="w3-bar-item w3-button w3-padding-large w3-theme-d4 w3-hover-white"><i class="fa fa-home w3-margin-right"></i> <b>Fund For Needs</b> </a>
-  <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="News"><i class="fa fa-globe"></i></a>
+  <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Donation Details"><i class="fa fa-globe"></i></a>
   <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Messages"><i class="fa fa-envelope"></i></a>
 
   <div class="w3-dropdown-hover w3-hide-small">
@@ -28,7 +28,8 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
     <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:300px">
       <a href="#" class="w3-bar-item w3-button">One new friend request</a>
       <a href="#" class="w3-bar-item w3-button">Ann Hong posted on your wall</a>
-      <a href="#" class="w3-bar-item w3-button">Zhi Hao Donates your post</a>
+      <a href="#" class="w3-bar-item w3-button">Zhi Hao Donated you</a>
+      <a href="#" class="w3-bar-item w3-button">Sheng Earn Donated you</a>
     </div>
   </div>
 
@@ -143,6 +144,7 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
         </div>
         <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>  Donate</button>
         <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>  Comment</button>
+        <button type="button" class="w3-button w3-margin-bottom" style="background-color:red;color:white;">Report</button>
       </div>
 
       <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
@@ -153,6 +155,7 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
         <p>Hello everyone, I need some money for my children to further thier degree study.</p>
         <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>  Donate</button>
         <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>  Comment</button>
+        <button type="button" class="w3-button w3-margin-bottom" style="background-color:red;color:white;">Report</button>
       </div>
 
       <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
@@ -165,6 +168,7 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
         <p>Hello everyone, I need some money for my children to further thier degree study.</p>
         <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>  Donate</button>
         <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>  Comment</button>
+        <button type="button" class="w3-button w3-margin-bottom" style="background-color:red;color:white;">Report</button>
       </div>
 
     <!-- End Middle Column -->

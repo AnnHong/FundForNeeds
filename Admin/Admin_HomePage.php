@@ -177,7 +177,7 @@ function openNav() {
   }
 }
 </script>
-<div class="w3-theme-d2">
+<div class="w3-theme-d2" style="bottom: 0px;">
   <footer class="w3-container w3-padding-16">
   <div style="text-align:center;">
     <a href="login_tnc.php">Terms and Conditions</a>&emsp;
