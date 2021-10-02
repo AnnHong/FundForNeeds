@@ -114,7 +114,7 @@ include 'user_list_function.php';
   					echo '<td>'.$row['email'].'</td>';
   					echo '<td>'.$row['password'].'</td>';
             echo '<td>'.$row['file_name'].'</td>';
-echo '<td>'.$row['user_verify'].'</td>';
+            echo '<td>'.$row['user_verify'].'</td>';
             $emailSelected=$row['email'];
 
 
