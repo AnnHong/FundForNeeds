@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -97,8 +98,15 @@
                 </div>
                 <div class="col d-flex flex-column flex-sm-row justify-content-between mb-3">
                   <div class="text-center text-sm-left mb-2 mb-sm-0">
-                    <h4 class="pt-sm-2 pb-1 mb-0 text-nowrap">YAP ZHI HAO</h4>
-                    <p class="mb-0">@zhi__hao19</p>
+                    <?php
+                    include 'Admin/user_list_function.php';
+                    $qryUserList = getListOfUser();
+                      while($row = mysqli_fetch_assoc($qryUserList)){
+                        echo '<h4 class="pt-sm-2 pb-1 mb-0 text-nowrap">' .$row['fullname']. '</h4>' ;
+                        echo '<p class="mb-0">'.$row['usernames']. '</p>';
+                      }
+                        ?>
+
                     <div class="mt-2">
                       <button class="btn" type="submit" style="background-color:#80daeb; color: white;">
                         <i class="fa fa-fw fa-camera"></i>
@@ -173,13 +181,27 @@
                           <div class="col">
                             <div class="form-group">
                               <label>Full Name</label>
-                              <input class="form-control" type="text" name="name" placeholder="YAP ZHI HAO" value="YAP ZHI HAO" disabled>
+                              <?php
+
+                              $qryUserList = getListOfUser();
+                                while($row = mysqli_fetch_assoc($qryUserList)){
+                                  echo '<input class="form-control" type="text"   value="' .$row['fullname']. '" disabled>' ;
+
+                                }
+                                  ?>
                             </div>
                           </div>
                           <div class="col">
                             <div class="form-group">
                               <label>Username</label>
-                              <input class="form-control" type="text" name="username" placeholder="zhi__hao19" value="zhi__hao19" disabled>
+                              <?php
+
+                              $qryUserList = getListOfUser();
+                                while($row = mysqli_fetch_assoc($qryUserList)){
+                                  echo '<input class="form-control" type="text"   value="' .$row['usernames']. '" disabled>' ;
+
+                                }
+                                  ?>
                             </div>
                           </div>
                         </div>
@@ -187,13 +209,27 @@
                           <div class="col">
                             <div class="form-group">
                               <label>Current Password</label>
-                              <input class="form-control" type="password" placeholder="••••••••••••" disabled>
+                              <?php
+
+                              $qryUserList = getListOfUser();
+                                while($row = mysqli_fetch_assoc($qryUserList)){
+                                  echo '<input class="form-control" type="password"   value="' .$row['password']. '" disabled>' ;
+
+                                }
+                                  ?>
                             </div>
                           </div>
                           <div class="col">
                             <div class="form-group">
                               <label>Email</label>
-                              <input class="form-control" type="text" placeholder="zhihao1919@gmail.com" value="zhihao1919@gmail.com" disabled>
+                              <?php
+
+                              $qryUserList = getListOfUser();
+                                while($row = mysqli_fetch_assoc($qryUserList)){
+                                  echo '<input class="form-control" type="text"   value="' .$row['email']. '" disabled>' ;
+
+                                }
+                                  ?>
                             </div>
                           </div>
                         </div>
