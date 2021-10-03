@@ -78,7 +78,7 @@
                       <h4 class="pt-sm-2 pb-1 mb-0 text-nowrap">YAP ZHI HAO</h4>
                       <p class="mb-0">@zhi__hao19</p>
                     <div class="mt-2">
-                      <button class="btn" type="file" style="background-color:#1EB37C; color: white;">
+                      <button class="btn" type="file" style="background-color:#80daeb; color: white;">
                         <i class="fa fa-fw fa-camera"></i>
                         <span type="file">Change Photo</span>
                       </button>
@@ -117,7 +117,7 @@
                           <div class="col">
                             <div class="form-group">
                               <label>Current Password</label>
-                              <input class="form-control" type="password" placeholder="••••••" disabled>
+                              <input class="form-control" type="password" placeholder="••••••••••••" disabled>
                             </div>
                           </div>
                           <div class="col">
@@ -136,7 +136,7 @@
                           <div class="col">
                             <div class="form-group">
                               <label>New Password</label>
-                              <input class="form-control" type="password" placeholder="••••••" disabled>
+                              <input class="form-control" type="password" placeholder="••••••••••••" disabled>
                             </div>
                           </div>
                         </div>
@@ -144,14 +144,14 @@
                           <div class="col">
                             <div class="form-group">
                               <label>Confirm <span class="d-none d-xl-inline">Password</span></label>
-                              <input class="form-control" type="password" placeholder="••••••" disabled></div>
+                              <input class="form-control" type="password" placeholder="••••••••••••" disabled></div>
                           </div>
                         </div>
                       </div>
                     </div>
                     <div style="text-align:center;">
-                      <button class="btn" type="submit" style="background-color:#1EB37C; color: white;margin-right:25px;">Change Password</button>
-                        <button class="btn " type="submit" style="background-color:#1EB37C; color: white;">Update Profile</button>
+                      <button class="btn" type="submit" style="background-color:#80daeb; color: white;margin-right:25px;">Change Password</button>
+                        <button class="btn " type="submit" style="background-color:#80daeb; color: white;">Update Profile</button>
                     </div>
                   </form>
                 </div>
@@ -163,9 +163,9 @@
 <div>
   <footer class="w3-container w3-theme-d2 w3-padding-16">
   <div style="text-align:center;">
-    <a href="user_tnc.php" style="color:white;">Terms and Conditions</a>&emsp;
-    <a href="user_contactus.php" style="color:white;">Contact Us</a>&emsp;
-    <a href="user_aboutus.php" style="color:white;">About Us</a>&emsp;
+    <a href="user_tnc.php" style="color:white;text-shadow: 2px 2px 4px #000000;">Terms and Conditions</a>&emsp;
+    <a href="user_contactus.php" style="color:white;text-shadow: 2px 2px 4px #000000;">Contact Us</a>&emsp;
+    <a href="user_aboutus.php" style="color:white;text-shadow: 2px 2px 4px #000000;">About Us</a>&emsp;
   </div>
   </footer>
   <footer class="w3-container w3-theme-d5">

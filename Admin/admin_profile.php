@@ -127,7 +127,7 @@
                           <div class="col">
                             <div class="form-group">
                               <label>Confirm <span class="d-none d-xl-inline">Password</span></label>
-                              <input class="form-control" type="password" placeholder="••••••"></div>
+                              <input class="form-control" type="password" placeholder="••••••••••••"></div>
                           </div>
                         </div>
                       </div>
