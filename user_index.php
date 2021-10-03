@@ -11,7 +11,86 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
+* {box-sizing: border-box;}
+button:hover {
+  opacity:1;
+}
 
+/* Float cancel and delete buttons and add an equal width */
+.confirmbtn, .cancelbtn {
+  float: left;
+  width: 50%;
+}
+
+/* Add a color to the cancel button */
+.confirmbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+/* Add a color to the delete button */
+.cancelbtn {
+  background-color: #f44336;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+/* Add padding and center-align text to the container */
+.container {
+  padding: 16px;
+  text-align: center;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  padding-top: 50px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 50%; /* Could be more or less, depending on screen size */
+  box-shadow:0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19);
+}
+
+/* Style the horizontal ruler */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and delete button on extra small screens */
+@media screen and (max-width: 300px) {
+  .confirmbtn, .cancelbtn {
+    width: 100%;
+  }
+}
 </style>
 <body>
 
@@ -121,9 +200,9 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
         <div class="w3-col m12">
           <div class="w3-card w3-round w3-white">
             <div class="w3-container w3-padding">
-              <h6 class="w3-opacity">Social Media template by w3.css</h6>
+              <h6 class="w3-opacity">Make a post to collect donation</h6>
               <p contenteditable="true" class="w3-border w3-padding">Ask For Donation</p>
-              <button type="button" class="w3-button w3-theme"><i class="fa fa-pencil"></i>  Post</button>
+              <button type="button" class="w3-button w3-theme-d2"><i class="fa fa-pencil"></i>  Post</button>
             </div>
           </div>
         </div>
@@ -143,22 +222,7 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
               <img src="nature.jpg" style="width:100%" alt="Nature" class="w3-margin-bottom">
           </div>
         </div>
-        <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up" onclick="document.getElementById('id01').style.display='block'"></i>  Donate</button>
-
-<div id="id01" class="modal">
-  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-  <form class="modal-content" action="/action_page.php">
-    <div class="container">
-      <h1>Delete Account</h1>
-      <p>Are you sure you want to delete your account?</p>
-
-      <div class="clearfix">
-        <button type="button" class="cancelbtn">Cancel</button>
-        <button type="button" class="deletebtn">Delete</button>
-      </div>
-    </div>
-  </form>
-</div>
+        <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom" onclick="document.getElementById('id01').style.display='block'"><i class="fa fa-thumbs-up" ></i>  Donate</button>
         <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>  Comment</button>
         <button type="button" class="w3-button w3-margin-bottom" style="background-color:red;color:white;">Report</button>
       </div>
@@ -169,7 +233,7 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
         <h4>Sheng Earn</h4><br>
         <hr class="w3-clear">
         <p>Hello everyone, I need some money for my children to further thier degree study.</p>
-        <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>  Donate</button>
+        <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom" onclick="document.getElementById('id01').style.display='block'"><i class="fa fa-thumbs-up"></i>  Donate</button>
         <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>  Comment</button>
         <button type="button" class="w3-button w3-margin-bottom" style="background-color:red;color:white;">Report</button>
       </div>
@@ -182,11 +246,35 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
         <p>Please...I'm really need your help</p>
         <img src="nature.jpg" style="width:100%" class="w3-margin-bottom">
         <p>Hello everyone, I need some money for my children to further thier degree study.</p>
-        <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>  Donate</button>
+        <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom" onclick="document.getElementById('id01').style.display='block'"><i class="fa fa-thumbs-up"></i>  Donate</button>
+
         <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>  Comment</button>
         <button type="button" class="w3-button w3-margin-bottom" style="background-color:red;color:white;">Report</button>
       </div>
 
+      <div id="id01" class="modal">
+        <form class="modal-content" action="/action_page.php">
+          <div class="container">
+            <h1>Donate Confirmation</h1>
+            <p>Are you sure you want to donate to this user?</p>
+            <div class="clearfix">
+              <button type="button" class="confirmbtn">Confirm</button>
+              <button type="button" class="cancelbtn" onclick="document.getElementById('id01').style.display='none'">Cancel</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <script>
+      // Get the modal
+      var modal = document.getElementById('id01');
+
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+      </script>
     <!-- End Middle Column -->
     </div>
 

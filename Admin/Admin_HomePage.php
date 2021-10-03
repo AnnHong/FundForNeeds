@@ -13,6 +13,86 @@
   .deletebutton{
     background-color:#ff0028 !important;
   }
+  * {box-sizing: border-box;}
+  button:hover {
+    opacity:1;
+  }
+
+  /* Float cancel and delete buttons and add an equal width */
+  .confirmbtn, .cancelbtn {
+    float: left;
+    width: 50%;
+  }
+
+  /* Add a color to the cancel button */
+  .confirmbtn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    opacity: 0.9;
+  }
+
+  /* Add a color to the delete button */
+  .cancelbtn {
+    background-color: #f44336;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    opacity: 0.9;
+  }
+
+  /* Add padding and center-align text to the container */
+  .container {
+    padding: 16px;
+    text-align: center;
+  }
+
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    padding-top: 50px;
+  }
+
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 10% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 50%; /* Could be more or less, depending on screen size */
+    box-shadow:0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19);
+  }
+
+  /* Style the horizontal ruler */
+  hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+  }
+
+  /* Clear floats */
+  .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  /* Change styles for cancel button and delete button on extra small screens */
+  @media screen and (max-width: 300px) {
+    .confirmbtn, .cancelbtn {
+      width: 100%;
+    }
+  }
   </style>
 </head>
 <body>
@@ -98,7 +178,7 @@
             <div class="w3-container w3-padding">
               <h6 class="w3-opacity">Admin Information Annoucement.</h6>
               <p contenteditable="true" class="w3-border w3-padding">Write some information...</p>
-              <button type="button" class="w3-button w3-theme"><i class="fa fa-pencil"></i>  Post</button>
+              <button type="button" class="w3-button w3-theme-d2"><i class="fa fa-pencil"></i>  Post</button>
             </div>
           </div>
         </div>
@@ -118,7 +198,7 @@
               <img src="nature.jpg" style="width:100%" alt="Nature" class="w3-margin-bottom">
           </div>
         </div>
-        <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom deletebutton">  Delete Post</button>
+        <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom deletebutton" onclick="document.getElementById('id01').style.display='block'">  Delete Post</button>
       </div>
 
       <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
@@ -127,7 +207,7 @@
         <h4>Sheng Earn</h4><br>
         <hr class="w3-clear">
         <p>Hello everyone, I need some money for my children to further thier degree study.</p>
-        <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom deletebutton">  Delete Post</button>
+        <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom deletebutton" onclick="document.getElementById('id01').style.display='block'">  Delete Post</button>
       </div>
 
       <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
@@ -138,9 +218,31 @@
         <p>Please...I'm really need your help</p>
         <img src="nature.jpg" style="width:100%" class="w3-margin-bottom">
         <p>Hello everyone, I need some money for my children to further thier degree study.</p>
-        <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom deletebutton">  Delete Post</button>
+        <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom deletebutton" onclick="document.getElementById('id01').style.display='block'">  Delete Post</button>
       </div>
+      <div id="id01" class="modal">
+        <form class="modal-content" action="/action_page.php">
+          <div class="container">
+            <h1>Post Deletion</h1>
+            <p>Are you sure you want to delete this post?</p>
+            <div class="clearfix">
+              <button type="button" class="confirmbtn">Confirm</button>
+              <button type="button" class="cancelbtn" onclick="document.getElementById('id01').style.display='none'">Cancel</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <script>
+      // Get the modal
+      var modal = document.getElementById('id01');
 
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+      </script>
     <!-- End Middle Column -->
     </div>
 
