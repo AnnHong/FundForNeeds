@@ -57,16 +57,13 @@ if(mysqli_num_rows($result) >0){
           float: right;
           padding-top: 0px;
         }
-
-
         </style>
 
         <div class="container">
           <p>Please enter your new password</p>
           <label for="password"><b>Password</b></label>
-        <input type="password" name="new_password" placeholder="Enter new password">
-
-        <button type="submit" >Change Password</button>
+        <input type="password" name="new_password" placeholder="Enter new password" style="border-radius:25px 25px;">
+        <button type="submit" style="border-radius:75px 25px;">Change Password</button>
       </div>
     </form>
     <?php

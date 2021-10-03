@@ -13,36 +13,31 @@
 <div class="w3-top">
  <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
   <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
-  <a href="Admin_Login.php" class="w3-bar-item w3-button w3-padding-large w3-theme-d4 w3-hover-white"><i class="fa fa-home w3-margin-right"></i> <b>Fund For Needs</b> </a>
-  <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="News"><i class="fa fa-globe"></i></a>
-  <a href="Admin_Login.php" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Account Settings"><i class="fa fa-user"></i></a>
-  <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Messages"><i class="fa fa-envelope"></i></a>
-  <div class="w3-dropdown-hover w3-hide-small">
-    <button class="w3-button w3-padding-large w3-hover-white" title="Notifications" onclick="window.location.href='Admin_Login.php';"><i class="fa fa-bell"></i><span class="w3-badge w3-right w3-small w3-green">3</span></button>
-  </div>
-    <a href="Admin_Login.php" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="Sign In" style="background-color: #04AA6D; color: white;">Sign In</a>
+  <a href="Admin_Login.php" class="w3-bar-item w3-button w3-padding-large w3-theme-d4 w3-hover-white" style="border-radius:15px 15px;"><i class="fa fa-home w3-margin-right"></i> <b>Fund For Needs</b> </a>
+    <a href="Admin_Login.php" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="Sign In" style="background-color: #04AA6D; color: white; border-radius:15px 15px;">Sign In</a>
  </div>
 </div>
 
-<form action="processAdmin.php" method="post" style="padding-top:100px;">
+<div style="margin-top:100px;">
+  <form action="processAdmin.php" method="post" style="width:50%;margin:auto;border-radius:25px 25px;">
 
-  <div class="container">
-    <label for="admin_email" ><b>Admin Email</b></label>
-    <input type="text" placeholder="Enter Admin Email" name="admin_email" required>
+    <div class="container" style="margin-top:25px;border-radius:25px 25px;">
+      <label for="admin_email" ><b>Admin Email</b></label>
+      <input type="text" placeholder="Enter Admin Email" name="admin_email" style="border-radius:25px 25px;" required>
 
-    <label for="password"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="password" required>
-    <br><br>
-    <button type="submit" class="signinbtn" name="login" style="margin: 8px 0; width:100%;">Login</button>
-  </div>
+      <label for="password"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="password" style="border-radius:25px 25px;" required>
+      <br><br>
+      <button type="submit" class="signinbtn" name="login" style="margin: 8px 0; width:49%;margin-left:5px;border-radius:75px 25px;">Sign In</button>
+      <button type="button" class="cancelbtn" style="width:49%;border-radius:75px 25px;">Cancel</button>
+    </div>
 
-  <div class="container" style="background-color:#f1f1f1">
-    <button type="button" class="cancelbtn">Cancel</button>
-    <span class="password">Forgot <a href="Admin_resetpassword.php">password?</a>&emsp;</span>
-    <span class="password">Create  <a href="admin_verifyemail.php">New Admin ID</a>&emsp;|&emsp;</span>
-
-  </div>
-</form>
+    <div >
+        <span class="password">Forgot <a href="Admin_resetpassword.php">password?</a>&emsp;</span>
+        <span class="password">Create  <a href="admin_verifyemail.php">New Admin ID</a>&emsp;|&emsp;</span>
+    </div>
+  </form>
+</div>
 <div style="position:absolute; width:100%; bottom: 0px;">
   <footer class="w3-container w3-theme-d2 w3-padding-16">
   <div style="text-align:center;">

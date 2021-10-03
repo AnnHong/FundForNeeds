@@ -13,29 +13,23 @@
 <div class="w3-top">
  <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
   <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
-  <a href="Admin_Login.php" class="w3-bar-item w3-button w3-padding-large w3-theme-d4 w3-hover-white"><i class="fa fa-home w3-margin-right"></i> <b>Fund For Needs</b> </a>
-  <a href="Admin_Login.php" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Donation History"><i class="fa fa-globe"></i></a>
-  <a href="Admin_Login.php" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="User List"><i class="fa fa-user"></i></a>
-  <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Messages"><i class="fa fa-envelope"></i></a>
-  <div class="w3-dropdown-hover w3-hide-small">
-    <button class="w3-button w3-padding-large w3-hover-white" title="Notifications"><i class="fa fa-bell"></i><span class="w3-badge w3-right w3-small w3-green">3</span></button>
-  </div>
-    <a href="Admin_Login.php" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="Sign In" style="background-color: #04AA6D; color: white;">Sign In</a>
+  <a href="Admin_Login.php" class="w3-bar-item w3-button w3-padding-large w3-theme-d4 w3-hover-white" style="border-radius:15px 15px;"><i class="fa fa-home w3-margin-right"></i> <b>Fund For Needs</b> </a>
+  <a href="Admin_Login.php" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="Sign In" style="background-color: #04AA6D; color: white;border-radius:25px 25px;">Sign In</a>
  </div>
 </div>
 <form action="processAdmin.php" method="POST" style="margin:100px 500px 25px 500px;">
   <div class="container">
     <label for="email"><b>Email</b></label>
-    <input type="text" placeholder="Enter Email" name="admin_email"  required>
+    <input type="text" placeholder="Enter Email" name="admin_email" style="border-radius: 25px 25px;" required>
 
     <label for="password"><b>Password</b></label>
-    <input type="password" placeholder="Enter password" name="password"  required>
+    <input type="password" placeholder="Enter password" name="password" style="border-radius: 25px 25px;" required>
 
     <label for="password"><b>Repeat Password</b></label>
-      <input type="password" placeholder="Enter repeat password" name="repeat_password"  required>
+      <input type="password" placeholder="Enter repeat password" name="repeat_password" style="border-radius: 25px 25px;" required>
     <div class="clearfix">
-      <button type="submit" class="verifybtn" name = "verify" style="margin: 8px 0;width: 100%;">Verify</button>
-      <button type="button" class="cancelbtn"  onclick="location.href = 'Admin_Login.php';" style="margin: 8px 0;width: 100%;">Cancel</button>
+      <button type="submit" class="verifybtn" name = "verify" style="margin: 8px 0;width: 100%;border-radius: 75px 25px;">Verify</button>
+      <button type="button" class="cancelbtn"  onclick="location.href = 'Admin_Login.php';" style="margin: 8px 0;width: 100%;border-radius: 75px 25px;">Cancel</button>
     </div>
   </div>
 </form>
