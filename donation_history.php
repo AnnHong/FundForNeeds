@@ -71,6 +71,7 @@ details > summary{
 </div>
 
 <div class="w3-container w3-content" style="max-width:1400px;margin-top:80px">
+  <h1 style="text-align:center;">Donation History</h1>
   <div class="w3-row">
     <div class="w3-col m7" style="margin-left: 20%;">
       <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
