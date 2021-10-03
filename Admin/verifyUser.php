@@ -14,7 +14,7 @@ if(isset($_POST['verifyUserButton'])){
 
       if($update){
         echo"<script>
-              alert('Your have verify the user successfully.');
+              alert('Your have verified the user successfully.');
               window.location.href='user_list.php';
               </script>";
 
