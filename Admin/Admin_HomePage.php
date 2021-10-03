@@ -33,6 +33,7 @@
     border: none;
     cursor: pointer;
     opacity: 0.9;
+    border-radius: 75px 25px;
   }
 
   /* Add a color to the delete button */
@@ -44,6 +45,7 @@
     border: none;
     cursor: pointer;
     opacity: 0.9;
+    border-radius: 75px 25px;
   }
 
   /* Add padding and center-align text to the container */
@@ -72,6 +74,7 @@
     border: 1px solid #888;
     width: 50%; /* Could be more or less, depending on screen size */
     box-shadow:0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19);
+    border-radius:25px 25px;
   }
 
   /* Style the horizontal ruler */
@@ -178,7 +181,7 @@
             <div class="w3-container w3-padding">
               <h6 class="w3-opacity">Admin Information Annoucement.</h6>
               <p contenteditable="true" class="w3-border w3-padding">Write some information...</p>
-              <button type="button" class="w3-button w3-theme-d2"><i class="fa fa-pencil"></i>  Post</button>
+              <button type="button" class="w3-button w3-theme-d2" onclick="document.getElementById('id02').style.display='block'"><i class="fa fa-pencil"></i>  Post</button>
             </div>
           </div>
         </div>
@@ -221,7 +224,7 @@
         <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom deletebutton" onclick="document.getElementById('id01').style.display='block'">  Delete Post</button>
       </div>
       <div id="id01" class="modal">
-        <form class="modal-content" action="/action_page.php">
+        <form class="modal-content" action="/action_page.php" style="border-radius: 25px 25px;">
           <div class="container">
             <h1>Post Deletion</h1>
             <p>Are you sure you want to delete this post?</p>
@@ -232,9 +235,32 @@
           </div>
         </form>
       </div>
+      <div id="id02" class="modal">
+        <form class="modal-content" action="/action_page.php" style="border-radius: 25px 25px;">
+          <div class="container">
+            <h1>Post Annoucement</h1>
+            <p>Are you sure you want to post this annoucement?</p>
+            <div class="clearfix">
+              <button type="button" class="confirmbtn">Confirm</button>
+              <button type="button" class="cancelbtn" onclick="document.getElementById('id02').style.display='none'">Cancel</button>
+            </div>
+          </div>
+        </form>
+      </div>
       <script>
       // Get the modal
       var modal = document.getElementById('id01');
+
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+      </script>
+      <script>
+      // Get the modal
+      var modal = document.getElementById('id02');
 
       // When the user clicks anywhere outside of the modal, close it
       window.onclick = function(event) {

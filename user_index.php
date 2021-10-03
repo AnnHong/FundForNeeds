@@ -31,6 +31,7 @@ button:hover {
   border: none;
   cursor: pointer;
   opacity: 0.9;
+  border-radius:75px 25px;
 }
 
 /* Add a color to the delete button */
@@ -42,6 +43,7 @@ button:hover {
   border: none;
   cursor: pointer;
   opacity: 0.9;
+  border-radius:75px 25px;
 }
 
 /* Add padding and center-align text to the container */
@@ -70,6 +72,7 @@ button:hover {
   border: 1px solid #888;
   width: 50%; /* Could be more or less, depending on screen size */
   box-shadow:0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19);
+  border-radius:25px 25px;
 }
 
 /* Style the horizontal ruler */
@@ -123,11 +126,9 @@ hr {
 </div>
 
 <!-- Navbar on small screens -->
-<div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium w3-large">
-  <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 1</a>
-  <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 2</a>
-  <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 3</a>
-  <a href="#" class="w3-bar-item w3-button w3-padding-large">My Profile</a>
+<div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium w3-large" style="border-radius:25px 25px;width:50%;margin-left:50%;">
+  <a href="user_profile.php" class="w3-bar-item w3-button w3-padding-large" style="margin-top:50px;border-radius:25px 25px;text-align:center;">My Profile</a>
+  <a href="index.php" class="w3-bar-item w3-button w3-padding-large" style="border-radius:25px 25px;text-align:center;">Sign Out</a>
 </div>
 
 <!-- Page Container -->
@@ -200,7 +201,7 @@ hr {
             <div class="w3-container w3-padding">
               <h6 class="w3-opacity">Make a post to collect donation</h6>
               <p contenteditable="true" class="w3-border w3-padding">Ask For Donation</p>
-              <button type="button" class="w3-button w3-theme-d2"><i class="fa fa-pencil"></i>  Post</button>
+              <button type="button" class="w3-button w3-theme-d2" onclick="document.getElementById('id02').style.display='block'"><i class="fa fa-pencil"></i>  Post</button>
             </div>
           </div>
         </div>
@@ -262,9 +263,35 @@ hr {
           </div>
         </form>
       </div>
+
+      <div id="id02" class="modal">
+        <form class="modal-content" action="/action_page.php">
+          <div class="container">
+            <h1>Post Confirmation</h1>
+            <p>Are you sure you want to ask for donation?</p>
+            <div class="clearfix">
+              <button type="button" class="confirmbtn">Confirm</button>
+              <button type="button" class="cancelbtn" onclick="document.getElementById('id02').style.display='none'">Cancel</button>
+            </div>
+          </div>
+        </form>
+      </div>
+
       <script>
       // Get the modal
       var modal = document.getElementById('id01');
+
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+      </script>
+
+      <script>
+      // Get the modal
+      var modal = document.getElementById('id02');
 
       // When the user clicks anywhere outside of the modal, close it
       window.onclick = function(event) {
