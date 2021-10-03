@@ -222,7 +222,7 @@ hr {
           </div>
         </div>
         <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom" onclick="document.getElementById('id01').style.display='block'" style="border-radius:25px 25px;"><i class="fa fa-thumbs-up" ></i>  Donate</button>
-        <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>  Comment</button>
+        <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom" style="border-radius:25px 25px;"><i class="fa fa-comment"></i>  Comment</button>
         <button type="button" class="w3-button w3-margin-bottom" style="background-color:red;color:white;border-radius:25px 25px;">Report</button>
       </div>
 
