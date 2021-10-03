@@ -8,9 +8,14 @@
     <link rel='stylesheet' href='index_font.css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta charset="utf-8">
-    <title>Admin Profile</title>
+    <title>My Profile</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+    body{
+        margin-top:25px;
+    }
+    </style>
 </head>
 <body>
   <div class="w3-top">
@@ -57,14 +62,14 @@
                     <h4 class="pt-sm-2 pb-1 mb-0 text-nowrap">YAP ZHI HAO</h4>
                     <p class="mb-0">@zhi__hao19</p>
                     <div class="mt-2">
-                      <button class="btn btn-primary " type="submit" style="background-color:#57707D; color: white;">
+                      <button class="btn btn-primary " type="submit" style="background-color:#ff7a7a; color: white;">
                         <i class="fa fa-fw fa-camera"></i>
                         <span>Change Photo</span>
                       </button>
                     </div>
                   </div>
                   <div class="text-center text-sm-right">
-                    <span class="badge badge-secondary">Front-end Programmer</span>
+                    <span class="badge badge-secondary" style="background-color:#ff7a7a; color: white;">Front-end Programmer</span>
                     <div class="text-muted"><small>Joined 07 June 2021</small></div>
                   </div>
                 </div>
@@ -94,14 +99,15 @@
                         <div class="row">
                           <div class="col">
                             <div class="form-group">
+                              <label>Current Password</label>
+                              <input class="form-control" type="password" placeholder="••••••••••••">
+                            </div>
+                          </div>
+                          <div class="col">
+                            <div class="form-group">
                               <label>Email</label>
                               <input class="form-control" type="text" placeholder="zhihao1919@gmail.com">
                             </div>
-                          </div>
-                        </div>
-                        <div class="row">
-                          <div class="col mb-3">
-
                           </div>
                         </div>
                       </div>
@@ -112,16 +118,8 @@
                         <div class="row">
                           <div class="col">
                             <div class="form-group">
-                              <label>Current Password</label>
-                              <input class="form-control" type="password" placeholder="••••••">
-                            </div>
-                          </div>
-                        </div>
-                        <div class="row">
-                          <div class="col">
-                            <div class="form-group">
                               <label>New Password</label>
-                              <input class="form-control" type="password" placeholder="••••••">
+                              <input class="form-control" type="password" placeholder="••••••••••••">
                             </div>
                           </div>
                         </div>
@@ -133,56 +131,18 @@
                           </div>
                         </div>
                       </div>
-                      <div class="col-12 col-sm-5 offset-sm-1 mb-3">
-                        <div></div>
-                        <div class="row">
-                          <div class="col">
-                            <div>
-                              <div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
                     </div>
-
-                    <div class="row">
-                      <button class="btn" type="submit" style="background-color:#57707D; color: white;">Change Password</button>
-                      <div class="col d-flex justify-content-end">
-
-                        <button class="btn" type="submit" style="background-color:#57707D; color: white;">Save Changes</button>
-                      </div>
+                    <div style="text-align:center;">
+                      <button class="btn" type="submit" style="background-color:#ff7a7a; color: white; margin-right:25px;">Change Password</button>
+                      <button class="btn" type="submit" style="background-color:#ff7a7a; color: white;">Save Changes</button>
                     </div>
                   </form>
-
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-
-      <div class="col-12 col-md-3 mb-3">
-        <div >
-          <div class="card-body">
-            <div class="px-xl-3">
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</div>
-</div>
-
-<style type="text/css">
-body{
-    margin-top:20px;
-    background:#f8f8f8
-}
-</style>
 <div>
   <footer class="w3-container w3-theme-d2 w3-padding-16">
   <div style="text-align:center;">

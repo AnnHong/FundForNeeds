@@ -51,8 +51,7 @@
     }
 
     body{
-        margin-top:20px;
-        background:#f8f8f8
+        margin-top:25px;
     }
     </style>
 </head>

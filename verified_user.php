@@ -22,15 +22,14 @@
 
     .icon{
       position: absolute;
-      top:108px;
+      top:123px;
       height: 15px;
       width:15px;
       border-radius: 50%;
     }
 
     body{
-        margin-top:20px;
-        background:#f8f8f8
+        margin-top:25px;
     }
     </style>
 </head>
@@ -77,6 +76,7 @@
                 <div class="col d-flex flex-column flex-sm-row justify-content-between mb-3">
                   <div class="text-center text-sm-left mb-2 mb-sm-0">
                       <h4 class="pt-sm-2 pb-1 mb-0 text-nowrap">YAP ZHI HAO</h4>
+                      <p class="mb-0">@zhi__hao19</p>
                     <div class="mt-2">
                       <button class="btn" type="file" style="background-color:#1EB37C; color: white;">
                         <i class="fa fa-fw fa-camera"></i>
@@ -84,8 +84,7 @@
                       </button>
                     </div>
 
-                    <br>
-                    <div>
+                    <div style="margin-top:15px;">
                       <label class="verified"><img src="check.png" alt="verified" class="icon">&emsp; Verified</label>
                     </div>
                   </div>
