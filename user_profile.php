@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="index_theme.css">
     <link rel='stylesheet' href='index_font.css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>User Profile</title>
+    <title>My Profile</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
@@ -44,11 +44,15 @@
     color: red;
     }
 
-    .close:hover,
-    .close:focus {
+    .close:hover, .close:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;
+    }
+
+    body{
+        margin-top:20px;
+        background:#f8f8f8
     }
     </style>
 </head>
@@ -169,27 +173,28 @@
                           <div class="col">
                             <div class="form-group">
                               <label>Full Name</label>
-                              <input class="form-control" type="text" name="name" placeholder="YAP ZHI HAO" value="YAP ZHI HAO">
+                              <input class="form-control" type="text" name="name" placeholder="YAP ZHI HAO" value="YAP ZHI HAO" disabled>
                             </div>
                           </div>
                           <div class="col">
                             <div class="form-group">
                               <label>Username</label>
-                              <input class="form-control" type="text" name="username" placeholder="zhi__hao19" value="zhi__hao19">
+                              <input class="form-control" type="text" name="username" placeholder="zhi__hao19" value="zhi__hao19" disabled>
                             </div>
                           </div>
                         </div>
                         <div class="row">
                           <div class="col">
                             <div class="form-group">
-                              <label>Email</label>
-                              <input class="form-control" type="text" placeholder="zhihao1919@gmail.com">
+                              <label>Current Password</label>
+                              <input class="form-control" type="password" placeholder="••••••••••••" disabled>
                             </div>
                           </div>
-                        </div>
-                        <div class="row">
-                          <div class="col mb-3">
-
+                          <div class="col">
+                            <div class="form-group">
+                              <label>Email</label>
+                              <input class="form-control" type="text" placeholder="zhihao1919@gmail.com" value="zhihao1919@gmail.com" disabled>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -200,16 +205,8 @@
                         <div class="row">
                           <div class="col">
                             <div class="form-group">
-                              <label>Current Password</label>
-                              <input class="form-control" type="password" placeholder="••••••">
-                            </div>
-                          </div>
-                        </div>
-                        <div class="row">
-                          <div class="col">
-                            <div class="form-group">
                               <label>New Password</label>
-                              <input class="form-control" type="password" placeholder="••••••">
+                              <input class="form-control" type="password" placeholder="••••••••••••" disabled>
                             </div>
                           </div>
                         </div>
@@ -217,44 +214,22 @@
                           <div class="col">
                             <div class="form-group">
                               <label>Confirm <span class="d-none d-xl-inline">Password</span></label>
-                              <input class="form-control" type="password" placeholder="••••••"></div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-12 col-sm-5 offset-sm-1 mb-3">
-                        <div></div>
-                        <div class="row">
-                          <div class="col">
-                            <div>
-                              <div>
-                              </div>
-                            </div>
+                              <input class="form-control" type="password" placeholder="••••••••••••" disabled></div>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <div class="row">
-                      <button class="btn " type="submit" style="background-color:#1EB37C; color: white;">Change Password</button>
-                      <div class="col d-flex justify-content-end">
-                        <button class="btn " type="submit" style="background-color:#1EB37C; color: white;">Save Changes</button>
-                      </div>
+                    <div style="text-align:center;">
+                      <button class="btn " type="submit" style="background-color:#1EB37C; color: white; margin-right:25px;">Change Password</button>
+                        <button class="btn " type="submit" style="background-color:#1EB37C; color: white;">Update Profile</button>
                     </div>
                   </form>
-
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-
-<style type="text/css">
-body{
-    margin-top:20px;
-    background:#f8f8f8
-}
-</style>
-
 <div>
   <footer class="w3-container w3-theme-d2 w3-padding-16">
   <div style="text-align:center;">
