@@ -61,7 +61,7 @@
                     <h4 class="pt-sm-2 pb-1 mb-0 text-nowrap">YAP ZHI HAO</h4>
                     <p class="mb-0">@zhi__hao19</p>
                     <div class="mt-2">
-                      <button class="btn btn-primary " type="submit" style="background-color:#ff7a7a; color: white;">
+                      <button class="btn" type="submit" style="background-color:#ff7a7a; color: white;">
                         <i class="fa fa-fw fa-camera"></i>
                         <span>Change Photo</span>
                       </button>
@@ -133,7 +133,7 @@
                     </div>
                     <div style="text-align:center;">
                       <button class="btn" type="submit" style="background-color:#ff7a7a; color: white; margin-right:25px;">Change Password</button>
-                      <button class="btn" type="submit" style="background-color:#ff7a7a; color: white;">Save Changes</button>
+                      <button class="btn" type="submit" style="background-color:#ff7a7a; color: white;">Update Profile</button>
                     </div>
                   </form>
                 </div>
