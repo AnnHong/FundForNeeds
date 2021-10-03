@@ -210,10 +210,21 @@
                             <div class="form-group">
                               <label>Current Password</label>
                               <?php
+                              echo '<script>
+                              function myFunction() {
 
+                                var x = document.getElementById("myInput");
+                                if (x.type === "password") {
+                                  x.type = "text";
+                                } else {
+                                  x.type = "password";
+                                }
+                              }
+                              </script>';
                               $qryUserList = getListOfUser();
                                 while($row = mysqli_fetch_assoc($qryUserList)){
-                                  echo '<input class="form-control" type="password"   value="' .$row['password']. '" disabled>' ;
+                                  echo '<input class="form-control" type="password"   value="' .$row['password']. '" id ="myInput" disabled>' ;
+                                  echo '<br><input type="checkbox" onclick="myFunction()"> Show Password<br>';
 
                                 }
                                   ?>
@@ -242,7 +253,7 @@
                           <div class="col">
                             <div class="form-group">
                               <label>New Password</label>
-                              <input class="form-control" type="password" placeholder="••••••••••••" disabled>
+                              <input class="form-control" type="password"  >
                             </div>
                           </div>
                         </div>
@@ -250,7 +261,7 @@
                           <div class="col">
                             <div class="form-group">
                               <label>Confirm <span class="d-none d-xl-inline">Password</span></label>
-                              <input class="form-control" type="password" placeholder="••••••••••••" disabled></div>
+                              <input class="form-control" type="password" ></div>
                           </div>
                         </div>
                       </div>
