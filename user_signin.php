@@ -22,8 +22,8 @@ input{
   <div class="w3-top">
    <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
     <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
-    <a href="index.php" class="w3-bar-item w3-button w3-padding-large w3-theme-d4 w3-hover-white" style="border-radius: 25px 25px;"><i class="fa fa-home w3-margin-right"></i> <b>Fund For Needs</b> </a>
-    <a href="user_signin.php" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="Sign In" style="background-color: #04AA6D; color: white;border-radius: 25px 25px;">Sign In</a>
+    <a href="index.php" class="w3-bar-item w3-button w3-padding-large w3-theme-d4 w3-hover-white" style="border-radius: 15px 15px;"><i class="fa fa-home w3-margin-right"></i> <b>Fund For Needs</b> </a>
+    <a href="user_signin.php" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="Sign In" style="background-color: #04AA6D; color: white;border-radius: 15px 15px;">Sign In</a>
    </div>
   </div>
 
@@ -43,7 +43,7 @@ input{
   </div>
 
   <div class="container" style="background-color:#f1f1f1">
-      <p>Don't have an account? <a href="user_signup.php">Register Now</a> <span class="password">Forgot <a href="user_reset_password.php">password?</a></span></p>
+      <p>Don't have an account? <a href="user_signup.php">Sign Up Now</a> <span class="password">Forgot <a href="user_reset_password.php">password?</a></span></p>
   </div>
 </form>
 <div style="position:absolute; width:100%; bottom: 0px;">

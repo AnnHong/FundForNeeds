@@ -12,31 +12,24 @@
 <body>
 <div class="w3-top">
  <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
-  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
-  <a href="index.php" class="w3-bar-item w3-button w3-padding-large w3-theme-d4 w3-hover-white"><i class="fa fa-home w3-margin-right"></i> <b>Fund For Needs</b> </a>
-  <a href="user_signin.php" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Donation History"><i class="fa fa-globe"></i></a>
-  <a href="user_signin.php" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Messages"><i class="fa fa-envelope"></i></a>
-
-  <div class="w3-dropdown-hover w3-hide-small">
-    <button class="w3-button w3-padding-large w3-hover-white" title="Notifications" onclick="location.href = 'user_signin.php';"><i class="fa fa-bell"></i><span class="w3-badge w3-right w3-small w3-green">3</span></button>
-  </div>
-
-  <a href="user_signin.php" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="Sign In" style="background-color: #04AA6D; color: white;">Sign In</a>
+  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()" style="border-radius:15px 15px;"><i class="fa fa-bars"></i></a>
+  <a href="index.php" class="w3-bar-item w3-button w3-padding-large w3-theme-d4 w3-hover-white" style="border-radius:15px 15px;"><i class="fa fa-home w3-margin-right"></i> <b>Fund For Needs</b> </a>
+  <a href="user_signin.php" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="Sign In" style="background-color: #04AA6D; color: white;border-radius:15px 15px;">Sign In</a>
  </div>
 </div>
 <form action="resetpassword_Function.php" method="POST" style="margin:100px 500px 75px 500px;">
   <div class="container">
     <label for="email"><b>Email</b></label>
-    <input type="text" placeholder="Enter Email" name="email"  required>
+    <input type="text" placeholder="Enter Email" name="email" required style="border-radius:50px 50px;">
 <br><br>
     <div class="clearfix">
-      <button type="submit" class="resetbtn" name = "resetbtn">Reset Password</button>
-      <button type="button" class="cancelbtn" onclick="location.href = 'user_signin.php';">Cancel</button>
+      <button type="submit" class="resetbtn" name = "resetbtn" style="border-radius:75px 25px;">Reset Password</button>
+      <button type="button" class="cancelbtn" onclick="location.href = 'user_signin.php';" style="border-radius:75px 25px;">Cancel</button>
     </div>
     <br><br>
   </div>
 
-  <div class="container signin">
+  <div class="container signin" style="border-radius:15px 15px;">
     <p>Already have an account? <a href="user_signin.php">Sign in</a>.</p>
   </div>
 </form>

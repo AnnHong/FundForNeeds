@@ -13,13 +13,13 @@
   <div class="w3-top">
    <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
     <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
-    <a href="index.php" class="w3-bar-item w3-button w3-padding-large w3-theme-d4 w3-hover-white"><i class="fa fa-home w3-margin-right"></i> <b>Fund For Needs</b> </a>
-    <a href="user_signin.php" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Donation History"><i class="fa fa-globe"></i></a>
-    <a href="user_signin.php" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Messages"><i class="fa fa-envelope"></i></a>
+    <a href="index.php" class="w3-bar-item w3-button w3-padding-large w3-theme-d4 w3-hover-white" style="border-radius:15px 15px;"><i class="fa fa-home w3-margin-right"></i> <b>Fund For Needs</b> </a>
+    <a href="user_signin.php" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Donation History" style="border-radius:15px 15px;"><i class="fa fa-globe"></i></a>
+    <a href="user_signin.php" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Messages" style="border-radius:15px 15px;"><i class="fa fa-envelope"></i></a>
     <div class="w3-dropdown-hover w3-hide-small">
-      <button class="w3-button w3-padding-large w3-hover-white" title="Notifications" onclick="window.location.href='user_signin.php';"><i class="fa fa-bell"></i><span class="w3-badge w3-right w3-small w3-green">3</span></button>
+      <button class="w3-button w3-padding-large w3-hover-white" title="Notifications" onclick="window.location.href='user_signin.php';" style="border-radius:15px 15px;"><i class="fa fa-bell"></i><span class="w3-badge w3-right w3-small w3-green">3</span></button>
     </div>
-    <a href="user_signin.php" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="Sign In" style="background-color: #04AA6D; color: white;">Sign In</a>
+    <a href="user_signin.php" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="Sign In" style="background-color: #04AA6D; color: white;border-radius:15px 15px;">Sign In</a>
    </div>
   </div>
 <br><br>
@@ -30,23 +30,23 @@
   </div>
   <div class="row">
     <div class="column">
-      <img src="contact_us.jpg" style="width:100%">
+      <img src="contact_us.jpg" style="width:100%;border-radius:25px 25px;">
     </div>
     <div class="column">
       <form action="/action_page.php">
         <label for="fname">Full Name</label>
-        <input type="text" id="fname" name="fullname" placeholder="Your full name..">
+        <input type="text" id="fname" name="fullname" placeholder="Your full name.." style="border-radius:25px 25px;">
         <label for="email">Email</label>
-        <input type="text" id="email" name="email" placeholder="Your email..">
+        <input type="text" id="email" name="email" placeholder="Your email.." style="border-radius:25px 25px;">
         <label for="problem">Issue Type</label>
-        <select id="problem" name="problem">
+        <select id="problem" name="problem" style="border-radius:25px 25px;">
           <option value="account">Account Issue</option>
           <option value="technical">Technical Issue</option>
           <option value="others">Others</option>
         </select>
         <label for="description">Description</label>
-        <textarea id="description" name="description" placeholder="Describe your issue.." style="height:170px"></textarea>
-        <input type="submit" value="Submit">
+        <textarea id="description" name="description" placeholder="Describe your issue.." style="height:170px;border-radius:15px 15px;"></textarea>
+        <input type="submit" value="Submit" style="border-radius:75px 25px;margin-left:45%;">
       </form>
     </div>
   </div>
