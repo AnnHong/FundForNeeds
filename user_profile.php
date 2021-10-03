@@ -98,8 +98,9 @@
                 <div class="col d-flex flex-column flex-sm-row justify-content-between mb-3">
                   <div class="text-center text-sm-left mb-2 mb-sm-0">
                     <h4 class="pt-sm-2 pb-1 mb-0 text-nowrap">YAP ZHI HAO</h4>
+                    <p class="mb-0">@zhi__hao19</p>
                     <div class="mt-2">
-                      <button class="btn" type="submit" style="background-color:#1EB37C; color: white;">
+                      <button class="btn" type="submit" style="background-color:#80daeb; color: white;">
                         <i class="fa fa-fw fa-camera"></i>
                         <span>Change Photo</span>
                       </button>
@@ -109,7 +110,7 @@
 
                       <div>
                         <!-- Trigger/Open The Modal -->
-                        <button id="myBtn" class="btn" style="background-color:#1EB37C; color: white;margin:15px 0 0 0;">Verify</button>
+                        <button id="myBtn" class="btn" style="background-color:#80daeb; color: white;">Verify</button>
 
                         <!-- The Modal -->
                         <div id="myModal" class="modal">
@@ -219,8 +220,8 @@
                       </div>
                     </div>
                     <div style="text-align:center;">
-                      <button class="btn " type="submit" style="background-color:#1EB37C; color: white; margin-right:25px;">Change Password</button>
-                        <button class="btn " type="submit" style="background-color:#1EB37C; color: white;">Update Profile</button>
+                      <button class="btn " type="submit" style="background-color:#80daeb; color: white; margin-right:25px;">Change Password</button>
+                        <button class="btn " type="submit" style="background-color:#80daeb; color: white;">Update Profile</button>
                     </div>
                   </form>
                 </div>

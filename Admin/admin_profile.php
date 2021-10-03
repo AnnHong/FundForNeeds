@@ -86,13 +86,13 @@
                           <div class="col">
                             <div class="form-group">
                               <label>Full Name</label>
-                              <input class="form-control" type="text" name="name" placeholder="YAP ZHI HAO" value="YAP ZHI HAO">
+                              <input class="form-control" type="text" name="name" placeholder="YAP ZHI HAO" value="YAP ZHI HAO" disabled>
                             </div>
                           </div>
                           <div class="col">
                             <div class="form-group">
                               <label>Username</label>
-                              <input class="form-control" type="text" name="username" placeholder="zhi__hao19" value="zhi__hao19">
+                              <input class="form-control" type="text" name="username" placeholder="zhi__hao19" value="zhi__hao19" disabled>
                             </div>
                           </div>
                         </div>
@@ -100,13 +100,13 @@
                           <div class="col">
                             <div class="form-group">
                               <label>Current Password</label>
-                              <input class="form-control" type="password" placeholder="••••••••••••">
+                              <input class="form-control" type="password" placeholder="••••••••••••" disabled>
                             </div>
                           </div>
                           <div class="col">
                             <div class="form-group">
                               <label>Email</label>
-                              <input class="form-control" type="text" placeholder="zhihao1919@gmail.com">
+                              <input class="form-control" type="text" placeholder="zhihao1919@gmail.com" value="zhihao1919@gmail.com" disabled>
                             </div>
                           </div>
                         </div>
@@ -119,7 +119,7 @@
                           <div class="col">
                             <div class="form-group">
                               <label>New Password</label>
-                              <input class="form-control" type="password" placeholder="••••••••••••">
+                              <input class="form-control" type="password" placeholder="••••••••••••" disabled>
                             </div>
                           </div>
                         </div>
@@ -127,7 +127,7 @@
                           <div class="col">
                             <div class="form-group">
                               <label>Confirm <span class="d-none d-xl-inline">Password</span></label>
-                              <input class="form-control" type="password" placeholder="••••••••••••"></div>
+                              <input class="form-control" type="password" placeholder="••••••••••••" disabled></div>
                           </div>
                         </div>
                       </div>
