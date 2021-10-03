@@ -60,12 +60,16 @@
 
       var x = document.getElementById("newpassword");
       var y = document.getElementById("confirmpassword");
+      var z = document.getElementById("myInput");
+
       if (x.type === "password") {
         x.type = "text";
         y.type = "text";
+        z.type = "text";
       } else {
         x.type = "password";
         y.type = "password";
+        z.type = "password";
       }
     }
 
@@ -200,7 +204,7 @@
 
                               $qryUserList = getListOfUser();
                                 while($row = mysqli_fetch_assoc($qryUserList)){
-                                  echo '<input class="form-control" type="text"   value="' .$row['fullname']. '" disabled>' ;
+                                  echo '<input class="form-control" type="text"   value="'.$row['fullname'].'" disabled>' ;
 
                                 }
                                   ?>
@@ -213,7 +217,7 @@
 
                               $qryUserList = getListOfUser();
                                 while($row = mysqli_fetch_assoc($qryUserList)){
-                                  echo '<input class="form-control" type="text"   value=" ' .$row['usernames']. '" disabled>' ;
+                                  echo '<input class="form-control" type="text"   value="'.$row['usernames'].'" disabled>' ;
 
                                 }
                                   ?>
@@ -225,21 +229,9 @@
                             <div class="form-group">
                               <label>Current Password</label>
                               <?php
-                              echo '<script>
-                              function myFunction() {
-
-                                var x = document.getElementById("myInput");
-                                if (x.type === "password") {
-                                  x.type = "text";
-                                } else {
-                                  x.type = "password";
-                                }
-                              }
-                              </script>';
                               $qryUserList = getListOfUser();
                                 while($row = mysqli_fetch_assoc($qryUserList)){
-                                  echo '<input class="form-control" type="password"   value="' .$row['password']. '" id ="myInput" disabled>' ;
-                                  echo '<br><input type="checkbox" onclick="myFunction()"> Show Password<br>';
+                                  echo '<input class="form-control" type="password"   value="'.$row['password'].'" id ="myInput" disabled>' ;
 
                                 }
                                   ?>
@@ -252,7 +244,7 @@
 
                               $qryUserList = getListOfUser();
                                 while($row = mysqli_fetch_assoc($qryUserList)){
-                                  echo '<input class="form-control" type="text"   value="' .$row['email']. '" disabled>' ;
+                                  echo '<input class="form-control" type="text"   value="'.$row['email'].'" disabled>' ;
 
                                 }
                                   ?>
@@ -268,7 +260,7 @@
                           <div class="col">
                             <div class="form-group">
                               <label>New Password</label>
-                              <input class="form-control" type="password" name="newpassword" id="newpassword">
+                              <input class="form-control" type="password" name="newpassword" id="newpassword" minlength="8" maxlength="16">
 
                             </div>
                           </div>
@@ -277,15 +269,17 @@
                           <div class="col">
                             <div class="form-group">
                               <label>Confirm <span class="d-none d-xl-inline">Password</span></label>
-                              <input class="form-control" type="password" name="confirmpassword" id="confirmpassword"></div>
+                              <input class="form-control" type="password" name="confirmpassword" id="confirmpassword" minlength="8" maxlength="16"></div>
                               <input type="checkbox" onclick="newFunction()"> Show Password<br>
                           </div>
                         </div>
                       </div>
                     </div>
                     <div style="text-align:center;">
+                      <form action= ".php" method="POST">
                       <button class="btn " type="submit" style="background-color:#80daeb; color: white; margin-right:25px;" name="ChangePassBtn">Change Password</button>
                         <button class="btn " type="submit" style="background-color:#80daeb; color: white;">Update Profile</button>
+                      </form>
                     </div>
                   </form>
                 </div>
