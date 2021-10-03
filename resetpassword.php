@@ -12,6 +12,7 @@ if(mysqli_num_rows($result) >0){
 
   if($user->reset_token == $reset_token){
     ?>
+    <title>Reset Password</title>
     <h2>Fund For Needs</h2>
     <form method="POST" action="new-password.php" style="margin:100px 500px 75px 500px;">
 <meta name="viewport" content="width=device-width, initial-scale=1">
