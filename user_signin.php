@@ -7,7 +7,7 @@
 <link rel='stylesheet' href='index_font.css'>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="user_signin.css">
-<title>User Sign In</title>
+<title>Sign In</title>
 
 </head>
 <body>

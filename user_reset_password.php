@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="index_theme.css">
 <link rel='stylesheet' href='index_font.css'>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<title>User Reset Password</title>
+<title>Reset Password</title>
 </head>
 <body>
 <div class="w3-top">
