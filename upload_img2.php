@@ -10,7 +10,7 @@ if(isset($_POST['upload_button'])){
     $file = rand(1000,100000)."-".$_FILES['file_name']['name'];
     $file_loc = $_FILES['file_name']['tmp_name'];
 
-    $folder="uploads/";
+    $folder="C:\xampp\htdocs\uploads";
 
     /* make file name in lower case */
     $new_file_name = strtolower($file);

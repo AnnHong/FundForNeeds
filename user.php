@@ -19,7 +19,7 @@ function Addnewuser()
 		$sql = "insert into users(email,password,token,usernames,fullname)
 						   values('$email','$password','$token','$usernames','$fullname')";
 
-	    echo $sql;
+	    //echo $sql;
 		//3.run insert query
 		if(!mysqli_query($con,$sql))
 		{

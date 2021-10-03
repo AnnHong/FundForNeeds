@@ -1,4 +1,23 @@
+<?php
+session_start();
+$email = $_SESSION['email'];
 
+function getUserInformation($email){
+$con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
+	if(!$con)
+		{
+		echo mysqli_error();
+		}
+	else
+	{
+		//echo 'connected';
+		$sql='select * from users where email = "'.$email.'"';
+		$qry=mysqli_query($con,$sql);
+		return $qry;
+	}
+}
+
+ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -118,12 +137,13 @@
                 <div class="col d-flex flex-column flex-sm-row justify-content-between mb-3">
                   <div class="text-center text-sm-left mb-2 mb-sm-0">
                     <?php
-                    include 'Admin/user_list_function.php';
-                    $qryUserList = getListOfUser();
-                      while($row = mysqli_fetch_assoc($qryUserList)){
-                        echo '<h4 class="pt-sm-2 pb-1 mb-0 text-nowrap">' .$row['fullname']. '</h4>' ;
-                        echo '<p class="mb-0">@'.$row['usernames']. '</p>';
-                      }
+
+                  //  $email = $_SESSION['email'];
+                    $qryUserData = getUserInformation($_SESSION['email']);
+                    $userRecord = mysqli_fetch_assoc($qryUserData);
+                        echo '<h4 class="pt-sm-2 pb-1 mb-0 text-nowrap">' .$userRecord['fullname']. '</h4>' ;
+                        echo '<p class="mb-0">@'.$userRecord['usernames']. '</p>';
+
                         ?>
 
                     <div class="mt-2">
@@ -202,11 +222,10 @@
                               <label>Full Name</label>
                               <?php
 
-                              $qryUserList = getListOfUser();
-                                while($row = mysqli_fetch_assoc($qryUserList)){
-                                  echo '<input class="form-control" type="text"   value="'.$row['fullname'].'" disabled>' ;
 
-                                }
+                                  echo '<input class="form-control" type="text"   value="'.$userRecord['fullname'].'" disabled>' ;
+
+
                                   ?>
                             </div>
                           </div>
@@ -214,12 +233,7 @@
                             <div class="form-group">
                               <label>Username</label>
                               <?php
-
-                              $qryUserList = getListOfUser();
-                                while($row = mysqli_fetch_assoc($qryUserList)){
-                                  echo '<input class="form-control" type="text"   value="'.$row['usernames'].'" disabled>' ;
-
-                                }
+                                  echo '<input class="form-control" type="text"   value="'.$userRecord['usernames'].'" disabled>' ;
                                   ?>
                             </div>
                           </div>
@@ -229,12 +243,8 @@
                             <div class="form-group">
                               <label>Current Password</label>
                               <?php
-                              $qryUserList = getListOfUser();
-                                while($row = mysqli_fetch_assoc($qryUserList)){
-                                  echo '<input class="form-control" type="password"   value="'.$row['password'].'" id ="myInput" disabled>' ;
-
-                                }
-                                  ?>
+                                  echo '<input class="form-control" type="password"   value="'.$userRecord['password'].'" id ="myInput" disabled>' ;
+                              ?>
                             </div>
                           </div>
                           <div class="col">
@@ -242,12 +252,8 @@
                               <label>Email</label>
                               <?php
 
-                              $qryUserList = getListOfUser();
-                                while($row = mysqli_fetch_assoc($qryUserList)){
-                                  echo '<input class="form-control" type="text"   value="'.$row['email'].'" disabled>' ;
-
-                                }
-                                  ?>
+                                  echo '<input class="form-control" type="text"   value="'.$userRecord['email'].'" disabled>' ;
+                              ?>
                             </div>
                           </div>
                         </div>
@@ -276,7 +282,7 @@
                       </div>
                     </div>
                     <div style="text-align:center;">
-                      <form action= ".php" method="POST">
+                      <form action= "update_function.php" method="POST">
                       <button class="btn " type="submit" style="background-color:#80daeb; color: white; margin-right:25px;" name="ChangePassBtn">Change Password</button>
                         <button class="btn " type="submit" style="background-color:#80daeb; color: white;">Update Profile</button>
                       </form>
