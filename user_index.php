@@ -201,7 +201,7 @@ hr {
             <div class="w3-container w3-padding">
               <h6 class="w3-opacity">Make a post to collect donation</h6>
               <p contenteditable="true" class="w3-border w3-padding">Ask For Donation</p>
-              <button type="button" class="w3-button w3-theme-d2" onclick="document.getElementById('id02').style.display='block'"><i class="fa fa-pencil"></i>  Post</button>
+              <button type="button" class="w3-button w3-theme-d2" onclick="document.getElementById('id02').style.display='block'" style="border-radius:25px 25px;"><i class="fa fa-pencil" st></i>  Post</button>
             </div>
           </div>
         </div>
@@ -221,9 +221,9 @@ hr {
               <img src="nature.jpg" style="width:100%" alt="Nature" class="w3-margin-bottom">
           </div>
         </div>
-        <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom" onclick="document.getElementById('id01').style.display='block'"><i class="fa fa-thumbs-up" ></i>  Donate</button>
+        <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom" onclick="document.getElementById('id01').style.display='block'" style="border-radius:25px 25px;"><i class="fa fa-thumbs-up" ></i>  Donate</button>
         <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>  Comment</button>
-        <button type="button" class="w3-button w3-margin-bottom" style="background-color:red;color:white;">Report</button>
+        <button type="button" class="w3-button w3-margin-bottom" style="background-color:red;color:white;border-radius:25px 25px;">Report</button>
       </div>
 
       <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
@@ -232,9 +232,9 @@ hr {
         <h4>Sheng Earn</h4><br>
         <hr class="w3-clear">
         <p>Hello everyone, I need some money for my children to further thier degree study.</p>
-        <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom" onclick="document.getElementById('id01').style.display='block'"><i class="fa fa-thumbs-up"></i>  Donate</button>
-        <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>  Comment</button>
-        <button type="button" class="w3-button w3-margin-bottom" style="background-color:red;color:white;">Report</button>
+        <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom" onclick="document.getElementById('id01').style.display='block'" style="border-radius:25px 25px;"><i class="fa fa-thumbs-up"></i>  Donate</button>
+        <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom" style="border-radius:25px 25px;"><i class="fa fa-comment"></i>  Comment</button>
+        <button type="button" class="w3-button w3-margin-bottom" style="background-color:red;color:white;border-radius:25px 25px;">Report</button>
       </div>
 
       <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
@@ -245,10 +245,10 @@ hr {
         <p>Please...I'm really need your help</p>
         <img src="snow.jpg" style="width:100%" class="w3-margin-bottom">
         <p>Hello everyone, I need some money for my children to further thier degree study.</p>
-        <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom" onclick="document.getElementById('id01').style.display='block'"><i class="fa fa-thumbs-up"></i>  Donate</button>
+        <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom" onclick="document.getElementById('id01').style.display='block'" style="border-radius:25px 25px;"><i class="fa fa-thumbs-up"></i>  Donate</button>
 
-        <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>  Comment</button>
-        <button type="button" class="w3-button w3-margin-bottom" style="background-color:red;color:white;">Report</button>
+        <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom" style="border-radius:25px 25px;"><i class="fa fa-comment"></i>  Comment</button>
+        <button type="button" class="w3-button w3-margin-bottom" style="background-color:red;color:white;border-radius:25px 25px;">Report</button>
       </div>
 
       <div id="id01" class="modal">
