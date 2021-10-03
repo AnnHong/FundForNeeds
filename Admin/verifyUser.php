@@ -10,7 +10,7 @@ if(isset($_POST['verifyUserButton'])){
     $match = mysqli_num_rows($search);
     if($match == 1){
 
-      $update = $con->query("UPDATE users SET user_verify = 1 WHERE email ='$email'");
+      $update = $con->query("UPDATE users SET user_verify = 'Verified' WHERE email ='$email'");
 
       if($update){
         echo"<script>
