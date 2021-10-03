@@ -39,11 +39,24 @@
     <input type="text" placeholder="Enter Email" name="email" required>
 
     <label for="password"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="password" required>
-
+    <input id="pass" type="password" placeholder="Enter Password" name="password" minlength="8" maxlength="16" required>
     <label for="password-repeat"><b>Repeat Password</b></label>
-    <input type="password" placeholder="Repeat Password" name="password_repeat" required>
-
+    <input id="rpass" type="password" placeholder="Repeat Password" name="password_repeat" minlength="8" maxlength="16" required>
+    <input type="checkbox" onclick="showpass()" style="margin-bottom:10px;"> Show Password
+    <script>
+    function showpass() {
+      var x = document.getElementById("pass");
+      var y=document.getElementById("rpass");
+      if (x.type === "password") {
+        x.type = "text";
+        y.type = "text";
+      } else {
+        x.type = "password";
+        y.type = "password";
+        }
+      }
+    </script>
+    <br>
     <input type="checkbox" name=check required>
     <label for="check">  By creating an account you agree to our <a href="tnc.html">Terms & Conditions</a>.</label>
     <br>

@@ -34,7 +34,18 @@ input{
     <input type="text" placeholder="Enter Email" name="email" required>
 
     <label for="password"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="password" required>
+    <input id="pass" type="password" placeholder="Enter Password" name="password" required>
+    <input type="checkbox" onclick="showpass()" style="margin-bottom:10px;"> Show Password
+    <script>
+    function showpass() {
+      var x = document.getElementById("pass");
+      if (x.type === "password") {
+        x.type = "text";
+      } else {
+        x.type = "password";
+        }
+      }
+    </script>
 
     <div class="clearfix">
       <button type="submit" class="signinbtn" name="signinbtn" style="margin-bottom:10px;">Sign In</button>
