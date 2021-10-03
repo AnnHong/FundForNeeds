@@ -120,7 +120,7 @@ details > summary{
       </div>
 
       <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
-        <p>You have donated RM5.00 to @zhaolin_lau</p>
+        <p>You have failed to donate RM5.00 to @zhaolin_lau</p>
       <details id="details">
         <summary>Show Details</summary>
           <table style="width:50%;">
@@ -165,7 +165,7 @@ details > summary{
       </div>
 
       <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
-        <p>You have donated RM5.00 to @zhaolin_lau</p>
+        <p>You have collected RM8.00 from @zhaolin_lau</p>
       <details id="details">
         <summary>Show Details</summary>
           <table style="width:50%;">
@@ -190,7 +190,7 @@ details > summary{
             </tr>
             <tr>
               <td>Amount</td>
-              <td>:&emsp;<b>RM5.00</b></td>
+              <td>:&emsp;<b>RM8.00</b></td>
             </tr>
             <tr>
               <td>Beneficiary Name</td>
@@ -210,7 +210,7 @@ details > summary{
       </div>
 
       <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
-        <p>You have donated RM5.00 to @zhaolin_lau</p>
+        <p>You have failed to collect RM8.00 from @zhaolin_lau</p>
       <details id="details">
         <summary>Show Details</summary>
           <table style="width:50%;">
@@ -223,7 +223,7 @@ details > summary{
             </tr>
             <tr>
               <td>Status</td>
-              <td>:&emsp;<b class="success">Successful</b></td>
+              <td>:&emsp;<b class="fail">Failed</b></td>
             </tr>
             <tr>
               <td>Reference Number</td>
@@ -235,7 +235,7 @@ details > summary{
             </tr>
             <tr>
               <td>Amount</td>
-              <td>:&emsp;<b>RM5.00</b></td>
+              <td>:&emsp;<b>RM8.00</b></td>
             </tr>
             <tr>
               <td>Beneficiary Name</td>
@@ -255,7 +255,7 @@ details > summary{
       </div>
 
       <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
-        <p>You have donated RM5.00 to @zhaolin_lau</p>
+        <p>You have donated RM12.00 to @zhaolin_lau</p>
       <details id="details">
         <summary>Show Details</summary>
           <table style="width:50%;">
@@ -280,7 +280,7 @@ details > summary{
             </tr>
             <tr>
               <td>Amount</td>
-              <td>:&emsp;<b>RM5.00</b></td>
+              <td>:&emsp;<b>RM12.00</b></td>
             </tr>
             <tr>
               <td>Beneficiary Name</td>
