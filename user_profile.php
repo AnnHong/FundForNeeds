@@ -55,6 +55,21 @@
         margin-top:25px;
     }
     </style>
+    <script>
+    function newFunction() {
+
+      var x = document.getElementById("newpassword");
+      var y = document.getElementById("confirmpassword");
+      if (x.type === "password") {
+        x.type = "text";
+        y.type = "text";
+      } else {
+        x.type = "password";
+        y.type = "password";
+      }
+    }
+
+    </script>
 </head>
 <body>
   <div class="w3-top">
@@ -103,7 +118,7 @@
                     $qryUserList = getListOfUser();
                       while($row = mysqli_fetch_assoc($qryUserList)){
                         echo '<h4 class="pt-sm-2 pb-1 mb-0 text-nowrap">' .$row['fullname']. '</h4>' ;
-                        echo '<p class="mb-0">'.$row['usernames']. '</p>';
+                        echo '<p class="mb-0">@ '.$row['usernames']. '</p>';
                       }
                         ?>
 
@@ -198,7 +213,7 @@
 
                               $qryUserList = getListOfUser();
                                 while($row = mysqli_fetch_assoc($qryUserList)){
-                                  echo '<input class="form-control" type="text"   value="' .$row['usernames']. '" disabled>' ;
+                                  echo '<input class="form-control" type="text"   value=" ' .$row['usernames']. '" disabled>' ;
 
                                 }
                                   ?>
@@ -253,7 +268,8 @@
                           <div class="col">
                             <div class="form-group">
                               <label>New Password</label>
-                              <input class="form-control" type="password"  >
+                              <input class="form-control" type="password" name="newpassword" id="newpassword">
+
                             </div>
                           </div>
                         </div>
@@ -261,13 +277,14 @@
                           <div class="col">
                             <div class="form-group">
                               <label>Confirm <span class="d-none d-xl-inline">Password</span></label>
-                              <input class="form-control" type="password" ></div>
+                              <input class="form-control" type="password" name="confirmpassword" id="confirmpassword"></div>
+                              <input type="checkbox" onclick="newFunction()"> Show Password<br>
                           </div>
                         </div>
                       </div>
                     </div>
                     <div style="text-align:center;">
-                      <button class="btn " type="submit" style="background-color:#80daeb; color: white; margin-right:25px;">Change Password</button>
+                      <button class="btn " type="submit" style="background-color:#80daeb; color: white; margin-right:25px;" name="ChangePassBtn">Change Password</button>
                         <button class="btn " type="submit" style="background-color:#80daeb; color: white;">Update Profile</button>
                     </div>
                   </form>
