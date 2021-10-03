@@ -113,12 +113,11 @@ hr {
     </div>
   </div>
 
-<div class="w3-dropdown-hover w3-button w3-hide-small w3-right w3-padding-large w3-hover-white">
+<div class="w3-dropdown-hover w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" style="border-radius:25px 25px;">
     <img src="avatar2.png" class="w3-circle" style="height:23px;width:23px" alt="Avatar">
-
-    <div class="w3-dropdown-content w3-card-4 w3-bar-block w3-hover-white" style="width:150px;right:0px;">
-      <a href="user_profile.php" class="w3-bar-item w3-button">My Profile</a>
-      <a href="index.php" class="w3-bar-item w3-button">Sign Out</a>
+    <div class="w3-dropdown-content w3-card-4 w3-bar-block w3-hover-white" style="width:150px;right:0px;border-radius:25px;">
+      <a href="user_profile.php" class="w3-bar-item w3-button" style="border-radius:25px 25px;text-align:center;">My Profile</a>
+      <a href="index.php" class="w3-bar-item w3-button" style="border-radius:25px 25px;text-align:center;">Sign Out</a>
     </div>
   </div>
  </div>
@@ -333,9 +332,9 @@ function openNav() {
 <div>
   <footer class="w3-container w3-theme-d2 w3-padding-16">
   <div style="text-align:center;">
-    <a href="user_tnc.php" style="color:white;text-shadow: 2px 2px 4px #000000;">Terms and Conditions</a>&emsp;
-    <a href="user_contactus.php" style="color:white;text-shadow: 2px 2px 4px #000000;">Contact Us</a>&emsp;
-    <a href="user_aboutus.php" style="color:white;text-shadow: 2px 2px 4px #000000;">About Us</a>&emsp;
+    <a href="user_tnc.php" style="color:white;text-shadow: 2px 2px 20px #000000;">Terms and Conditions</a>&emsp;
+    <a href="user_contactus.php" style="color:white;text-shadow: 2px 2px 20px #000000;">Contact Us</a>&emsp;
+    <a href="user_aboutus.php" style="color:white;text-shadow: 2px 2px 20px #000000;">About Us</a>&emsp;
   </div>
   </footer>
 

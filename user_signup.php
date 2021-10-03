@@ -8,6 +8,15 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="user_signup.css">
 <title>Sign Up</title>
+<style media="screen">
+  button{
+    border-radius: 75px 25px;
+  }
+
+  input{
+    border-radius:50px 50px;
+  }
+</style>
 </head>
 <body>
 <div class="w3-top">
@@ -51,16 +60,16 @@
     </div>
   </div>
 
-  <div class="container signin">
+  <div class="container signin" style="border-radius:15px 15px;">
     <p>Already have an account? <a href="user_signin.php">Sign in</a>.</p>
   </div>
 </form>
 <div style="bottom:0px;">
   <footer class="w3-container w3-theme-d2 w3-padding-16">
   <div style="text-align:center;">
-    <a href="tnc.html" style="color:white;text-shadow: 2px 2px 4px #000000;">Terms and Conditions</a>&emsp;
-    <a href="contact_us.html" style="color:white;text-shadow: 2px 2px 4px #000000;">Contact Us</a>&emsp;
-    <a href="about_us.html" style="color:white;text-shadow: 2px 2px 4px #000000;">About Us</a>&emsp;
+    <a href="tnc.html" style="color:white;text-shadow: 2px 2px 20px #000000;">Terms and Conditions</a>&emsp;
+    <a href="contact_us.html" style="color:white;text-shadow: 2px 2px 20px #000000;">Contact Us</a>&emsp;
+    <a href="about_us.html" style="color:white;text-shadow: 2px 2px 20px #000000;">About Us</a>&emsp;
   </div>
   </footer>
 

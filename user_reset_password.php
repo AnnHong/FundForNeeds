@@ -44,9 +44,9 @@
 <div style="position:absolute; width:100%; bottom: 0px;">
   <footer class="w3-container w3-theme-d2 w3-padding-16">
   <div style="text-align:center;">
-    <a href="tnc.html" style="color:white;text-shadow: 2px 2px 4px #000000;">Terms and Conditions</a>&emsp;
-    <a href="contact_us.html" style="color:white;text-shadow: 2px 2px 4px #000000;">Contact Us</a>&emsp;
-    <a href="about_us.html" style="color:white;text-shadow: 2px 2px 4px #000000;">About Us</a>&emsp;
+    <a href="tnc.html" style="color:white;text-shadow: 2px 2px 20px #000000;">Terms and Conditions</a>&emsp;
+    <a href="contact_us.html" style="color:white;text-shadow: 2px 2px 20px #000000;">Contact Us</a>&emsp;
+    <a href="about_us.html" style="color:white;text-shadow: 2px 2px 20px #000000;">About Us</a>&emsp;
   </div>
   </footer>
 
