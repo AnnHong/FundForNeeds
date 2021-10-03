@@ -118,7 +118,7 @@
                     $qryUserList = getListOfUser();
                       while($row = mysqli_fetch_assoc($qryUserList)){
                         echo '<h4 class="pt-sm-2 pb-1 mb-0 text-nowrap">' .$row['fullname']. '</h4>' ;
-                        echo '<p class="mb-0">@ '.$row['usernames']. '</p>';
+                        echo '<p class="mb-0">@'.$row['usernames']. '</p>';
                       }
                         ?>
 
