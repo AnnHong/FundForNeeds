@@ -29,7 +29,7 @@
     <br><br>
   </div>
 
-  <div class="container signin" style="border-radius:15px 15px;">
+  <div class="container signin" style="border-radius:25px 25px;">
     <p>Already have an account? <a href="user_signin.php">Sign in</a>.</p>
   </div>
 </form>
