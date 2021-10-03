@@ -102,7 +102,7 @@
  <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
   <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
   <a href="Admin_HomePage.php" class="w3-bar-item w3-button w3-padding-large w3-theme-d4 w3-hover-white"><i class="fa fa-home w3-margin-right"></i><b>Fund For Needs</b></a>
-  <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="News"><i class="fa fa-globe"></i></a>
+  <a href="admin_history.php" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Donation History"><i class="fa fa-globe"></i></a>
   <a href="user_list.php" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="User List"><i class="fa fa-user"></i></a>
   <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Messages"><i class="fa fa-envelope"></i></a>
   <div class="w3-dropdown-hover w3-hide-small">
@@ -216,7 +216,7 @@
         <h4>Zhi Hao</h4><br>
         <hr class="w3-clear">
         <p>Please...I'm really need your help</p>
-        <img src="nature.jpg" style="width:100%" class="w3-margin-bottom">
+        <img src="snow.jpg" style="width:100%" class="w3-margin-bottom">
         <p>Hello everyone, I need some money for my children to further thier degree study.</p>
         <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom deletebutton" onclick="document.getElementById('id01').style.display='block'">  Delete Post</button>
       </div>

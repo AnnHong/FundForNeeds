@@ -244,7 +244,7 @@ hr {
         <h4>Zhi Hao</h4><br>
         <hr class="w3-clear">
         <p>Please...I'm really need your help</p>
-        <img src="nature.jpg" style="width:100%" class="w3-margin-bottom">
+        <img src="snow.jpg" style="width:100%" class="w3-margin-bottom">
         <p>Hello everyone, I need some money for my children to further thier degree study.</p>
         <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom" onclick="document.getElementById('id01').style.display='block'"><i class="fa fa-thumbs-up"></i>  Donate</button>
 
