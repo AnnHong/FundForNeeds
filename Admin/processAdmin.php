@@ -4,10 +4,11 @@ session_start();
   if(isSet($_POST['login']))
 {
   login();
-  echo "<script>
+
+  /*echo "<script>
         alert('You are logged in.Welcome.')
   			window.location.href='Admin_HomePage.php';
-  			</script>";
+  			</script>";*/
 
 }else if(isSet($_POST['verify'])){
   verifyemailadmin();
@@ -24,26 +25,41 @@ function login()
         //print_r($_POST);
         $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
 
-		$admin_email = $_POST['admin_email'];
-		$password = $_POST['password'];
+        if(mysqli_connect_errno()) {
+               die("Failed to connect with MySQL: ". mysqli_connect_error());
+           }
 
-		if(!$con){
-			echo mysqli_error();
-		}else{
-			//echo '<br>connected';
+
+
+
+
+      $admin_email = $_POST['admin_email'];
+      $password = $_POST['password'];
+      //to prevent from mysqli injection
+      $admin_email = stripcslashes($admin_email);
+      $password = stripcslashes($password);
+      $admin_email = mysqli_real_escape_string($con, $admin_email);
+      $password = mysqli_real_escape_string($con, $password);
+
 			$sql = "select * from admin WHERE admin_email = '$admin_email' AND password = '$password'";
-			$qry = mysqli_query($con,$sql);
-			$count = mysqli_num_rows($qry);
 
-			if($count == 1){
-        $userRecord=mysqli_fetch_assoc($qry);
-        $_SESSION['admin_email']=$userRecord['admin_email'];
-        $_SESSION['password']=$userRecord['password'];
+      $result = mysqli_query($con, $sql);
+      $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+      $count = mysqli_num_rows($result);
+
+			if($count==1){
+        echo "<script>
+        alert('You are logged in.Welcome.')
+        window.location.href='Admin_HomePage.php';
+          </script>";
 				//header("Location: Admin_HomePage.html");
 			}else{
-				echo '<br>signin failed';
+			  echo "<script>
+        alert(' Login failed. Invalid username or password..')
+        window.location.href='Admin_Login.php';
+          </script>";
 			}
-    }
+
 }
 
 function verifyemailadmin(){
@@ -59,10 +75,12 @@ function verifyemailadmin(){
     $admin_email = $_POST['admin_email'];
     $password = $_POST['password'];
     $password_repeat = $_POST['repeat_password'];
+    $admin_fullname = $_POST['admin_fullname'];
+    $admin_staffid = $_POST['admin_staffid'];
     $token = md5( rand(0,1000) );
 
-    $sql = "insert into admin(admin_email,password,token)
-               values('$admin_email','$password','$token')";
+    $sql = "insert into admin(admin_email,password,token,admin_fullname,admin_staffid)
+               values('$admin_email','$password','$token','$admin_fullname','$admin_staffid')";
 
       //echo $sql;
     //3.run insert query

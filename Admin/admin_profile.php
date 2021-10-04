@@ -1,3 +1,23 @@
+<?php
+session_start();
+$admin_email = $_SESSION['admin_email'];
+
+function getAdminInformation($admin_email){
+$con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
+	if(!$con)
+		{
+		echo mysqli_error();
+		}
+	else
+	{
+		//echo 'connected';
+		$sql='select * from admin where admin_email = "'.$admin_email.'"';
+		$qry=mysqli_query($con,$sql);
+		return $qry;
+	}
+}
+
+ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,7 +35,23 @@
     body{
         margin-top:25px;
     }
+
     </style>
+    <script>
+    function newFunction() {
+
+      var x = document.getElementById("newpassword");
+
+
+      if (x.type === "password") {
+        x.type = "text";
+
+      } else {
+        x.type = "password";
+      
+      }
+    }
+      </script>
 </head>
 <body>
   <div class="w3-top">
@@ -58,8 +94,14 @@
                 </div>
                 <div class="col d-flex flex-column flex-sm-row justify-content-between mb-3">
                   <div class="text-center text-sm-left mb-2 mb-sm-0">
-                    <h4 class="pt-sm-2 pb-1 mb-0 text-nowrap">YAP ZHI HAO</h4>
-                    <p class="mb-0">@zhi__hao19</p>
+                    <?php
+
+                    $qryAdminData = getAdminInformation($_SESSION['admin_email']);
+                    $adminRecord = mysqli_fetch_assoc($qryAdminData);
+                        echo '<h4 class="pt-sm-2 pb-1 mb-0 text-nowrap">' .$adminRecord['admin_fullname']. '</h4>' ;
+                        echo '<p class="mb-0">@'.$adminRecord['admin_staffid']. '</p>';
+
+                        ?>
                     <div class="mt-2">
                       <button class="btn" type="submit" style="background-color:#ff7a7a; color: white;">
                         <i class="fa fa-fw fa-camera"></i>
@@ -85,13 +127,17 @@
                           <div class="col">
                             <div class="form-group">
                               <label>Full Name</label>
-                              <input class="form-control" type="text" name="name" placeholder="YAP ZHI HAO" value="YAP ZHI HAO" disabled>
+                              <?php
+                                  echo '<input class="form-control" type="text"   value="'.$adminRecord['admin_fullname'].'" disabled>' ;
+                                  ?>
                             </div>
                           </div>
                           <div class="col">
                             <div class="form-group">
                               <label>Staff ID</label>
-                              <input class="form-control" type="text" name="staffid" placeholder="zhi__hao19" value="zhi__hao19" disabled>
+                              <?php
+                                  echo '<input class="form-control" type="text"   value="'.$adminRecord['admin_staffid'].'" disabled>' ;
+                                  ?>
                             </div>
                           </div>
                         </div>
@@ -99,13 +145,18 @@
                           <div class="col">
                             <div class="form-group">
                               <label>Current Password</label>
-                              <input class="form-control" type="password" placeholder="••••••••••••" disabled>
+                              <?php
+                                  echo '<input class="form-control" type="password"   id="newpassword" value="'.$adminRecord['password'].'" disabled>' ;
+                                  echo '<input type="checkbox" onclick="newFunction()"> Show Password<br>';
+                              ?>
                             </div>
                           </div>
                           <div class="col">
                             <div class="form-group">
                               <label>Email</label>
-                              <input class="form-control" type="text" placeholder="zhihao1919@gmail.com" value="zhihao1919@gmail.com" disabled>
+                              <?php
+                                  echo '<input class="form-control" type="text"   value="'.$adminRecord['admin_email'].'" disabled>' ;
+                              ?>
                             </div>
                           </div>
                         </div>
