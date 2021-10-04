@@ -17,8 +17,14 @@
   <a href="Admin_Login.php" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="Sign In" style="background-color: #04AA6D; color: white;border-radius:25px 25px;">Sign In</a>
  </div>
 </div>
-<form action="processAdmin.php" method="POST" style="margin:100px 500px 25px 500px;">
+<form action="processAdmin.php" method="POST" style="margin:75px 500px 25px 500px;">
   <div class="container">
+    <label for="fullname"><b>Full Name</b></label>
+    <input type="text" placeholder="Enter Full name" name="admin_fullname" style="border-radius: 25px 25px;" required>
+
+    <label for="staffid"><b>Staff ID</b></label>
+    <input type="text" placeholder="Enter Staff ID" name="admin_staffid" style="border-radius: 25px 25px;" required>
+
     <label for="email"><b>Email</b></label>
     <input type="text" placeholder="Enter Email" name="admin_email" style="border-radius: 25px 25px;" required>
 
@@ -33,7 +39,7 @@
     </div>
   </div>
 </form>
-<div style="position:absolute; width:100%; bottom: 0px;">
+<div style="bottom: 0px;">
   <footer class="w3-container w3-theme-d2 w3-padding-16">
   <div style="text-align:center;">
     <a href="admin_tnc.php" style="color:white;">Terms and Conditions</a>&emsp;
