@@ -427,8 +427,7 @@ hr {
       x.previousElementSibling.className += " w3-theme-d1";
     } else {
       x.className = x.className.replace("w3-show", "");
-      x.previousElementSibling.className =
-      x.previousElementSibling.className.replace(" w3-theme-d1", "");
+      x.previousElementSibling.className = x.previousElementSibling.className.replace(" w3-theme-d1", "");
     }
   }
 
