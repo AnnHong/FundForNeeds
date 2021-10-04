@@ -65,7 +65,7 @@ if(mysqli_num_rows($result) >0){
         <div class="container">
           <p>Please enter your new password</p>
           <label for="password"><b>Password</b></label>
-        <input type="password" name="new_password" placeholder="Enter new password" style="border-radius:25px 25px;">
+        <input type="password" name="new_password" placeholder="Enter new password" style="border-radius:25px 25px;" minlength="8" maxlength="16">
 
         <button type="submit" style="border-radius:75px 25px;">Change Password</button>
       </div>

@@ -29,10 +29,10 @@
     <input type="text" placeholder="Enter Email" name="admin_email" style="border-radius: 25px 25px;" required>
 
     <label for="password"><b>Password</b></label>
-    <input type="password" placeholder="Enter password" name="password" style="border-radius: 25px 25px;" required>
+    <input type="password" placeholder="Enter password" name="password" style="border-radius: 25px 25px;" minlength="8" maxlength="16" required>
 
     <label for="password"><b>Repeat Password</b></label>
-      <input type="password" placeholder="Enter repeat password" name="repeat_password" style="border-radius: 25px 25px;" required>
+      <input type="password" placeholder="Enter repeat password" name="repeat_password" style="border-radius: 25px 25px;" minlength="8" maxlength="16" required>
     <div class="clearfix">
       <button type="submit" class="verifybtn" name = "verify" style="margin: 8px 0;width: 100%;border-radius: 75px 25px;">Verify</button>
       <button type="button" class="cancelbtn"  onclick="location.href = 'Admin_Login.php';" style="margin: 8px 0;width: 100%;border-radius: 75px 25px;">Cancel</button>
