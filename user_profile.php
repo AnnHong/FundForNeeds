@@ -221,11 +221,7 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
                             <div class="form-group">
                               <label>Full Name</label>
                               <?php
-
-
                                   echo '<input class="form-control" type="text"   value="'.$userRecord['fullname'].'" disabled>' ;
-
-
                                   ?>
                             </div>
                           </div>
@@ -241,17 +237,14 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
                         <div class="row">
                           <div class="col">
                             <div class="form-group">
-                              <label>Current Password</label>
-                              <?php
-                                  echo '<input class="form-control" type="password"   value="'.$userRecord['password'].'" id ="myInput" disabled>' ;
-                              ?>
+                              <label>Paypal Account</label>
+                                <input class="form-control" type="text" id="paypal" disabled>
                             </div>
                           </div>
                           <div class="col">
                             <div class="form-group">
                               <label>Email</label>
                               <?php
-
                                   echo '<input class="form-control" type="text"   value="'.$userRecord['email'].'" disabled>' ;
                               ?>
                             </div>
