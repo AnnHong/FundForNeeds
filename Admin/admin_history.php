@@ -9,7 +9,26 @@
 <link rel="stylesheet" href="index_theme.css">
 <link rel='stylesheet' href='index_font.css'>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <style>
+/* Add animation to "page content" */
+.animate-bottom{
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 }
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom {
+  from{ bottom:-100px; opacity:0 }
+  to{ bottom:0; opacity:1 }
+}
 html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
 
 details > summary{
@@ -32,7 +51,7 @@ details > summary{
   color: red;
 }
 </style>
-<body>
+<body class="animate-bottom">
 <!-- Navbar -->
 <div class="w3-top">
  <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
@@ -76,7 +95,7 @@ details > summary{
   <h1 style="text-align:center;">Donation History</h1>
   <div class="w3-row">
     <div class="w3-col m7" style="margin-left: 20%;">
-      <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+      <div class="w3-container w3-card w3-white w3-round w3-margin w3-animate-left"><br>
           <p>@khooannhong has donated RM5.00 to @zhaolin_lau</p>
         <details id="details">
           <summary>Show Details</summary>
@@ -121,7 +140,7 @@ details > summary{
         <br>
       </div>
 
-      <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+      <div class="w3-container w3-card w3-white w3-round w3-margin w3-animate-left" style="animation-delay:0.1s;"><br>
         <p>@khooannhong has failed to donate RM5.00 to @zhaolin_lau</p>
       <details id="details">
         <summary>Show Details</summary>
@@ -166,7 +185,7 @@ details > summary{
       <br>
       </div>
 
-      <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+      <div class="w3-container w3-card w3-white w3-round w3-margin w3-animate-left" style="animation-delay:0.2s;"><br>
         <p>@khooannhong has collected RM8.00 from @zhaolin_lau</p>
       <details id="details">
         <summary>Show Details</summary>
@@ -211,7 +230,7 @@ details > summary{
       <br>
       </div>
 
-      <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+      <div class="w3-container w3-card w3-white w3-round w3-margin w3-animate-left" style="animation-delay:0.3s;"><br>
         <p>@khooannhong has failed to collect RM8.00 from @zhaolin_lau</p>
       <details id="details">
         <summary>Show Details</summary>
@@ -256,7 +275,7 @@ details > summary{
       <br>
       </div>
 
-      <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+      <div class="w3-container w3-card w3-white w3-round w3-margin w3-animate-left" style="animation-delay:0.4s;"><br>
         <p>@khooannhong has donated RM12.00 to @zhaolin_lau</p>
       <details id="details">
         <summary>Show Details</summary>

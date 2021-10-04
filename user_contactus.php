@@ -8,12 +8,32 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="contact_us.css">
 <title>Contact Us</title>
+<style media="screen">
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 }
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom {
+  from{ bottom:-100px; opacity:0 }
+  to{ bottom:0; opacity:1 }
+}
+</style>
 </head>
-<body>
+<body class="animate-bottom">
   <div class="w3-top">
    <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
     <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
-    <a href="user_index.php" class="w3-bar-item w3-button w3-padding-large w3-theme-d4 w3-hover-white" style="border-radius:15px 15px;"><i class="fa fa-home w3-margin-right"></i> <b>Fund For Needs</b> </a>
+    <a href="user_index.php" class="w3-bar-item w3-button w3-padding-large w3-theme-d4 w3-hover-white" style="border-radius:15px 15px;"><i class="fa fa-home w3-margin-right"></i><b>Fund For Needs</b></a>
     <a href="donation_history.php" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Donation History" style="border-radius:15px 15px;"><i class="fa fa-globe"></i></a>
     <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Messages" style="border-radius:15px 15px;"><i class="fa fa-envelope"></i></a>
     <div class="w3-dropdown-hover w3-hide-small">
@@ -36,8 +56,9 @@
    </div>
   </div>
 <br><br>
-<div class="container">
+<div>
   <div style="text-align:center">
+    <br>
     <h2>Contact Us</h2>
     <p>Leave us a message and our team will further proceed on it.</p>
   </div>
@@ -61,7 +82,7 @@
         </select>
         <label for="description">Description</label>
         <textarea id="description" name="description" placeholder="Describe your issue.." style="height:170px;border-radius:25px 25px;"></textarea>
-        <input type="submit" value="Submit" style="border-radius:75px 25px;margin-left:45%;">
+        <input type="submit" value="Submit" style="border-radius:75px 25px;margin-left:25%;width:50%;">
       </form>
     </div>
   </div>

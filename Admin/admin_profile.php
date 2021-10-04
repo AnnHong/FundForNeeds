@@ -27,11 +27,26 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
     <link rel="stylesheet" href="index_theme.css">
     <link rel='stylesheet' href='index_font.css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <meta charset="utf-8">
     <title>My Profile</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
+		.animate-bottom {
+			position: relative;
+			-webkit-animation-name: animatebottom;
+			-webkit-animation-duration: 1s;
+			animation-name: animatebottom;
+			animation-duration: 1s
+		}
+
+		@-webkit-keyframes animatebottom {
+			from { bottom:-100px; opacity:0 }
+			to { bottom:0px; opacity:1 }
+		}
+
+		@keyframes animatebottom {
+			from{ bottom:-100px; opacity:0 }
+			to{ bottom:0; opacity:1 }
+		}
     body{
         margin-top:25px;
     }
@@ -48,12 +63,12 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
 
       } else {
         x.type = "password";
-      
+
       }
     }
       </script>
 </head>
-<body>
+<body class="animate-bottom">
   <div class="w3-top">
    <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
     <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
@@ -196,8 +211,8 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
 <div>
   <footer class="w3-container w3-theme-d2 w3-padding-16">
   <div style="text-align:center;">
-    <a href="admin_tnc.php" style="color:white;">Terms and Conditions</a>&emsp;
-    <a href="admin_aboutus.php" style="color:white;">About Us</a>&emsp;
+    <a href="login_tnc.php" style="color:white;">Terms and Conditions</a>&emsp;
+    <a href="login_aboutus.php" style="color:white;">About Us</a>&emsp;
   </div>
   </footer>
   <footer class="w3-container w3-theme-d5">

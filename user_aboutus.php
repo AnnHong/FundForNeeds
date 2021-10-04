@@ -7,10 +7,30 @@
   <link rel='stylesheet' href='index_font.css'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="about_us.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 <title>About Us</title>
+<style media="screen">
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
 
-<body>
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 }
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom {
+  from{ bottom:-100px; opacity:0 }
+  to{ bottom:0; opacity:1 }
+}
+</style>
+<body class="animate-bottom">
   <div class="w3-top">
    <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
     <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
@@ -39,14 +59,14 @@
   </div>
 <br><br>
 <div>
-  <div class="about-section">
+  <div class="about-section w3-animate-top">
   <h1>About Us</h1>
   <p>There's a part of every one of us that dream of a better world. The spark of inspiration to help a people or help the neighbourhood. At FundForNeeds, we believe you can use your inspiration to help others and this is how changes happen. During this pandemic, many families have gone through the pass of their loved ones, no income and many other situation. This is where we decided to start FundForNeeds so that everyone can help out others with just a few simple click.</p>
 </div>
 
 <h2 style="text-align:center">Our Team</h2>
 <div class="row">
-  <div class="column">
+  <div class="column w3-animate-right">
     <div class="card">
       <img src="annhong.jpeg" alt="annhong" style="width:100%">
       <div class="container">
@@ -59,20 +79,20 @@
     </div>
   </div>
 
-  <div class="column">
+  <div class="column w3-animate-bottom">
     <div class="card">
       <img src="zhaolin.jpg" alt="zhaolin" style="width:100%">
       <div class="container">
         <h2>LAU ZHAO LIN</h2>
         <p class="title">Full-Stack Web Developer</p>
-        <p>Learn to code and help nonprofits. It's about what happens next.</p>
+        <p>Learn to code and help nonprofits.</p>
         <p>zhaolinlau@gmail.com</p>
         <p><a class="button" href="mailto:zhaolinlau@gmail.com" style="border-radius:25px 25px;">Contact</a></p>
       </div>
     </div>
   </div>
 
-  <div class="column">
+  <div class="column w3-animate-left">
     <div class="card">
       <img src="zhihao.jpeg" alt="zhihao" style="width:100%">
       <div class="container">
@@ -84,8 +104,10 @@
       </div>
     </div>
   </div>
+</div>
 
-  <div class="column">
+<div class="row">
+  <div class="column w3-animate-right">
     <div class="card">
       <img src="shengearn.jpeg" alt="shengearn" style="width:100%">
       <div class="container">
@@ -98,7 +120,7 @@
     </div>
   </div>
 
-  <div class="column">
+  <div class="column w3-animate-top">
     <div class="card">
       <img src="logaraaj.jpeg" alt="logaraaj" style="width:100%">
       <div class="container">
@@ -111,7 +133,7 @@
     </div>
   </div>
 
-  <div class="column">
+  <div class="column w3-animate-left">
     <div class="card">
       <img src="iskandar.jpeg" alt="John" style="width:100%">
       <div class="container">
@@ -123,7 +145,6 @@
       </div>
     </div>
   </div>
-
 </div>
 </div>
 

@@ -38,7 +38,7 @@
 </div>
 
 <div style="margin-top:150px;">
-  <form action="processAdmin.php" method="post" style="width:50%;margin:auto;border-radius:25px 25px;">
+  <form action="processAdmin.php" method="post" style="width:40%;margin:auto;border-radius:25px 25px;">
 
     <div class="container" style="margin-top:25px;border-radius:25px 25px;">
       <label for="admin_email" ><b>Admin Email</b></label>

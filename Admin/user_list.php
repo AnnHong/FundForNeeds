@@ -9,6 +9,23 @@
   <link rel='stylesheet' href='index_font.css'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style>
+  /* Add animation to "page content" */
+  .animate-bottom {
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 1s;
+    animation-name: animatebottom;
+    animation-duration: 1s
+  }
+
+  @-webkit-keyframes animatebottom {
+    from { bottom:-100px; opacity:0 }
+    to { bottom:0px; opacity:1 }
+  }
+
+  @keyframes animatebottom {
+    from{ bottom:-100px; opacity:0 }
+    to{ bottom:0; opacity:1 }
+  }
   html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
   .deletebutton{
     background-color:#ff0028 !important;
@@ -50,7 +67,7 @@ tr:nth-child(even) {
 }
   </style>
 </head>
-<body>
+<body class="animate-bottom">
 
 <!-- Navbar -->
 <div class="w3-top">

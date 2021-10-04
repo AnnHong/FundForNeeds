@@ -7,10 +7,29 @@
   <link rel='stylesheet' href='index_font.css'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="admin_tnc.css">
-</head>
-<title>Terms & Conditions</title>
+  <title>Terms & Conditions</title>
+<style media="screen">
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
 
-<body>
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 }
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom {
+  from{ bottom:-100px; opacity:0 }
+  to{ bottom:0; opacity:1 }
+}
+</style>
+</head>
+
+<body class="animate-bottom">
   <div class="w3-top">
    <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
     <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
@@ -167,7 +186,7 @@
 
 </div>
 <div style="width:25%; margin: auto;">
-  <button type="submit"  name="back" onclick="goBack()" style="background-color: #04AA6D; color: white; width: 100%;">Back</button>
+  <button type="submit"  name="back" onclick="goBack()" style="background-color: #04AA6D; color: white; width: 100%;border-radius:75px 25px;">Back</button>
 
   <script>
     function goBack() {
