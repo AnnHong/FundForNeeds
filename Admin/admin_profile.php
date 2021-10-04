@@ -90,8 +90,8 @@
                           </div>
                           <div class="col">
                             <div class="form-group">
-                              <label>Username</label>
-                              <input class="form-control" type="text" name="username" placeholder="zhi__hao19" value="zhi__hao19" disabled>
+                              <label>Staff ID</label>
+                              <input class="form-control" type="text" name="staffid" placeholder="zhi__hao19" value="zhi__hao19" disabled>
                             </div>
                           </div>
                         </div>
