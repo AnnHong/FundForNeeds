@@ -5,10 +5,10 @@ session_start();
 {
   login();
 
-  /*echo "<script>
+  echo "<script>
         alert('You are logged in.Welcome.')
   			window.location.href='Admin_HomePage.php';
-  			</script>";*/
+  			</script>";
 
 }else if(isSet($_POST['verify'])){
   verifyemailadmin();
@@ -23,43 +23,25 @@ session_start();
 function login()
     {
         //print_r($_POST);
-        $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
-
-        if(mysqli_connect_errno()) {
-               die("Failed to connect with MySQL: ". mysqli_connect_error());
-           }
-
-
-
-
-
+    //  $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
+      $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
       $admin_email = $_POST['admin_email'];
-      $password = $_POST['password'];
-      //to prevent from mysqli injection
-      $admin_email = stripcslashes($admin_email);
-      $password = stripcslashes($password);
-      $admin_email = mysqli_real_escape_string($con, $admin_email);
-      $password = mysqli_real_escape_string($con, $password);
+  		$password = $_POST['password'];
 
-			$sql = "select * from admin WHERE admin_email = '$admin_email' AND password = '$password'";
-
-      $result = mysqli_query($con, $sql);
-      $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
-      $count = mysqli_num_rows($result);
-
-			if($count==1){
-        echo "<script>
-        alert('You are logged in.Welcome.')
-        window.location.href='Admin_HomePage.php';
-          </script>";
-				//header("Location: Admin_HomePage.html");
-			}else{
-			  echo "<script>
-        alert(' Login failed. Invalid username or password..')
-        window.location.href='Admin_Login.php';
-          </script>";
-			}
-
+      if(!$con){
+  			echo mysqli_error();
+  		}else{
+        	$sql = "select * from admin WHERE admin_email = '$admin_email' AND password = '$password'";
+          $qry = mysqli_query($con,$sql);
+          $count = mysqli_num_rows($qry);
+          if($count == 1){
+            $userRecord=mysqli_fetch_assoc($qry);
+            $_SESSION['admin_email']=$userRecord['admin_email'];
+            $_SESSION['password']=$userRecord['password'];
+}else{
+  echo '<br>signin failed';
+}
+      }
 }
 
 function verifyemailadmin(){

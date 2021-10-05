@@ -1,8 +1,8 @@
 <?php
 session_start();
-$admin_email = $_SESSION['admin_email'];
+$admin = $_SESSION['admin_email'];
 
-function getAdminInformation($admin_email){
+function getAdminInformation($admin){
 $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
 	if(!$con)
 		{
@@ -11,8 +11,9 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
 	else
 	{
 		//echo 'connected';
-		$sql='select * from admin where admin_email = "'.$admin_email.'"';
+		$sql='SELECT * from admin where admin_email = "'.$admin.'"';
 		$qry=mysqli_query($con,$sql);
+
 		return $qry;
 	}
 }
