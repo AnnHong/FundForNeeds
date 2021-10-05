@@ -114,7 +114,7 @@
               </ul>
               <div class="tab-content pt-3">
                 <div class="tab-pane active">
-                  <form class="form">
+                  <form class="form" action= "update_function.php" method="POST">
                     <div class="row">
                       <div class="col">
                         <div class="row">
@@ -169,10 +169,8 @@
                       </div>
                     </div>
                     <div style="text-align:center;">
-                      <form action= "update_function.php" method="POST">
                       <button class="btn" type="button" style="background-color:#80daeb; color: white; margin-right:25px;border-radius:75px 25px;" name="ChangePassBtn" onclick="updateFunction()">Update Profile</button>
                       <button class="btn" type="submit" style="background-color:#80daeb; color: white;border-radius:75px 25px;">Save Changes</button>
-                      </form>
                     </div>
                   </form>
                 </div>
