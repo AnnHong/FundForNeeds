@@ -75,7 +75,7 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
       <img src="avatar2.png" class="w3-circle" style="height:23px;width:23px" alt="Avatar">
       <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:150px;right:0px;border-radius: 25px 25px;">
         <a href="admin_profile.php" class="w3-bar-item w3-button" style="border-radius: 25px 25px;">My Profile</a>
-        <a href="Admin_HomePage.php" class="w3-bar-item w3-button" style="border-radius: 25px 25px;">Sign Out</a>
+        <a href="Admin_Login.php" class="w3-bar-item w3-button" style="border-radius: 25px 25px;">Sign Out</a>
       </div>
     </div>
    </div>
