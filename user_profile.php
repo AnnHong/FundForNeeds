@@ -224,7 +224,7 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
                 </div>
               </div>
               <ul class="nav nav-tabs">
-                <li class="nav-item"><a href="" class="active nav-link">Settings</a></li>
+                <li class="nav-item"><a href="" class="active nav-link">Profile Information</a></li>
               </ul>
               <div class="tab-content pt-3">
                 <div class="tab-pane active">
@@ -236,7 +236,7 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
                             <div class="form-group">
                               <label>Full Name</label>
                               <?php
-                                  echo '<input class="form-control" type="text" id="fullname"  value="'.$userRecord['fullname'].'" disabled>' ;
+                                  echo '<input class="form-control" type="text" id="fullname" style="border-radius:25px 25px;" value="'.$userRecord['fullname'].'" disabled>' ;
                                   ?>
                             </div>
                           </div>
@@ -244,7 +244,7 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
                             <div class="form-group">
                               <label>Username</label>
                               <?php
-                                  echo '<input class="form-control" type="text" id="username"  value="'.$userRecord['usernames'].'" disabled>' ;
+                                  echo '<input class="form-control" type="text" id="username" style="border-radius:25px 25px;" value="'.$userRecord['usernames'].'" disabled>' ;
                                   ?>
                             </div>
                           </div>
@@ -253,14 +253,14 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
                           <div class="col">
                             <div class="form-group">
                               <label>Paypal Account</label>
-                                <input class="form-control" type="text" id="paypal" disabled>
+                                <input class="form-control" type="text" style="border-radius:25px 25px;" id="paypal" disabled>
                             </div>
                           </div>
                           <div class="col">
                             <div class="form-group">
                               <label>Email</label>
                               <?php
-                                  echo '<input class="form-control" type="text" id="email"  value="'.$userRecord['email'].'" disabled>' ;
+                                  echo '<input class="form-control" type="text" id="email" style="border-radius:25px 25px;" value="'.$userRecord['email'].'" disabled>' ;
                               ?>
                             </div>
                           </div>
@@ -274,7 +274,7 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
                           <div class="col">
                             <div class="form-group">
                               <label>New Password</label>
-                              <input class="form-control" type="password" name="newpassword" id="newpassword" minlength="8" maxlength="16" disabled>
+                              <input class="form-control" type="password" name="newpassword" id="newpassword" style="border-radius:25px 25px;" minlength="8" maxlength="16" disabled>
                             </div>
                           </div>
                         </div>
@@ -282,7 +282,7 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
                           <div class="col">
                             <div class="form-group">
                               <label>Confirm <span class="d-none d-xl-inline">Password</span></label>
-                              <input class="form-control" type="password" name="confirmpassword" id="confirmpassword" minlength="8" maxlength="16" oninput="check(this)" disabled></div>
+                              <input class="form-control" type="password" name="confirmpassword" id="confirmpassword" style="border-radius:25px 25px;" minlength="8" maxlength="16" oninput="check(this)" disabled></div>
                               <input type="checkbox" onclick="newFunction()" id="showpassword" disabled> Show Password<br>
                           </div>
                         </div>

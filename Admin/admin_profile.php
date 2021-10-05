@@ -103,7 +103,7 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
 
                         ?>
                     <div class="mt-2">
-                      <button class="btn" type="submit" style="background-color:#ff7a7a; color: white;">
+                      <button class="btn" type="submit" style="background-color:#ff7a7a; color: white;border-radius:75px 25px;">
                         <i class="fa fa-fw fa-camera"></i>
                         <span>Change Photo</span>
                       </button>
@@ -116,7 +116,7 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
                 </div>
               </div>
               <ul class="nav nav-tabs">
-                <li class="nav-item"><a href="" class="active nav-link">Settings</a></li>
+                <li class="nav-item"><a href="" class="active nav-link">Profile Information</a></li>
               </ul>
               <div class="tab-content pt-3">
                 <div class="tab-pane active">
@@ -128,7 +128,7 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
                             <div class="form-group">
                               <label>Full Name</label>
                               <?php
-                                  echo '<input class="form-control" type="text" id="fullname" value="'.$adminRecord['admin_fullname'].'" disabled>' ;
+                                  echo '<input class="form-control" type="text" id="fullname" style="border-radius:25px 25px;" value="'.$adminRecord['admin_fullname'].'" disabled>' ;
                                   ?>
                             </div>
                           </div>
@@ -136,7 +136,7 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
                             <div class="form-group">
                               <label>Staff ID</label>
                               <?php
-                                  echo '<input class="form-control" type="text" id="staffid"  value="'.$adminRecord['admin_staffid'].'" disabled>' ;
+                                  echo '<input class="form-control" type="text" id="staffid" style="border-radius:25px 25px;" value="'.$adminRecord['admin_staffid'].'" disabled>' ;
                                   ?>
                             </div>
                           </div>
@@ -146,7 +146,7 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
                             <div class="form-group">
                               <label>Current Password</label>
                               <?php
-                                  echo '<input class="form-control" id="currentpassword" type="password" value="'.$adminRecord['password'].'" disabled>' ;
+                                  echo '<input class="form-control" id="currentpassword" style="border-radius:25px 25px;" type="password" value="'.$adminRecord['password'].'" disabled>' ;
                               ?>
                             </div>
                           </div>
@@ -154,7 +154,7 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
                             <div class="form-group">
                               <label>Email</label>
                               <?php
-                                  echo '<input class="form-control" type="text" id="email"  value="'.$adminRecord['admin_email'].'" disabled>' ;
+                                  echo '<input class="form-control" type="text" id="email" style="border-radius:25px 25px;" value="'.$adminRecord['admin_email'].'" disabled>' ;
                               ?>
                             </div>
                           </div>
@@ -168,7 +168,7 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
                           <div class="col">
                             <div class="form-group">
                               <label>New Password</label>
-                              <input class="form-control" id="newpassword" type="password" minlength="8" maxlength="16" disabled>
+                              <input class="form-control" id="newpassword" type="password" style="border-radius:25px 25px;" minlength="8" maxlength="16" disabled>
                             </div>
                           </div>
                         </div>
@@ -176,7 +176,7 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
                           <div class="col">
                             <div class="form-group">
                               <label>Confirm <span class="d-none d-xl-inline">Password</span></label>
-                              <input class="form-control" id="confirmpassword" type="password" minlength="8" maxlength="16" disabled></div>
+                              <input class="form-control" id="confirmpassword" type="password" style="border-radius:25px 25px;" minlength="8" maxlength="16" disabled></div>
 															<input type="checkbox" onclick="newFunction()" id="showpassword" disabled> Show Password<br>
                           </div>
                         </div>
@@ -184,8 +184,8 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
                     </div>
                     <div style="text-align:center;">
 											<form action= "./action.php" method="POST">
-                      <button class="btn" type="button" style="background-color:#ff7a7a; color: white; margin-right:25px;" onclick="updateFunction()">Update Profile</button>
-                      <button class="btn" type="submit" style="background-color:#ff7a7a; color: white;">Save Changes</button>
+                      <button class="btn" type="button" style="background-color:#ff7a7a; color: white; margin-right:25px;border-radius:75px 25px;" onclick="updateFunction()">Update Profile</button>
+                      <button class="btn" type="submit" style="background-color:#ff7a7a; color: white;border-radius:75px 25px;">Save Changes</button>
 											</form>
                     </div>
                   </form>
