@@ -282,7 +282,7 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
                           <div class="col">
                             <div class="form-group">
                               <label>Confirm <span class="d-none d-xl-inline">Password</span></label>
-                              <input class="form-control" type="password" name="confirmpassword" id="confirmpassword" minlength="8" maxlength="16" disabled></div>
+                              <input class="form-control" type="password" name="confirmpassword" id="confirmpassword" minlength="8" maxlength="16" oninput="check(this)" disabled></div>
                               <input type="checkbox" onclick="newFunction()" id="showpassword" disabled> Show Password<br>
                           </div>
                         </div>
@@ -311,6 +311,12 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
 				document.getElementById('confirmpassword').disabled = !document.getElementById('confirmpassword').disabled;
 				document.getElementById('showpassword').disabled = !document.getElementById('showpassword').disabled;
 			}
+
+			function check(input) {
+        if (input.value != document.getElementById('newpassword').value) {
+            input.setCustomValidity('Password Must be Matching.');
+        }
+    }
 			</script>
 
 <div>
