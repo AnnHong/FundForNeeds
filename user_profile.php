@@ -164,7 +164,7 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
                         ?>
 
                     <div class="mt-2">
-                      <button class="btn" type="submit" style="background-color:#80daeb; color: white;">
+                      <button class="btn" type="submit" style="background-color:#80daeb; color: white;border-radius:75px 25px;">
                         <i class="fa fa-fw fa-camera"></i>
                         <span>Change Photo</span>
                       </button>
@@ -174,7 +174,7 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
 
                       <div>
                         <!-- Trigger/Open The Modal -->
-                        <button id="myBtn" class="btn" style="background-color:#80daeb; color: white;">Verify</button>
+                        <button id="myBtn" class="btn" style="background-color:#80daeb; color: white;border-radius:75px 25px;">Verify</button>
 
                         <!-- The Modal -->
                         <div id="myModal" class="modal">
@@ -236,7 +236,7 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
                             <div class="form-group">
                               <label>Full Name</label>
                               <?php
-                                  echo '<input class="form-control" type="text"   value="'.$userRecord['fullname'].'" disabled>' ;
+                                  echo '<input class="form-control" type="text" id="fullname"  value="'.$userRecord['fullname'].'" disabled>' ;
                                   ?>
                             </div>
                           </div>
@@ -244,7 +244,7 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
                             <div class="form-group">
                               <label>Username</label>
                               <?php
-                                  echo '<input class="form-control" type="text"   value="'.$userRecord['usernames'].'" disabled>' ;
+                                  echo '<input class="form-control" type="text" id="username"  value="'.$userRecord['usernames'].'" disabled>' ;
                                   ?>
                             </div>
                           </div>
@@ -260,7 +260,7 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
                             <div class="form-group">
                               <label>Email</label>
                               <?php
-                                  echo '<input class="form-control" type="text"   value="'.$userRecord['email'].'" disabled>' ;
+                                  echo '<input class="form-control" type="text" id="email"  value="'.$userRecord['email'].'" disabled>' ;
                               ?>
                             </div>
                           </div>
@@ -274,7 +274,7 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
                           <div class="col">
                             <div class="form-group">
                               <label>New Password</label>
-                              <input class="form-control" type="password" name="newpassword" id="newpassword" minlength="8" maxlength="16">
+                              <input class="form-control" type="password" name="newpassword" id="newpassword" minlength="8" maxlength="16" disabled>
                             </div>
                           </div>
                         </div>
@@ -282,16 +282,16 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
                           <div class="col">
                             <div class="form-group">
                               <label>Confirm <span class="d-none d-xl-inline">Password</span></label>
-                              <input class="form-control" type="password" name="confirmpassword" id="confirmpassword" minlength="8" maxlength="16"></div>
-                              <input type="checkbox" onclick="newFunction()"> Show Password<br>
+                              <input class="form-control" type="password" name="confirmpassword" id="confirmpassword" minlength="8" maxlength="16" disabled></div>
+                              <input type="checkbox" onclick="newFunction()" id="showpassword" disabled> Show Password<br>
                           </div>
                         </div>
                       </div>
                     </div>
                     <div style="text-align:center;">
                       <form action= "update_function.php" method="POST">
-                      <button class="btn " type="submit" style="background-color:#80daeb; color: white; margin-right:25px;" name="ChangePassBtn">Change Password</button>
-                      <button class="btn " type="submit" style="background-color:#80daeb; color: white;">Update Profile</button>
+                      <button class="btn" type="button" style="background-color:#80daeb; color: white; margin-right:25px;border-radius:75px 25px;" name="ChangePassBtn" onclick="updateFunction()">Update Profile</button>
+                      <button class="btn" type="submit" style="background-color:#80daeb; color: white;border-radius:75px 25px;">Save Changes</button>
                       </form>
                     </div>
                   </form>
@@ -301,6 +301,18 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
           </div>
         </div>
       </div>
+			<script type="text/javascript">
+			function updateFunction() {
+				document.getElementById('fullname').disabled = !document.getElementById('fullname').disabled;
+				document.getElementById('username').disabled = !document.getElementById('username').disabled;
+				document.getElementById('email').disabled = !document.getElementById('email').disabled;
+				document.getElementById('paypal').disabled = !document.getElementById('paypal').disabled;
+				document.getElementById('newpassword').disabled = !document.getElementById('newpassword').disabled;
+				document.getElementById('confirmpassword').disabled = !document.getElementById('confirmpassword').disabled;
+				document.getElementById('showpassword').disabled = !document.getElementById('showpassword').disabled;
+			}
+			</script>
+
 <div>
   <footer class="w3-container w3-theme-d2 w3-padding-16">
   <div style="text-align:center;">
