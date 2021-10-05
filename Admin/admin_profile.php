@@ -52,21 +52,6 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
     }
 
     </style>
-    <script>
-    function newFunction() {
-
-      var x = document.getElementById("newpassword");
-
-
-      if (x.type === "password") {
-        x.type = "text";
-
-      } else {
-        x.type = "password";
-
-      }
-    }
-      </script>
 </head>
 <body class="animate-bottom">
   <div class="w3-top">
@@ -135,7 +120,7 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
               </ul>
               <div class="tab-content pt-3">
                 <div class="tab-pane active">
-                  <form class="form" novalidate="">
+                  <form class="form">
                     <div class="row">
                       <div class="col">
                         <div class="row">
@@ -143,7 +128,7 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
                             <div class="form-group">
                               <label>Full Name</label>
                               <?php
-                                  echo '<input class="form-control" type="text"   value="'.$adminRecord['admin_fullname'].'" disabled>' ;
+                                  echo '<input class="form-control" type="text" id="fullname" value="'.$adminRecord['admin_fullname'].'" disabled>' ;
                                   ?>
                             </div>
                           </div>
@@ -151,7 +136,7 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
                             <div class="form-group">
                               <label>Staff ID</label>
                               <?php
-                                  echo '<input class="form-control" type="text"   value="'.$adminRecord['admin_staffid'].'" disabled>' ;
+                                  echo '<input class="form-control" type="text" id="staffid"  value="'.$adminRecord['admin_staffid'].'" disabled>' ;
                                   ?>
                             </div>
                           </div>
@@ -161,8 +146,7 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
                             <div class="form-group">
                               <label>Current Password</label>
                               <?php
-                                  echo '<input class="form-control" type="password"   id="newpassword" value="'.$adminRecord['password'].'" disabled>' ;
-                                  echo '<input type="checkbox" onclick="newFunction()"> Show Password<br>';
+                                  echo '<input class="form-control" id="currentpassword" type="password" value="'.$adminRecord['password'].'" disabled>' ;
                               ?>
                             </div>
                           </div>
@@ -170,7 +154,7 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
                             <div class="form-group">
                               <label>Email</label>
                               <?php
-                                  echo '<input class="form-control" type="text"   value="'.$adminRecord['admin_email'].'" disabled>' ;
+                                  echo '<input class="form-control" type="text" id="email"  value="'.$adminRecord['admin_email'].'" disabled>' ;
                               ?>
                             </div>
                           </div>
@@ -184,7 +168,7 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
                           <div class="col">
                             <div class="form-group">
                               <label>New Password</label>
-                              <input class="form-control" type="password" placeholder="••••••••••••" disabled>
+                              <input class="form-control" id="newpassword" type="password" minlength="8" maxlength="16" disabled>
                             </div>
                           </div>
                         </div>
@@ -192,14 +176,17 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
                           <div class="col">
                             <div class="form-group">
                               <label>Confirm <span class="d-none d-xl-inline">Password</span></label>
-                              <input class="form-control" type="password" placeholder="••••••••••••" disabled></div>
+                              <input class="form-control" id="confirmpassword" type="password" minlength="8" maxlength="16" disabled></div>
+															<input type="checkbox" onclick="newFunction()" id="showpassword" disabled> Show Password<br>
                           </div>
                         </div>
                       </div>
                     </div>
                     <div style="text-align:center;">
-                      <button class="btn" type="submit" style="background-color:#ff7a7a; color: white; margin-right:25px;">Change Password</button>
-                      <button class="btn" type="submit" style="background-color:#ff7a7a; color: white;">Update Profile</button>
+											<form action= "./action.php" method="POST">
+                      <button class="btn" type="button" style="background-color:#ff7a7a; color: white; margin-right:25px;" onclick="updateFunction()">Update Profile</button>
+                      <button class="btn" type="submit" style="background-color:#ff7a7a; color: white;">Save Changes</button>
+											</form>
                     </div>
                   </form>
                 </div>
@@ -208,6 +195,36 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
           </div>
         </div>
       </div>
+			<script type="text/javascript">
+			function updateFunction() {
+				document.getElementById('fullname').disabled = !document.getElementById('fullname').disabled;
+				document.getElementById('staffid').disabled = !document.getElementById('staffid').disabled;
+				document.getElementById('email').disabled = !document.getElementById('email').disabled;
+				document.getElementById('newpassword').disabled = !document.getElementById('newpassword').disabled;
+				document.getElementById('confirmpassword').disabled = !document.getElementById('confirmpassword').disabled;
+				document.getElementById('showpassword').disabled = !document.getElementById('showpassword').disabled;
+			}
+
+			function check(input) {
+        if (input.value != document.getElementById('newpassword').value) {
+            input.setCustomValidity('Password Must be Matching.');
+        }
+    }
+
+		function newFunction() {
+      var x = document.getElementById("newpassword");
+			var y = document.getElementById("confirmpassword");
+
+      if (x.type === "password") {
+        x.type = "text";
+				y.type = "text";
+
+      } else {
+        x.type = "password";
+				y.type = "password";
+      }
+    }
+			</script>
 <div>
   <footer class="w3-container w3-theme-d2 w3-padding-16">
   <div style="text-align:center;">
