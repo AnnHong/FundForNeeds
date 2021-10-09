@@ -121,7 +121,7 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
               </ul>
               <div class="tab-content pt-3">
                 <div class="tab-pane active">
-                  <form class="form" action= "./action.php" method="POST">
+                  <form class="form" action= "update_profile_admin.php" method="POST">
                     <div class="row">
                       <div class="col">
                         <div class="row">
@@ -129,7 +129,7 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
                             <div class="form-group">
                               <label>Full Name</label>
                               <?php
-                                  echo '<input class="form-control" type="text" id="fullname" style="border-radius:25px 25px;" value="'.$adminRecord['admin_fullname'].'" disabled>' ;
+                                  echo '<input class="form-control" type="text" id="fullname" name= "admin_fullname" style="border-radius:25px 25px;" value="'.$adminRecord['admin_fullname'].'" disabled>' ;
                                   ?>
                             </div>
                           </div>
@@ -137,7 +137,7 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
                             <div class="form-group">
                               <label>Staff ID</label>
                               <?php
-                                  echo '<input class="form-control" type="text" id="staffid" style="border-radius:25px 25px;" value="'.$adminRecord['admin_staffid'].'" disabled>' ;
+                                  echo '<input class="form-control" type="text" id="staffid" name="admin_staffid" style="border-radius:25px 25px;" value="'.$adminRecord['admin_staffid'].'" disabled>' ;
                                   ?>
                             </div>
                           </div>
@@ -169,7 +169,7 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
                           <div class="col">
                             <div class="form-group">
                               <label>New Password</label>
-                              <input class="form-control" id="newpassword" type="password" style="border-radius:25px 25px;" minlength="8" maxlength="16" disabled>
+                              <input class="form-control" id="newpassword" name="newpassword" type="password" style="border-radius:25px 25px;" minlength="8" maxlength="16" disabled>
                             </div>
                           </div>
                         </div>
@@ -177,16 +177,20 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
                           <div class="col">
                             <div class="form-group">
                               <label>Confirm <span class="d-none d-xl-inline">Password</span></label>
-                              <input class="form-control" id="confirmpassword" type="password" style="border-radius:25px 25px;" minlength="8" maxlength="16" disabled></div>
+                              <input class="form-control" id="confirmpassword" name="confirmpassword" type="password" style="border-radius:25px 25px;" minlength="8" maxlength="16" disabled></div>
 															<input type="checkbox" onclick="newFunction()" id="showpassword" disabled> Show Password<br>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <div style="text-align:center;">
-                      <button class="btn" type="button" style="background-color:#ff7a7a; color: white; margin-right:25px;border-radius:75px 25px;" onclick="updateFunction()">Update Profile</button>
-                      <button class="btn" type="submit" style="background-color:#ff7a7a; color: white;border-radius:75px 25px;">Save Changes</button>
-                    </div>
+										<div style="float:left;">
+											<button class="btn" type="button" style="background-color:#80daeb; color: white;border-radius:75px 25px;"name="UpdatePassAdminBtn" onclick="updatePassword()">Update Password</button>
+											<button class="btn" id="chgpass" type="submit" style="background-color:#80daeb; color: white;border-radius:75px 25px;margin-left:25px;"name="ChangePassAdminBtn" disabled>Change Password</button>
+										</div>
+											<div style="float:right;">
+												<button class="btn" type="button" style="background-color:#80daeb; color: white; margin-right:25px;border-radius:75px 25px;"  onclick="updateFunction()">Update Profile</button>
+												<button class="btn" id="save" type="submit" style="background-color:#80daeb; color: white;border-radius:75px 25px;" name="updateAdminBtn" disabled>Save Changes</button>
+											</div>
                   </form>
                 </div>
               </div>
@@ -198,10 +202,14 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
 			function updateFunction() {
 				document.getElementById('fullname').disabled = !document.getElementById('fullname').disabled;
 				document.getElementById('staffid').disabled = !document.getElementById('staffid').disabled;
-				document.getElementById('email').disabled = !document.getElementById('email').disabled;
+				document.getElementById('save').disabled = !document.getElementById('save').disabled;
+			}
+
+			function updatePassword(){
 				document.getElementById('newpassword').disabled = !document.getElementById('newpassword').disabled;
 				document.getElementById('confirmpassword').disabled = !document.getElementById('confirmpassword').disabled;
 				document.getElementById('showpassword').disabled = !document.getElementById('showpassword').disabled;
+				document.getElementById('chgpass').disabled = !document.getElementById('chgpass').disabled;
 			}
 
 			function check(input) {

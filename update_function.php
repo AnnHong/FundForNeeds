@@ -13,7 +13,7 @@ if(isset($_POST['SaveBtn'])){
 }
 
 function UpdateUser(){
-  echo 'nak update profile ';
+  //echo 'nak update profile ';
   $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
 
 if(!$con){
@@ -32,7 +32,7 @@ if(!$con){
 }
 
 function UpdateUserPassword(){
-  echo 'nak update Password ';
+  //echo 'nak update Password ';
   $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
 
 if(!$con){
