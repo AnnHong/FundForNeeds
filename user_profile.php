@@ -284,16 +284,21 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
                           <div class="col">
                             <div class="form-group">
                               <label>Confirm <span class="d-none d-xl-inline">Password</span></label>
-                              <input class="form-control" type="password" name="confirmpassword" id="confirmpassword" style="border-radius:25px 25px;" minlength="8" maxlength="16" oninput="check(this)" disabled></div>
+                              <input class="form-control" type="password" name="confirmpassword" id="confirmpassword" style="border-radius:25px 25px;" minlength="8" maxlength="16" oninput="check(input)" disabled></div>
                               <input type="checkbox" onclick="newFunction()" id="showpassword" disabled> Show Password<br>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <div style="text-align:center;">
-                      <button class="btn" type="button" style="background-color:#80daeb; color: white; margin-right:25px;border-radius:75px 25px;"  onclick="updateFunction()">Update Profile</button>
-                      <button class="btn" type="submit" style="background-color:#80daeb; color: white;border-radius:75px 25px;"name="SaveBtn">Save Changes</button>
-											<button class="btn" type="submit" style="background-color:#80daeb; color: white;border-radius:75px 25px;"name="ChangePassBtn">Change Password</button>
+                    <div>
+											<div style="float:left;">
+												<button class="btn" type="button" style="background-color:#80daeb; color: white;border-radius:75px 25px;"name="UpdatePassBtn" onclick="updatePassword()">Update Password</button>
+												<button class="btn" id="chgpass" type="submit" style="background-color:#80daeb; color: white;border-radius:75px 25px;margin-left:25px;"name="ChangePassBtn" disabled>Change Password</button>
+											</div>
+												<div style="float:right;">
+													<button class="btn" type="button" style="background-color:#80daeb; color: white; margin-right:25px;border-radius:75px 25px;"  onclick="updateFunction()">Update Profile</button>
+		                      <button class="btn" id="save" type="submit" style="background-color:#80daeb; color: white;border-radius:75px 25px;" name="SaveBtn" disabled>Save Changes</button>
+												</div>
 									  </div>
                   </form>
                 </div>
@@ -308,16 +313,21 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
 				document.getElementById('username').disabled = !document.getElementById('username').disabled;
 				document.getElementById('email').disabled = !document.getElementById('email').disabled;
 				document.getElementById('paypal').disabled = !document.getElementById('paypal').disabled;
+				document.getElementById('save').disabled = !document.getElementById('save').disabled;
+			}
+
+			function updatePassword(){
 				document.getElementById('newpassword').disabled = !document.getElementById('newpassword').disabled;
 				document.getElementById('confirmpassword').disabled = !document.getElementById('confirmpassword').disabled;
 				document.getElementById('showpassword').disabled = !document.getElementById('showpassword').disabled;
+				document.getElementById('chgpass').disabled = !document.getElementById('chgpass').disabled;
 			}
 
-		//	function check(input) {
-        //if (input.value != document.getElementById('newpassword').value) {
-        //    input.setCustomValidity('Password Must be Matching.');
-        //}
-    //}
+			function check(input) {
+        if (input.value != document.getElementById('newpassword').value) {
+            input.setCustomValidity('Password Must be Matching.');
+        }
+    }
 			</script>
 
 <div>
