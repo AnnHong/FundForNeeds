@@ -262,7 +262,7 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
                             <div class="form-group">
                               <label>Email</label>
                               <?php
-                                  echo '<input class="form-control" type="text" id="email" name="email" style="border-radius:25px 25px;" value="'.$userRecord['email'].'" disabled>' ;
+                                  echo '<input class="form-control" type="text" name="email" style="border-radius:25px 25px;" value="'.$userRecord['email'].'" disabled>' ;
                               ?>
                             </div>
                           </div>
@@ -311,7 +311,6 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
 			function updateFunction() {
 				document.getElementById('fullname').disabled = !document.getElementById('fullname').disabled;
 				document.getElementById('username').disabled = !document.getElementById('username').disabled;
-				document.getElementById('email').disabled = !document.getElementById('email').disabled;
 				document.getElementById('paypal').disabled = !document.getElementById('paypal').disabled;
 				document.getElementById('save').disabled = !document.getElementById('save').disabled;
 			}
