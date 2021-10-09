@@ -20,7 +20,7 @@ if(!$con){
   echo mysqli_error();
 }else{
 
-  $sql = 'UPDATE users SET usernames ="'.$_POST['usernames'].'", fullname="'.$_POST['fullname'].'", Paypal="'.$_POST['paypal'].'" WHERE email= "'.$_SESSION['email'].'"';
+  $sql = 'UPDATE users SET usernames ="'.$_POST['usernames'].'", fullname="'.$_POST['fullname'].'", Paypal="'.$_POST['paypal'].'" password="'.$_POST['newpassword'].'" WHERE email= "'.$_SESSION['email'].'"';
   //'update customer set IC_number= "'.$_POST['IC_number'].'",dob="'.$_POST['dob'].'" ,Cnumber="'.$_POST['Cnumber'].'"
  			//	,gender="'.$_POST['gender'].'",email="'.$_POST['email'].'" ,password="'.$_POST['password'].'"
  				//	where username = "'.$_POST['username'].'" ';
@@ -33,6 +33,7 @@ if(!$con){
         //  </script>";;
       }
 }
+
 function UpdateUserPassword(){
   echo 'nak update Password ';
   $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
