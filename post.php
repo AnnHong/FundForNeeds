@@ -11,13 +11,23 @@ function add_post(){
   if(!$con){
     echo mysqli_error();
   }else{
-    $sql=”INSERT into blog_posts (post_title,content,author_name,post_date) values(‘”.$_POST[‘blogtitle’].”‘,'”.$_POST[‘content’].”‘,'”.$_POST[‘authorname’].”‘,now())”;
 
+    $email=$_POST['email'];
+
+    $sql = "SELECT * FROM users WHERE email='$email'";
+    $result = mysqli_query($con,$sql);
+
+    if(mysqli_num_rows($result) >0){
+
+      $post = time(). md5($email);
+      $sql = "INSERT users SET post='$post' WHERE email='$email'";
+    }
     if (!mysqli_query($con,$sql))
     {
       die(‘Error: ‘ . mysqli_error($con));
     }
-    echo “1 record added”;
-
+    else{ echo “1 record added”;
+    }
   }
+}
 ?>

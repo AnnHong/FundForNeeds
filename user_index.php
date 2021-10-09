@@ -323,22 +323,6 @@ hr {
           <button type="button" class="w3-button w3-margin-bottom" style="background-color:red;color:white;border-radius:25px 25px;" onclick="document.getElementById('id03').style.display='block'">Report</button>
         </div>
 
-        <?php
-        $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
-        mysql_select_db('posts', $con);                     // Check connection
-
-        $sql="SELECT * FROM 'posts'";
-
-        $result = mysql_query($sql);
-
-        while($row = mysql_fetch_array($result)){
-
-        ?>
-        <p><?php echo $row['post_id'];?></p>
-        <p> by <?php echo $row['email_p'];?></p>
-        <?php } ?>
-
-
         <div id="id01" class="modal">
           <form class="modal-content w3-animate-zoom" action="/action_page.php">
             <div class="container">
@@ -353,7 +337,7 @@ hr {
         </div>
 
         <div id="id02" class="modal">
-          <form class="modal-content w3-animate-zoom" action="/post.php">
+          <form class="modal-content w3-animate-zoom" action="post.php">
             <div class="container">
               <h1>Post Confirmation</h1>
               <p>Are you sure you want to ask for donation?</p>
