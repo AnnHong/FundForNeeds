@@ -293,9 +293,9 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
                     <div style="text-align:center;">
                       <button class="btn" type="button" style="background-color:#80daeb; color: white; margin-right:25px;border-radius:75px 25px;"  onclick="updateFunction()">Update Profile</button>
                       <button class="btn" type="submit" style="background-color:#80daeb; color: white;border-radius:75px 25px;"name="SaveBtn">Save Changes</button>
-											<form action="update_function.php" method="POST">
+
 											<button class="btn" type="submit" style="background-color:#80daeb; color: white;border-radius:75px 25px;"name="ChangePassBtn">Change Password</button>
-											</form>
+										
 									  </div>
                   </form>
                 </div>
