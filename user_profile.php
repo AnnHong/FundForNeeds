@@ -236,7 +236,7 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
                             <div class="form-group">
                               <label>Full Name</label>
                               <?php
-                                  echo '<input class="form-control" type="text" id="fullname" style="border-radius:25px 25px;" value="'.$userRecord['fullname'].'" disabled>' ;
+                                  echo '<input class="form-control" type="text" id="fullname" name="fullname" style="border-radius:25px 25px;" value="'.$userRecord['fullname'].'" disabled>' ;
                                   ?>
                             </div>
                           </div>
@@ -244,7 +244,7 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
                             <div class="form-group">
                               <label>Username</label>
                               <?php
-                                  echo '<input class="form-control" type="text" id="username" style="border-radius:25px 25px;" value="'.$userRecord['usernames'].'" disabled>' ;
+                                  echo '<input class="form-control" type="text" id="username" name="usernames" style="border-radius:25px 25px;" value="'.$userRecord['usernames'].'" disabled>' ;
                                   ?>
                             </div>
                           </div>
@@ -253,14 +253,16 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
                           <div class="col">
                             <div class="form-group">
                               <label>Paypal Account</label>
-                                <input class="form-control" type="text" style="border-radius:25px 25px;" id="paypal" disabled>
+                                <?php
+																echo '<input class="form-control" type="text" style="border-radius:25px 25px;" id="paypal" name = "paypal" value="'.$userRecord['Paypal'].'" disabled>';
+																?>
                             </div>
                           </div>
                           <div class="col">
                             <div class="form-group">
                               <label>Email</label>
                               <?php
-                                  echo '<input class="form-control" type="text" id="email" style="border-radius:25px 25px;" value="'.$userRecord['email'].'" disabled>' ;
+                                  echo '<input class="form-control" type="text" id="email" name="email" style="border-radius:25px 25px;" value="'.$userRecord['email'].'" disabled>' ;
                               ?>
                             </div>
                           </div>
@@ -289,9 +291,12 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
                       </div>
                     </div>
                     <div style="text-align:center;">
-                      <button class="btn" type="button" style="background-color:#80daeb; color: white; margin-right:25px;border-radius:75px 25px;" name="ChangePassBtn" onclick="updateFunction()">Update Profile</button>
-                      <button class="btn" type="submit" style="background-color:#80daeb; color: white;border-radius:75px 25px;">Save Changes</button>
-                    </div>
+                      <button class="btn" type="button" style="background-color:#80daeb; color: white; margin-right:25px;border-radius:75px 25px;"  onclick="updateFunction()">Update Profile</button>
+                      <button class="btn" type="submit" style="background-color:#80daeb; color: white;border-radius:75px 25px;"name="SaveBtn">Save Changes</button>
+											<form action="update_function.php" method="POST">
+											<button class="btn" type="submit" style="background-color:#80daeb; color: white;border-radius:75px 25px;"name="ChangePassBtn">Change Password</button>
+											</form>
+									  </div>
                   </form>
                 </div>
               </div>
@@ -310,11 +315,11 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
 				document.getElementById('showpassword').disabled = !document.getElementById('showpassword').disabled;
 			}
 
-			function check(input) {
-        if (input.value != document.getElementById('newpassword').value) {
-            input.setCustomValidity('Password Must be Matching.');
-        }
-    }
+		//	function check(input) {
+        //if (input.value != document.getElementById('newpassword').value) {
+        //    input.setCustomValidity('Password Must be Matching.');
+        //}
+    //}
 			</script>
 
 <div>
