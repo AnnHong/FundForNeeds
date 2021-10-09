@@ -20,7 +20,7 @@ if(!$con){
   echo mysqli_error();
 }else{
 
-  $sql = 'UPDATE users SET usernames ="'.$_POST['usernames'].'", fullname="'.$_POST['fullname'].'", Paypal="'.$_POST['paypal'].'", password="'.$_POST['newpassword'].'" WHERE email= "'.$_SESSION['email'].'"';
+  $sql = 'UPDATE users SET usernames ="'.$_POST['usernames'].'", fullname="'.$_POST['fullname'].'", Paypal="'.$_POST['paypal'].'" WHERE email= "'.$_SESSION['email'].'"';
   $qry=mysqli_query($con,$sql);
   			return $qry;
 
@@ -44,10 +44,7 @@ if(!$con){
   $qry=mysqli_query($con,$sql);
   			return $qry;
 
-  //echo "<script>
-      //    alert('Your password has been changed.');
-        //  window.location.href='user_profile.php';
-        //  </script>";;
+
       }
 }
 
