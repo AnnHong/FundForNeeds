@@ -154,9 +154,9 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
     while($row=mysqli_fetch_assoc($q)){
       //echo $row ['username'].'<br>';
       if($row['image']==''){
-        echo "<img width='100' height='100' src='pictures/default.jpg' alt='Default Profile Pic'>";
+        echo "<img width='140' height='140' src='pictures/default.jpg' alt='Default Profile Pic'>";
       }else{
-                    echo "<img width='100' height='100' src='pictures/".$row['image']."' alt='Profile Pic'>";
+                    echo "<img width='140' height='140' src='pictures/".$row['image']."' alt='Profile Pic'>";
                 }
     }
    ?>
