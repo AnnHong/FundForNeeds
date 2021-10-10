@@ -27,7 +27,7 @@ if(isset($_POST['upload_button'])){
       echo "<script>
               alert('File sucessfully upload');
               window.location.href='user_profile.php';
-              </script>";;;
+              </script>";
     }else{
 
       echo "Error.Please try again";
@@ -50,5 +50,19 @@ else if(isset($_POST['uploadPic_button'])){
                   </script>";;;
         }
 
+}else if(isset($_POST['uploadPicVerified_button'])){
+  move_uploaded_file($_FILES['image']['tmp_name'],"C:/xampp/htdocs/verifyuser_photos/".$_FILES['image']['name']);
+  $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
+
+  if(!$con){
+    echo mysqli_error();
+  }else{
+    $email =$_SESSION['email'];
+    $q = mysqli_query($con,"UPDATE users SET image = '".$_FILES['image']['name']."' WHERE email = '".$email."'");
+    echo "<script>
+            alert('Image sucessfully upload');
+            window.location.href='verified_user.php';
+            </script>";;;
+  }
 }
 ?>

@@ -152,9 +152,9 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
     							while($row=mysqli_fetch_assoc($q)){
       						//echo $row ['username'].'<br>';
       						if($row['image']==''){
-        						echo "<img width='140' height='140' src='pictures/default.jpg' alt='Default Profile Pic'>";
+        						echo "<img width='140' height='140' src='../verifyuser_photos/default.jpg' alt='Default Profile Pic'>";
       						}else{
-                    echo "<img width='140' height='140' src='pictures/".$row['image']."' alt='Profile Pic'>";
+                    echo "<img width='140' height='140' src='../verifyuser_photos/".$row['image']."' alt='Profile Pic'>";
                 		}
     							}
    							?>
@@ -184,7 +184,7 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
 														<form action="upload_img2.php" method="post" enctype="multipart/form-data">
 															<b><p>Please upload your profile picture.</p></b>
 															<input type="file" id="myFile" name="image" style="margin:0 0 25px 80px;">
-															<input type="submit" name ="uploadPic_button" class="btn">
+															<input type="submit" name ="uploadPicVerified_button" class="btn">
 														</form>
 													</div>
 												</div>
@@ -286,7 +286,7 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
                           <div class="col">
                             <div class="form-group">
                               <label>Confirm <span class="d-none d-xl-inline">Password</span></label>
-                              <input class="form-control" type="password" name="confirmpassword" id="confirmpassword" style="border-radius:25px 25px;" minlength="8" maxlength="16" oninput="check(this)" disabled></div>
+                              <input class="form-control" type="password" name="confirmpassword" id="confirmpassword" style="border-radius:25px 25px;" minlength="8" maxlength="16" oninput="check(input)" disabled></div>
                               <input type="checkbox" onclick="newFunction()" id="showpassword" disabled> Show Password<br>
                           </div>
                         </div>
@@ -309,27 +309,43 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
           </div>
         </div>
       </div>
-      <script type="text/javascript">
-      function updateFunction() {
-        document.getElementById('fullname').disabled = !document.getElementById('fullname').disabled;
-        document.getElementById('username').disabled = !document.getElementById('username').disabled;
-        document.getElementById('paypal').disabled = !document.getElementById('paypal').disabled;
-        document.getElementById('save').disabled = !document.getElementById('save').disabled;
-      }
+			<script type="text/javascript">
+			function updateFunction() {
+				document.getElementById('fullname').disabled = !document.getElementById('fullname').disabled;
+				document.getElementById('username').disabled = !document.getElementById('username').disabled;
+				document.getElementById('paypal').disabled = !document.getElementById('paypal').disabled;
+				document.getElementById('save').disabled = !document.getElementById('save').disabled;
+			}
 
-      function updatePassword(){
-        document.getElementById('newpassword').disabled = !document.getElementById('newpassword').disabled;
-        document.getElementById('confirmpassword').disabled = !document.getElementById('confirmpassword').disabled;
-        document.getElementById('showpassword').disabled = !document.getElementById('showpassword').disabled;
-        document.getElementById('chgpass').disabled = !document.getElementById('chgpass').disabled;
-      }
+			function updatePassword(){
+				document.getElementById('newpassword').disabled = !document.getElementById('newpassword').disabled;
+				document.getElementById('confirmpassword').disabled = !document.getElementById('confirmpassword').disabled;
+				document.getElementById('showpassword').disabled = !document.getElementById('showpassword').disabled;
+				document.getElementById('chgpass').disabled = !document.getElementById('chgpass').disabled;
+			}
 
-      function check(input) {
-        if (input.value != document.getElementById('newpassword').value) {
-            input.setCustomValidity('Password Must be Matching.');
-        }
+			function check(input) {
+				if (input.value = document.getElementById('newpassword').value) {
+						input.setCustomValidity('Password Must be Matching.');
+				}
+		}
+		function newFunction() {
+
+      var x = document.getElementById("newpassword");
+      var y = document.getElementById("confirmpassword");
+      var z = document.getElementById("myInput");
+
+      if (x.type === "password") {
+        x.type = "text";
+        y.type = "text";
+        z.type = "text";
+      } else {
+        x.type = "password";
+        y.type = "password";
+        z.type = "password";
+      }
     }
-      </script>
+			</script>
 <div>
   <footer class="w3-container w3-theme-d2 w3-padding-16">
   <div style="text-align:center;">
