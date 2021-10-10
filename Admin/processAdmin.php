@@ -5,10 +5,6 @@ session_start();
 {
   login();
 
-  echo "<script>
-        alert('You are logged in.Welcome.')
-  			window.location.href='Admin_HomePage.php';
-  			</script>";
 
 }else if(isSet($_POST['verify'])){
   verifyemailadmin();
@@ -38,8 +34,17 @@ function login()
             $userRecord=mysqli_fetch_assoc($qry);
             $_SESSION['admin_email']=$userRecord['admin_email'];
             $_SESSION['password']=$userRecord['password'];
+            echo "<script>
+                			alert('You are log in. Welcome.');
+                			window.location.href='Admin_Homepage.php';
+                			</script>";;
+
 }else{
-  echo '<br>signin failed';
+  echo "<script>
+            alert('Invalid email and password.Please try again.');
+            window.location.href='Admin_Login.php';
+            </script>";;
+
 }
       }
 }
