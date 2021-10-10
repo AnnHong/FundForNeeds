@@ -73,7 +73,7 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
     }
 
     /* The Close Button */
-    .close {
+    .close,.cancel {
     color: #aaaaaa;
     float: right;
     font-size: 28px;
@@ -81,7 +81,7 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
     color: red;
     }
 
-    .close:hover, .close:focus {
+    .close:hover, .close:focus,.cancel:hover, .cancel:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;
@@ -204,7 +204,7 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
                         <div id="myModal2" class="modal">
                           <!-- Modal content -->
                           <div class="modal-content" style=" text-align:right !important;">
-                            <span class="close">&times;</span>
+                            <span class="cancel">&times;</span>
                             <input type="file" name="Upload IC" value="Upload your IC" id="upload" hidden>
                             <div style="display:inline-block;text-align:center;">
                               <form action="upload_img2.php" method="post" enctype="multipart/form-data">
@@ -224,6 +224,7 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
 										var btn2 = document.getElementById("myBtn2");
                     // Get the <span> element that closes the modal
                     var span = document.getElementsByClassName("close")[0];
+										var span2 = document.getElementsByClassName("cancel")[0];
 										  //var span2 = document.getElementsByClassName("close")[0];
                     // When the user clicks the button, open the modal
                     btn.onclick = function() {
@@ -238,7 +239,11 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
                     span.onclick = function() {
                    		modal.style.display = "none" ;
                     }
-										
+
+										span2.onclick = function() {
+                   		modal2.style.display = "none" ;
+                    }
+
                     // When the user clicks anywhere outside of the modal, close it
                     window.onclick = function(event) {
                       if (event.target == modal) {
