@@ -151,15 +151,15 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
 
     							$con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
     							$q = mysqli_query($con,'SELECT * FROM users WHERE  email ="'.$email.'" ');
-    while($row=mysqli_fetch_assoc($q)){
-      //echo $row ['username'].'<br>';
-      if($row['image']==''){
-        echo "<img width='140' height='140' src='pictures/default.jpg' alt='Default Profile Pic'>";
-      }else{
+    							while($row=mysqli_fetch_assoc($q)){
+      						//echo $row ['username'].'<br>';
+      						if($row['image']==''){
+        						echo "<img width='140' height='140' src='pictures/default.jpg' alt='Default Profile Pic'>";
+      						}else{
                     echo "<img width='140' height='140' src='pictures/".$row['image']."' alt='Profile Pic'>";
-                }
-    }
-   ?>
+                		}
+    							}
+   							?>
                 </div>
                 <div class="col d-flex flex-column flex-sm-row justify-content-between mb-3">
                   <div class="text-center text-sm-left mb-2 mb-sm-0">
@@ -198,10 +198,10 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
 
                       <div>
                         <!-- Trigger/Open The Modal -->
-                        <button id="myBtn" class="btn" style="background-color:#80daeb; color: white;border-radius:75px 25px;">Verify</button>
+                        <button id="myBtn2" class="btn" style="background-color:#80daeb; color: white;border-radius:75px 25px;">Verify</button>
 
                         <!-- The Modal -->
-                        <div id="myModal" class="modal">
+                        <div id="myModal2" class="modal">
                           <!-- Modal content -->
                           <div class="modal-content" style=" text-align:right !important;">
                             <span class="close">&times;</span>
@@ -218,29 +218,37 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
                         <script>
                     // Get the modal
                     var modal = document.getElementById("myModal");
-
+										var modal2 = document.getElementById("myModal2");
                     // Get the button that opens the modal
                     var btn = document.getElementById("myBtn");
-
+										var btn2 = document.getElementById("myBtn2");
                     // Get the <span> element that closes the modal
                     var span = document.getElementsByClassName("close")[0];
-
+										  //var span2 = document.getElementsByClassName("close")[0];
                     // When the user clicks the button, open the modal
                     btn.onclick = function() {
                       modal.style.display = "block";
                     }
 
+										btn2.onclick = function() {
+											modal2.style.display = "block";
+										}
+
                     // When the user clicks on <span> (x), close the modal
                     span.onclick = function() {
-                      modal.style.display = "none";
+                   		modal.style.display = "none" ;
                     }
-
+										
                     // When the user clicks anywhere outside of the modal, close it
                     window.onclick = function(event) {
                       if (event.target == modal) {
                         modal.style.display = "none";
-                      }
+
+                      }else if(event.target == modal2){
+												modal2.style.display = "none";
+											}
                     }
+
                     </script>
                       </div>
                     </div>

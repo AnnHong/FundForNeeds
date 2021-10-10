@@ -87,11 +87,21 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
             <div class="e-profile">
               <div class="row">
                 <div class="col-12 col-sm-auto mb-3">
-                  <div class="mx-auto" style="width: 140px;">
-                    <div class="d-flex justify-content-center align-items-center rounded" style="height: 140px; background-color: rgb(233, 236, 239);">
-                      <span style="color: rgb(166, 168, 170); font: bold 8pt Arial;">140x140</span>
-                    </div>
-                  </div>
+									<?php
+
+									$admin_email = $_SESSION['admin_email'];
+
+    							$con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
+    							$q = mysqli_query($con,'SELECT * FROM admin WHERE  admin_email ="'.$admin_email.'" ');
+    							while($row=mysqli_fetch_assoc($q)){
+      						//echo $row ['username'].'<br>';
+      							if($row['image_admin']==''){
+        							echo "<img width='140' height='140' src='admin_pictures/default.jpg' alt='Default Profile Pic'>";
+      							}else{
+                    	echo "<img width='140' height='140' src='admin_pictures/".$row['image_admin']."' alt='Profile Pic'>";
+                		}
+    							}
+   							?>
                 </div>
                 <div class="col d-flex flex-column flex-sm-row justify-content-between mb-3">
                   <div class="text-center text-sm-left mb-2 mb-sm-0">
@@ -103,12 +113,55 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
                         echo '<p class="mb-0">@'.$adminRecord['admin_staffid']. '</p>';
 
                         ?>
-                    <div class="mt-2">
-                      <button class="btn" type="submit" style="background-color:#ff7a7a; color: white;border-radius:75px 25px;">
-                        <i class="fa fa-fw fa-camera"></i>
-                        <span>Change Photo</span>
-                      </button>
-                    </div>
+												<div class="mt-2">
+													<div>
+		                      <button class="btn" id="myBtn" type="submit" name="changePic"style="background-color:#ff7a7a; color: white;border-radius:75px 25px;">
+		                        <i class="fa fa-fw fa-camera"></i>
+		                        <span>Change Photo</span>
+		                      </button>
+													<div id="myModal" class="modal">
+														<!-- Modal content -->
+														<div class="modal-content" style=" text-align:right !important;">
+															<span class="close">&times;</span>
+															<input type="file" name="image_admin" value="upload your profile picture" id="upload" hidden>
+															<div style="display:inline-block;text-align:center;">
+																<form action="upload_pic.php" method="post" enctype="multipart/form-data">
+																	<b><p>Please upload your profile picture.</p></b>
+																	<input type="file" id="myFile" name="image_admin" style="margin:0 0 25px 80px;">
+																	<input type="submit" name ="uploadPicAdmin_button" class="btn">
+																</form>
+															</div>
+														</div>
+													</div>
+													<script>
+													// Get the modal
+													var modal = document.getElementById("myModal");
+
+													// Get the button that opens the modal
+													var btn = document.getElementById("myBtn");
+
+													// Get the <span> element that closes the modal
+													var span = document.getElementsByClassName("close")[0];
+
+													// When the user clicks the button, open the modal
+													btn.onclick = function() {
+														modal.style.display = "block";
+													}
+
+													// When the user clicks on <span> (x), close the modal
+													span.onclick = function() {
+														modal.style.display = "none";
+													}
+
+													// When the user clicks anywhere outside of the modal, close it
+													window.onclick = function(event) {
+														if (event.target == modal) {
+															modal.style.display = "none";
+														}
+													}
+													</script>
+		                    </div>
+											</div>
                   </div>
                   <div class="text-center text-sm-right">
                     <span class="badge badge-secondary" style="background-color:#ff7a7a; color: white;">Front-end Programmer</span>
@@ -184,12 +237,12 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
                       </div>
                     </div>
 										<div style="float:left;">
-											<button class="btn" type="button" style="background-color:#80daeb; color: white;border-radius:75px 25px;"name="UpdatePassAdminBtn" onclick="updatePassword()">Update Password</button>
-											<button class="btn" id="chgpass" type="submit" style="background-color:#80daeb; color: white;border-radius:75px 25px;margin-left:25px;"name="ChangePassAdminBtn" disabled>Change Password</button>
+											<button class="btn" type="button" style="background-color:#ff7a7a; color: white;border-radius:75px 25px;"name="UpdatePassAdminBtn" onclick="updatePassword()">Update Password</button>
+											<button class="btn" id="chgpass" type="submit" style="background-color:#ff7a7a; color: white;border-radius:75px 25px;margin-left:25px;"name="ChangePassAdminBtn" disabled>Change Password</button>
 										</div>
 											<div style="float:right;">
-												<button class="btn" type="button" style="background-color:#80daeb; color: white; margin-right:25px;border-radius:75px 25px;"  onclick="updateFunction()">Update Profile</button>
-												<button class="btn" id="save" type="submit" style="background-color:#80daeb; color: white;border-radius:75px 25px;" name="updateAdminBtn" disabled>Save Changes</button>
+												<button class="btn" type="button" style="background-color:#ff7a7a; color: white; margin-right:25px;border-radius:75px 25px;"  onclick="updateFunction()">Update Profile</button>
+												<button class="btn" id="save" type="submit" style="background-color:#ff7a7a; color: white;border-radius:75px 25px;" name="updateAdminBtn" disabled>Save Changes</button>
 											</div>
                   </form>
                 </div>
@@ -231,6 +284,7 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
 				y.type = "password";
       }
     }
+
 			</script>
 <div>
   <footer class="w3-container w3-theme-d2 w3-padding-16">
