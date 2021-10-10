@@ -17,7 +17,7 @@ session_start();
 }
 
 function login()
-    {
+{
         //print_r($_POST);
     //  $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
       $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
@@ -34,18 +34,18 @@ function login()
             $userRecord=mysqli_fetch_assoc($qry);
             $_SESSION['admin_email']=$userRecord['admin_email'];
             $_SESSION['password']=$userRecord['password'];
-            echo "<script>
+                echo "<script>
                 			alert('You are log in. Welcome.');
                 			window.location.href='Admin_Homepage.php';
                 			</script>";;
 
-}else{
-  echo "<script>
-            alert('Invalid email and password.Please try again.');
-            window.location.href='Admin_Login.php';
-            </script>";;
+            }else{
+                echo "<script>
+                      alert('Invalid email and password.Please try again.');
+                      window.location.href='Admin_Login.php';
+                      </script>";;
 
-}
+            }
       }
 }
 
