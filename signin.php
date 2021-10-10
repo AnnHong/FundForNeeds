@@ -40,6 +40,9 @@ function signin()
           			</script>";;
 			}
     }
+
+    //$sql = "select * from users WHERE email = '$email' AND verified = 1 AND password = '$password' AND user_verify = 1 ";
+    //go verified_user.php 
 }
 
 ?>

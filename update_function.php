@@ -10,6 +10,14 @@ if(isset($_POST['SaveBtn'])){
   $msg= UpdateUserPassword();
 	header( "refresh:1; url=user_profile.php?msg=".$msg);
 
+}else if(isset($_POST['ChangePassBtn_verified'])){
+  $msg= UpdateUserPassword();
+	header( "refresh:1; url=verified_user.php?msg=".$msg);
+
+}else if(isset($_POST['SaveBtn_verified'])){
+  $msg= UpdateUserPassword();
+	header( "refresh:1; url=verified_user.php?msg=".$msg);
+
 }
 
 function UpdateUser(){
