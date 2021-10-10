@@ -51,6 +51,9 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
     body{
         margin-top:25px;
     }
+		img{
+		   pointer-events: none;
+		}
 
 		.modal {
     display: none; /* Hidden by default */

@@ -48,6 +48,10 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
 			from{ bottom:-100px; opacity:0 }
 			to{ bottom:0; opacity:1 }
 		}
+
+		img{
+		   pointer-events: none;
+		}
     /* The Modal (background) */
     .modal {
     display: none; /* Hidden by default */

@@ -28,6 +28,10 @@
     from{ bottom:-100px; opacity:0 }
     to{ bottom:0; opacity:1 }
   }
+
+  img{
+     pointer-events: none;
+  }
   </style>
 </head>
 <body class="animate-bottom">
