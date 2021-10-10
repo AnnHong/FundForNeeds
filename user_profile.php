@@ -29,6 +29,7 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>My Profile</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <style>
 		/* Add animation to "page content" */
 		.animate-bottom {
@@ -184,7 +185,7 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
                       </button>
 											<div id="myModal" class="modal">
 												<!-- Modal content -->
-												<div class="modal-content" style=" text-align:right !important;">
+												<div class="modal-content w3-animate-zoom" style=" text-align:right !important;">
 													<span class="close">&times;</span>
 													<input type="file" name="image" value="upload your profile picture" id="upload" hidden>
 													<div style="display:inline-block;text-align:center;">
@@ -207,7 +208,7 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
                         <!-- The Modal -->
                         <div id="myModal2" class="modal">
                           <!-- Modal content -->
-                          <div class="modal-content" style=" text-align:right !important;">
+                          <div class="modal-content w3-animate-zoom" style=" text-align:right !important;">
                             <span class="cancel">&times;</span>
                             <input type="file" name="Upload IC" value="Upload your IC" id="upload" hidden>
                             <div style="display:inline-block;text-align:center;">
