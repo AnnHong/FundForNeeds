@@ -41,7 +41,7 @@ function login()
 
             }else{
                 echo "<script>
-                      alert('Invalid email and password.Please try again.');
+                      alert('Invalid email or password. Please try again.');
                       window.location.href='Admin_Login.php';
                       </script>";;
 
