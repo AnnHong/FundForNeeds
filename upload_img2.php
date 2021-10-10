@@ -34,4 +34,21 @@ if(isset($_POST['upload_button'])){
     }
 	}
 }
+else if(isset($_POST['uploadPic_button'])){
+
+        move_uploaded_file($_FILES['image']['tmp_name'],"pictures/".$_FILES['image']['name']);
+        $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
+
+        if(!$con){
+          echo mysqli_error();
+        }else{
+          $email =$_SESSION['email'];
+          $q = mysqli_query($con,"UPDATE users SET image = '".$_FILES['image']['name']."' WHERE email = '".$email."'");
+          echo "<script>
+                  alert('Image sucessfully upload');
+                  window.location.href='user_profile.php';
+                  </script>";;;
+        }
+
+}
 ?>

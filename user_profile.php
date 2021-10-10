@@ -145,11 +145,21 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
             <div class="e-profile">
               <div class="row">
                 <div class="col-12 col-sm-auto mb-3">
-                  <div class="mx-auto" style="width: 140px;">
-                    <div class="d-flex justify-content-center align-items-center rounded" style="height: 140px; background-color: rgb(233, 236, 239);">
-                      <span style="color: rgb(166, 168, 170); font: bold 8pt Arial;">140x140</span>
-                    </div>
-                  </div>
+									<?php
+
+									$email = $_SESSION['email'];
+
+    							$con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
+    							$q = mysqli_query($con,'SELECT * FROM users WHERE  email ="'.$email.'" ');
+    while($row=mysqli_fetch_assoc($q)){
+      //echo $row ['username'].'<br>';
+      if($row['image']==''){
+        echo "<img width='100' height='100' src='pictures/default.jpg' alt='Default Profile Pic'>";
+      }else{
+                    echo "<img width='100' height='100' src='pictures/".$row['image']."' alt='Profile Pic'>";
+                }
+    }
+   ?>
                 </div>
                 <div class="col d-flex flex-column flex-sm-row justify-content-between mb-3">
                   <div class="text-center text-sm-left mb-2 mb-sm-0">
@@ -164,10 +174,24 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
                         ?>
 
                     <div class="mt-2">
-                      <button class="btn" type="submit" style="background-color:#80daeb; color: white;border-radius:75px 25px;">
+                      <button class="btn" id="myBtn" type="submit" name="changePic"style="background-color:#80daeb; color: white;border-radius:75px 25px;">
                         <i class="fa fa-fw fa-camera"></i>
                         <span>Change Photo</span>
                       </button>
+											<div id="myModal" class="modal">
+												<!-- Modal content -->
+												<div class="modal-content" style=" text-align:right !important;">
+													<span class="close">&times;</span>
+													<input type="file" name="image" value="upload your profile picture" id="upload" hidden>
+													<div style="display:inline-block;text-align:center;">
+														<form action="upload_img2.php" method="post" enctype="multipart/form-data">
+															<b><p>Please upload your profile picture.</p></b>
+															<input type="file" id="myFile" name="image" style="margin:0 0 25px 80px;">
+															<input type="submit" name ="uploadPic_button" class="btn">
+														</form>
+													</div>
+												</div>
+											</div>
                     </div>
 
                     <div class="mt-2">
