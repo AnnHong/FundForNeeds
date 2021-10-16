@@ -11,7 +11,7 @@ signin();
 
 function signin()
     {
-        print_r($_POST);
+        //print_r($_POST);
         $con = mysqli_connect("localhost", "fundforneeds", "fundforneeds", "fundforneeds");
 
 		$email = $_POST['email'];

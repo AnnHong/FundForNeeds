@@ -190,7 +190,7 @@ hr {
   <div class="w3-dropdown-hover w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" style="border-radius:15px 15px;">
       <img src="avatar2.png" class="w3-circle" style="height:23px;width:23px" alt="Avatar">
       <div class="w3-dropdown-content w3-card-4 w3-bar-block w3-hover-white" style="width:150px;right:0px;border-radius:25px;">
-        <a href="user_profile.php" class="w3-bar-item w3-button" style="border-radius:25px 25px;text-align:center;">My Profile</a>
+        <a href="user_status_function.php" class="w3-bar-item w3-button" style="border-radius:25px 25px;text-align:center;">My Profile</a>
         <a href="index.php" class="w3-bar-item w3-button" style="border-radius:25px 25px;text-align:center;">Sign Out</a>
       </div>
     </div>
@@ -199,7 +199,7 @@ hr {
 
   <!-- Navbar on small screens -->
   <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium w3-large" style="border-radius:25px 25px;width:50%;margin-left:50%;">
-    <a href="user_profile.php" class="w3-bar-item w3-button w3-padding-large" style="margin-top:50px;border-radius:25px 25px;text-align:center;">My Profile</a>
+    <a href="user_status_function.php" class="w3-bar-item w3-button w3-padding-large" style="margin-top:50px;border-radius:25px 25px;text-align:center;">My Profile</a>
     <a href="index.php" class="w3-bar-item w3-button w3-padding-large" style="border-radius:25px 25px;text-align:center;">Sign Out</a>
   </div>
 

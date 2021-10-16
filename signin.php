@@ -35,14 +35,14 @@ function signin()
 				//echo '<br>signin failed';
 
       echo  "<script>
-          			alert('Please verify your email first.');
+          			alert('Please verify your email first. Or Invalid email and password.');
           			window.location.href='user_signin.php';
           			</script>";;
 			}
     }
 
     //$sql = "select * from users WHERE email = '$email' AND verified = 1 AND password = '$password' AND user_verify = 1 ";
-    //go verified_user.php 
+    //go verified_user.php
 }
 
 ?>
