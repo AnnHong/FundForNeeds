@@ -125,6 +125,8 @@ include 'user_list_function.php';
       <th>Email</th>
       <th>Password</th>
       <th>IC File</th>
+      <th>Paypal Account</th>
+      
       <th>Verification Status</th>
       <th>Verification</th>
       <th>Modification</th>
@@ -141,7 +143,9 @@ include 'user_list_function.php';
   					echo '<td>'.$row['email'].'</td>';
   					echo '<td>'.$row['password'].'</td>';
             echo '<td>'.$row['file_name'].'</td>';
-            echo '<td>'.$row['user_verify'].'</td>';
+            echo '<td>'.$row['Paypal'].'</td>';
+            //echo "<td><img width='140' height='140' src='C:/xampp/htdocs/user_photos/".$row['image']."' alt='Profile Pic'></td>";
+  echo '<td>'.$row['user_verify'].'</td>';
             $emailSelected=$row['email'];
 
 
@@ -153,7 +157,13 @@ include 'user_list_function.php';
     name="verifyUserButton" class="verify">';
   echo '</form>';
 
-  echo '<td>Modify</td>';
+  echo '<td style="text-align:center;"><form action="" method="POST">';
+    echo '<input type="hidden" name="EditUser"
+      value="'.$emailSelected.'" >';
+
+    echo '<input type="submit" value="Edit"
+    name="EditUserButton" class="edit">';
+  echo '</form>';
         echo '<td style="text-align:center;"><form action="deleteUser.php" method="POST">';
           echo '<input type="hidden" name="emailToDelete"
             value="'.$emailSelected.'" >';
