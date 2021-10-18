@@ -65,6 +65,16 @@ tr:nth-child(even) {
   margin: 2px 2px;
   cursor: pointer;
 }
+
+.edit{
+  background-color: rgb(68, 159, 235);
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  margin: 2px 2px;
+  cursor: pointer;
+}
   </style>
 </head>
 <body class="animate-bottom">
@@ -126,7 +136,7 @@ include 'user_list_function.php';
       <th>Password</th>
       <th>IC File</th>
       <th>Paypal Account</th>
-      
+
       <th>Verification Status</th>
       <th>Verification</th>
       <th>Modification</th>
