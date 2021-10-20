@@ -32,7 +32,7 @@ function getpost()
 
       echo '<tr>';
   					echo'<td>'.$count.'</td>';
-  					echo '<td>'.$row['Id'].'</td>';
+  				
   					echo '<td>'.$row['User_Email'].'</td>';
   					echo '<td>'.$row['Post_Content'].'</td>';
   					echo '<td>'.$row['Post_Date'].'</td>';
