@@ -167,7 +167,7 @@ include 'user_list_function.php';
     name="verifyUserButton" class="verify">';
   echo '</form>';
 
-  echo '<td style="text-align:center;"><form action="" method="POST">';
+  echo '<td style="text-align:center;"><form action="editUser.php" method="POST">';
     echo '<input type="hidden" name="EditUser"
       value="'.$emailSelected.'" >';
 

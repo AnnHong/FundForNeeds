@@ -14,6 +14,27 @@ session_start();
   			window.location.href='Admin_Login.php';
   			</script>";
 
+}else if(isset($_POST['save'])){
+
+	print_r($_POST);
+	$msg= UpdateUserInformation();
+	header( "refresh:1; url=customerList.php?msg=".$msg);
+
+}
+
+function getUserInformation($email){
+$con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
+	if(!$con)
+		{
+		echo mysqli_error();
+		}
+	else
+	{
+		//echo 'connected';
+		$sql='select * from users where email = "'.$email.'"';
+		$qry=mysqli_query($con,$sql);
+		return $qry;
+	}
 }
 
 function login()
