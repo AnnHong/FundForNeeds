@@ -5,7 +5,6 @@ if(isset($_POST['EditUserButton'])){
 
   $msg=editUser();
 
-header( "refresh:1; url=user_list.php?msg=".$msg);
 }
 
 function editUser()
