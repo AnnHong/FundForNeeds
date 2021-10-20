@@ -1,33 +1,24 @@
 <?php
-if(isset($_POST['confirmbtn']))
-{
-  add_post();
-}
+session_start();
+  function create_post()
+  {
+    $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
 
-function add_post(){
-
-	$con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
-
-  if(!$con){
-    echo mysqli_error();
-  }else{
-
-    $email=$_POST['email'];
-
-    $sql = "SELECT * FROM users WHERE email='$email'";
-    $result = mysqli_query($con,$sql);
-
-    if(mysqli_num_rows($result) >0){
-
-      $post = time(). md5($email);
-      $sql = "INSERT users SET post='$post' WHERE email='$email'";
+    if(!$con){
+      echo mysqli_error();
     }
-    if (!mysqli_query($con,$sql))
-    {
-      die(‘Error: ‘ . mysqli_error($con));
-    }
-    else{ echo “1 record added”;
+    else{
+      $User_Email = $_SESSION['email'];
+      $post_content = $_POST['post'];
+      $date = date('Y/m/d h:i:s');
+      $sql = "insert into posts(User_Email, Post_Content, Post_Date) values('$User_Email', '$post_content', '$date')";
+
+      if(!mysqli_query($con, $sql)){
+        return mysqli_error($con);
+      }
+      else{
+        return true;
+      }
     }
   }
-}
 ?>

@@ -1,3 +1,10 @@
+<?php
+//ForPosting
+  if($_SERVER['REQUEST METHOD'] == "POST")
+  {
+    print_r($_POST);
+  }
+ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -88,35 +95,7 @@ input[type=submit]:hover {
   background-color: #45a049;
 }
 
-/* Float cancel and delete buttons and add an equal width */
-.confirmbtn, .cancelbtn {
-  float: left;
-  width: 50%;
-}
 
-/* Add a color to the cancel button */
-.confirmbtn {
-  background-color: #04AA6D;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  opacity: 0.9;
-  border-radius:75px 25px;
-}
-
-/* Add a color to the delete button */
-.cancelbtn {
-  background-color: #f44336;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  opacity: 0.9;
-  border-radius:75px 25px;
-}
 
 /* Add padding and center-align text to the container */
 .container {
@@ -157,12 +136,6 @@ hr {
   display: table;
 }
 
-/* Change styles for cancel button and delete button on extra small screens */
-@media screen and (max-width: 300px) {
-  .confirmbtn, .cancelbtn {
-    width: 100%;
-  }
-}
 </style>
 <body onload="load()" style="margin:0;">
   <div id="loader"></div>
@@ -265,19 +238,19 @@ hr {
       </div>
 
       <!-- Middle Column -->
-      <div class="w3-col m7">
+      <divclass="w3-col m7">
+
 
         <div class="w3-row-padding">
           <div class="w3-col m12">
-            <div class="w3-card w3-round w3-white">
-              <div class="w3-container w3-padding">
-                <h6 class="w3-opacity">Make a post to collect donation</h6>
-                <p contenteditable="true" class="w3-border w3-padding">Ask For Donation</p>
-                <button type="button" class="w3-button w3-theme-d2" onclick="document.getElementById('id02').style.display='block'" style="border-radius:25px 25px;"><i class="fa fa-pencil" st></i>  Post</button>
-              </div>
-            </div>
+                <form action="processPost.php" method="POST">
+                  <textarea name="post" placeholder="Ask For Donation..."></textarea>
+                  <button name="postbutton" type="submit"> Post </button>
+                  <br>
+                </form>
           </div>
         </div>
+
 
         <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
           <img src="avatar2.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
@@ -323,31 +296,6 @@ hr {
           <button type="button" class="w3-button w3-margin-bottom" style="background-color:red;color:white;border-radius:25px 25px;" onclick="document.getElementById('id03').style.display='block'">Report</button>
         </div>
 
-        <div id="id01" class="modal">
-          <form class="modal-content w3-animate-zoom" action="/action_page.php">
-            <div class="container">
-              <h1>Donate Confirmation</h1>
-              <p>Are you sure you want to donate to this user?</p>
-              <div class="clearfix">
-                <button type="button" class="confirmbtn">Confirm</button>
-                <button type="button" class="cancelbtn" onclick="document.getElementById('id01').style.display='none'">Cancel</button>
-              </div>
-            </div>
-          </form>
-        </div>
-
-        <div id="id02" class="modal">
-          <form class="modal-content w3-animate-zoom" action="post.php">
-            <div class="container">
-              <h1>Post Confirmation</h1>
-              <p>Are you sure you want to ask for donation?</p>
-              <div class="clearfix">
-                <button type="button" class="confirmbtn">Confirm</button>
-                <button type="button" class="cancelbtn" onclick="document.getElementById('id02').style.display='none'">Cancel</button>
-              </div>
-            </div>
-          </form>
-        </div>
 
         <div id="id03" class="modal">
           <form class="modal-content w3-animate-zoom" action="/action_page.php">
@@ -366,8 +314,6 @@ hr {
                     <br>
                     <label for="description" style="margin-right:440px;">Description</label><br>
                     <textarea id="description" name="description" placeholder="Describe the problem..." style="height:170px;border-radius:25px 25px;width:75%;"></textarea>
-                    <button type="button" class="confirmbtn">Confirm</button>
-                    <button type="button" class="cancelbtn" onclick="document.getElementById('id03').style.display='none'">Cancel</button>
                   </form>
               </div>
             </div>

@@ -29,6 +29,7 @@ function signin()
         $userRecord=mysqli_fetch_assoc($qry);
         $_SESSION['email']=$userRecord['email'];
         $_SESSION['password']=$userRecord['password'];
+        $_SESSION['id'] = $userRecord['Id'];
         //$_SESSION['password_repeat']=$userRecord['password_repeat'];
 				header("Location: user_index.php");
 			}else{
