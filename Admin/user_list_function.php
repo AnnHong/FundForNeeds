@@ -28,7 +28,7 @@ function UpdateUserInformation(){
 		{
 			//echo 'connected';
 
-			$sql= 'update users set fullname= "'.$_POST['fullname'].'",Paypal="'.$_POST['Paypal'].'" ,username = "'.$_POST['username'].'" ,password="'.$_POST['password'].'"
+			$sql= 'update users set fullname= "'.$_POST['fullname'].'",Paypal="'.$_POST['Paypal'].'" ,usernames = "'.$_POST['usernames'].'" ,password="'.$_POST['password'].'"
 					where email="'.$_POST['email'].'" ';
 
 			$qry=mysqli_query($con,$sql);
