@@ -16,7 +16,21 @@ function getListOfUser()
 		return $qry;
 	}
 }
+function getUserInformation($email){
 
+$con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
+	if(!$con)
+		{
+		echo mysqli_error();
+		}
+	else
+	{
+		//echo 'connected';
+		$sql='select * from users where email = "'.$email.'"';
+		$qry=mysqli_query($con,$sql);
+		return $qry;
+	}
+}
 function UpdateUserInformation(){
 	print_r($_POST);
 	$con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");

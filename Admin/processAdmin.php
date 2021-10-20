@@ -1,6 +1,7 @@
 <?php
-session_start();
 
+include "user_list_function.php";
+session_start();
   if(isSet($_POST['login']))
 {
   login();
@@ -14,28 +15,13 @@ session_start();
   			window.location.href='Admin_Login.php';
   			</script>";
 
-}else if(isset($_POST['save'])){
+}else if(isset($_POST['updateUser'])){
 
-	print_r($_POST);
-	$msg= UpdateUserInformation();
-	header( "refresh:1; url=customerList.php?msg=".$msg);
-
+  $msg=UpdateUserInformation();
+  	header( "refresh:1; url=user_list.php?msg=".$msg);
 }
 
-function getUserInformation($email){
-$con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
-	if(!$con)
-		{
-		echo mysqli_error();
-		}
-	else
-	{
-		//echo 'connected';
-		$sql='select * from users where email = "'.$email.'"';
-		$qry=mysqli_query($con,$sql);
-		return $qry;
-	}
-}
+
 
 function login()
 {
