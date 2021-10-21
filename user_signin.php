@@ -34,6 +34,12 @@ input{
   from{ bottom:-100px; opacity:0 }
   to{ bottom:0; opacity:1 }
 }
+
+.size_image{
+  width:150px;
+  margin-left: 35%;
+  margin-right: 50%;
+}
 </style>
 </head>
 <body class="animate-bottom">
@@ -48,6 +54,7 @@ input{
 <form action="signin.php" method="post" style="margin:100px 500px 75px 500px;border-radius: 15px 15px;">
 
   <div class="container">
+    <img class="size_image" src="FundForNeedsV2.png"><br>
     <label for="email"><b>Email</b></label>
     <input type="text" placeholder="Enter Email" name="email" required>
 
@@ -75,7 +82,7 @@ input{
       <p>Don't have an account? <a href="user_signup.php">Sign Up Now</a> <span class="password">Forgot <a href="user_reset_password.php">password?</a></span></p>
   </div>
 </form>
-<div style="position:absolute; width:100%; bottom: 0px;">
+<div style="position:absolute; width:100%; bottom: -70px;">
   <footer class="w3-container w3-theme-d2 w3-padding-16">
   <div style="text-align:center;">
     <a href="tnc.html" style="color:white;text-shadow: 2px 2px 20px #000000;">Terms and Conditions</a>&emsp;
@@ -100,3 +107,4 @@ input{
 </div>
 </body>
 </html>
+>>>>>>> before discard
