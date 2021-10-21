@@ -283,12 +283,13 @@ hr {
          ?>
 
         <div class="w3-row-padding">
-          <div class="w3-col m12">
-                <form action="" method="POST">
-                  <textarea name="post" placeholder="Ask For Donation..."></textarea>
-                    <button type="button" class="w3-button w3-theme-d2"  style="border-radius:25px 25px;"><i class="fa fa-pencil" st></i>  Post</button>
-                  <br>
-                </form>
+
+          <div class="w3-card w3-round w3-white">
+            <div class="w3-container w3-padding">
+              <h6 class="w3-opacity">Make a post to collect donation</h6>
+              <p contenteditable="true" class="w3-border w3-padding">Ask For Donation</p>
+              <button type="button" class="w3-button w3-theme-d2" onclick="document.getElementById('id02').style.display='block'" style="border-radius:25px 25px;"><i class="fa fa-pencil" st></i>  Post</button>
+            </div>
           </div>
         </div>
 
