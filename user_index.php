@@ -284,12 +284,12 @@ hr {
 
         <div class="w3-row-padding">
 
-          <div class="w3-card w3-round w3-white">
-            <div class="w3-container w3-padding">
-              <h6 class="w3-opacity">Make a post to collect donation</h6>
-              <p contenteditable="true" class="w3-border w3-padding">Ask For Donation</p>
-              <button type="button" class="w3-button w3-theme-d2" onclick="document.getElementById('id02').style.display='block'" style="border-radius:25px 25px;"><i class="fa fa-pencil" st></i>  Post</button>
-            </div>
+          <div class="w3-col m12">
+                <form action="processPost.php" method="POST">
+                  <textarea name="post" placeholder="Ask For Donation..."></textarea>
+                    <button name="postbutton" type="submit"> Post </button>
+                  <br>
+                </form>
           </div>
         </div>
 
@@ -352,7 +352,7 @@ hr {
         </div>
 
         <div id="id02" class="modal">
-          <form class="modal-content w3-animate-zoom" action="post_fucntion.php">
+          <form class="modal-content w3-animate-zoom" action="post.php">
             <div class="container">
               <h1>Post Confirmation</h1>
               <p>Are you sure you want to ask for donation?</p>
