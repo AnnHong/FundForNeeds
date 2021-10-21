@@ -287,6 +287,7 @@ hr {
           <div class="w3-col m12">
                 <form action="processPost.php" method="POST">
                   <textarea name="post" placeholder="Ask For Donation..."></textarea>
+                  <!-- <button type="button" class="w3-button w3-theme-d2" onclick="document.getElementById('id02').style.display='block'" style="border-radius:25px 25px;"><i class="fa fa-pencil" st></i>  Post</button> -->
                     <button name="postbutton" type="submit"> Post </button>
                   <br>
                 </form>
