@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="index.css">
   <link rel="stylesheet" href="index_theme.css">
-  <link rel='stylesheet' href='index_font.css'>
+  <link rel="stylesheet" href="index_font.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style>
   /* Add animation to "page content" */
@@ -37,13 +37,13 @@
 }
 
 td, th {
-  border: 1px solid #dddddd;
+  border: 1px solid #b5b5b5;
   text-align: left;
   padding: 8px;
 }
 
 tr:nth-child(even) {
-  background-color: #dddddd;
+  background-color: #b5b5b5;
 }
 
 .verify{
@@ -74,6 +74,10 @@ tr:nth-child(even) {
   text-decoration: none;
   margin: 2px 2px;
   cursor: pointer;
+}
+
+input{
+  border-radius: 5px 5px;
 }
   </style>
 </head>
