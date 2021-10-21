@@ -9,6 +9,7 @@ $userRecord  =mysqli_fetch_assoc($userQry);
       echo
       '<html>
       <head>
+      <title>User Info Modification</title>
       <link rel="stylesheet" href="index.css">
       <link rel="stylesheet" href="index_theme.css">
       <link rel="stylesheet" href="index_font.css">
@@ -41,8 +42,10 @@ $userRecord  =mysqli_fetch_assoc($userQry);
         </style>
       </head>
       <body class="animate-bottom">
+      
       <form action="processAdmin.php" method="POST">
       <div>
+
         <label>Full Name :</label><br>
         <input type="text"  name="fullname"  placeholder="Full Name" value="'.$userRecord['fullname'].'" required><br><br>
         <label>Username :</label><br>
@@ -53,12 +56,26 @@ $userRecord  =mysqli_fetch_assoc($userQry);
         <input type="text"  name="Paypal" placeholder="Paypal" value="'.$userRecord['Paypal'].'" required><br><br>
         <label>Password :</label><br>
         <input type="password" placeholder="Enter Password" name="password" id="myInput"  value="'.$userRecord['password'].'"><br>
+        <input type="checkbox" onclick="newFunction()" id="showpassword">Show Password<br>
         <br>
         <button type="submit" class="updatebtn" name="updateUser">Update</button>
         <button type="button" class="cancelbtn" onclick="goBack()">Cancel</button>
       </div>
       </form>
       <script>
+      function newFunction() {
+        var x = document.getElementById("myInput");
+
+
+        if (x.type === "password") {
+          x.type = "text";
+
+
+        } else {
+          x.type = "password";
+
+        }
+      }
         function goBack() {
           window.history.back();
         }
