@@ -201,6 +201,8 @@ hr {
   display: table;
 }
 
+textarea{resize:none;}
+
 </style>
 <body onload="load()" style="margin:0;">
   <div id="loader"></div>
@@ -242,7 +244,7 @@ hr {
   </div>
 
   <!-- Page Container -->
-  <div class="w3-container w3-content" style="max-width:1400px;margin-top:80px">
+  <div class="w3-container w3-content" style="max-width:1400px;margin-top:80px;margin-bottom:78px">
     <!-- The Grid -->
     <div class="w3-row">
       <!-- Left Column -->
@@ -394,7 +396,7 @@ hr {
 
   <!-- End Page Container -->
   </div>
-  <br>
+
 
   <script>
   // Accordion

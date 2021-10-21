@@ -9,6 +9,7 @@ $userRecord  =mysqli_fetch_assoc($userQry);
       echo
       '<html>
       <head>
+      <title>User Info Modification</title>
       <link rel="stylesheet" href="index.css">
       <link rel="stylesheet" href="index_theme.css">
       <link rel="stylesheet" href="index_font.css">
