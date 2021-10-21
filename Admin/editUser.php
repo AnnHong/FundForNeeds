@@ -17,12 +17,14 @@ $userRecord  =mysqli_fetch_assoc($userQry);
 
         <style>
         body{font-family:arial;background-color:#ff7a7a;}
-        form{background-color:white;margin-top:23px;border-radius:15px 15px;padding: 75px 0 75px 0;width:40%;margin-left:30%;box-shadow:0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.1)}
+        form{background-color:white;margin-top:23px;border-radius:15px 15px;padding: 50px 0 50px 0;width:40%;margin-left:30%;box-shadow:0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.1)}
         button{cursor:pointer;color:white;border:none;padding:15px;width:35%;border-radius:75px 25px;margin-top:15px;font-size:17px;margin-left:25px;}
         .updatebtn{background-color:rgb(68, 159, 235);margin-left:13%;}
         .cancelbtn{background-color:#ff0028;}
         input{padding:11px;width:60%;border-radius:50px 50px;border:1px solid darkgrey;margin-left:20%;font-size:15px;}
         label{margin-left:20%;font-size:17px;}
+        #showpassword{margin-left:20%;width:5%;}
+        #showlabel{cursor:pointer;margin-left:0%;}
         .animate-bottom {
           -webkit-animation-name: animatebottom;
           -webkit-animation-duration: 1s;
@@ -42,7 +44,7 @@ $userRecord  =mysqli_fetch_assoc($userQry);
         </style>
       </head>
       <body class="animate-bottom">
-      
+
       <form action="processAdmin.php" method="POST">
       <div>
 
@@ -56,7 +58,8 @@ $userRecord  =mysqli_fetch_assoc($userQry);
         <input type="text"  name="Paypal" placeholder="Paypal" value="'.$userRecord['Paypal'].'" required><br><br>
         <label>Password :</label><br>
         <input type="password" placeholder="Enter Password" name="password" id="myInput"  value="'.$userRecord['password'].'"><br>
-        <input type="checkbox" onclick="newFunction()" id="showpassword">Show Password<br>
+        <br>
+        <input type="checkbox" onclick="newFunction()" id="showpassword"><label for="showpassword" id="showlabel">Show Password</label><br>
         <br>
         <button type="submit" class="updatebtn" name="updateUser">Update</button>
         <button type="button" class="cancelbtn" onclick="goBack()">Cancel</button>
