@@ -2,9 +2,10 @@
 //ForPosting
   if($_SERVER['REQUEST METHOD'] == "POST")
   {
-    print_r($_POST);
+    //print_r($_POST);
   }
  ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -95,6 +96,34 @@ input[type=submit]:hover {
   background-color: #45a049;
 }
 
+/* Float cancel and delete buttons and add an equal width */
+.confirmbtn, .cancelbtn {
+  float: left;
+  width: 50%;
+}
+
+/* Add a color to the cancel button */
+.confirmbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  opacity: 0.9;
+  border-radius:75px 25px;
+}
+/* Add a color to the delete button */
+.cancelbtn {
+  background-color: #f44336;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  opacity: 0.9;
+  border-radius:75px 25px;
+}
 
 
 /* Add padding and center-align text to the container */
@@ -128,7 +157,12 @@ hr {
   border: 1px solid #f1f1f1;
   margin-bottom: 25px;
 }
-
+/* Change styles for cancel button and delete button on extra small screens */
+@media screen and (max-width: 300px) {
+  .confirmbtn, .cancelbtn {
+    width: 100%;
+  }
+}
 /* Clear floats */
 .clearfix::after {
   content: "";
@@ -238,7 +272,7 @@ hr {
       </div>
 
       <!-- Middle Column -->
-      <divclass="w3-col m7">
+      <div class="w3-col m7">
 
 
         <div class="w3-row-padding">
@@ -268,7 +302,7 @@ hr {
           </div>
           <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom" onclick="document.getElementById('id01').style.display='block'" style="border-radius:25px 25px;"><i class="fa fa-thumbs-up" ></i>  Donate</button>
           <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom" style="border-radius:25px 25px;"><i class="fa fa-comment"></i>  Comment</button>
-          <button type="button" class="w3-button w3-margin-bottom" style="background-color:red;color:white;border-radius:25px 25px;" onclick="document.getElementById('id03').style.display='block'">Report</button>
+
         </div>
 
         <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
@@ -279,7 +313,7 @@ hr {
           <p>Hello everyone, I need some money for my children to further thier degree study.</p>
           <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom" onclick="document.getElementById('id01').style.display='block'" style="border-radius:25px 25px;"><i class="fa fa-thumbs-up"></i>  Donate</button>
           <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom" style="border-radius:25px 25px;"><i class="fa fa-comment"></i>  Comment</button>
-          <button type="button" class="w3-button w3-margin-bottom" style="background-color:red;color:white;border-radius:25px 25px;" onclick="document.getElementById('id03').style.display='block'">Report</button>
+
         </div>
 
         <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
@@ -293,9 +327,34 @@ hr {
           <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom" onclick="document.getElementById('id01').style.display='block'" style="border-radius:25px 25px;"><i class="fa fa-thumbs-up"></i>  Donate</button>
 
           <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom" style="border-radius:25px 25px;"><i class="fa fa-comment"></i>  Comment</button>
-          <button type="button" class="w3-button w3-margin-bottom" style="background-color:red;color:white;border-radius:25px 25px;" onclick="document.getElementById('id03').style.display='block'">Report</button>
+
         </div>
 
+        <div id="id01" class="modal">
+          <form class="modal-content w3-animate-zoom" action="/action_page.php">
+            <div class="container">
+              <h1>Donate Confirmation</h1>
+              <p>Are you sure you want to donate to this user?</p>
+              <div class="clearfix">
+                <button type="button" class="confirmbtn">Confirm</button>
+                <button type="button" class="cancelbtn" onclick="document.getElementById('id01').style.display='none'">Cancel</button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <div id="id02" class="modal">
+          <form class="modal-content w3-animate-zoom" action="post.php">
+            <div class="container">
+              <h1>Post Confirmation</h1>
+              <p>Are you sure you want to ask for donation?</p>
+              <div class="clearfix">
+                <button type="button" class="confirmbtn">Confirm</button>
+                <button type="button" class="cancelbtn" onclick="document.getElementById('id02').style.display='none'">Cancel</button>
+              </div>
+            </div>
+          </form>
+        </div>
 
         <div id="id03" class="modal">
           <form class="modal-content w3-animate-zoom" action="/action_page.php">
@@ -337,25 +396,7 @@ hr {
       </div>
 
       <!-- Right Column -->
-      <div class="w3-col m2">
-        <div class="w3-card w3-round w3-white w3-center">
-          <div class="w3-container">
-            <p>Friend Request</p>
-            <img src="avatar6.png" alt="Avatar" style="width:50%"><br>
-            <span>Sheng Earn</span>
-            <div class="w3-row w3-opacity">
-              <div class="w3-half">
-                <button class="w3-button w3-block w3-green w3-section" title="Accept"><i class="fa fa-check"></i></button>
-              </div>
-              <div class="w3-half">
-                <button class="w3-button w3-block w3-red w3-section" title="Decline"><i class="fa fa-remove"></i></button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <br>
-      <!-- End Right Column -->
-      </div>
+      
 
     <!-- End Grid -->
     </div>
