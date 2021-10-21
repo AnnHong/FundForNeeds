@@ -43,7 +43,7 @@ td, th {
 }
 
 tr:nth-child(even) {
-  background-color: #b5b5b5;
+  background-color: #dddddd;
 }
 
 .verify{
