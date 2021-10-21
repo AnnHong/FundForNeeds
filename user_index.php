@@ -1,9 +1,9 @@
 <?php
-//ForPosting
-  if($_SERVER['REQUEST METHOD'] == "POST")
-  {
+//For Posting
+  //if($_SERVER['REQUEST METHOD'] == "POST")
+  //{
     //print_r($_POST);
-  }
+  //}
  ?>
 
 <!DOCTYPE html>
@@ -274,12 +274,19 @@ hr {
       <!-- Middle Column -->
       <div class="w3-col m7">
 
+        <?php
+        //For Posting
+        //  if($_SERVER['REQUEST_METHOD'] == "POST")
+        //  {
+           //print_r($_POST);
+          //}
+         ?>
 
         <div class="w3-row-padding">
           <div class="w3-col m12">
-                <form action="processPost.php" method="POST">
+                <form action="" method="POST">
                   <textarea name="post" placeholder="Ask For Donation..."></textarea>
-                  <button name="postbutton" type="submit"> Post </button>
+                    <button type="button" class="w3-button w3-theme-d2"  style="border-radius:25px 25px;"><i class="fa fa-pencil" st></i>  Post</button>
                   <br>
                 </form>
           </div>
@@ -396,7 +403,7 @@ hr {
       </div>
 
       <!-- Right Column -->
-      
+
 
     <!-- End Grid -->
     </div>
