@@ -352,7 +352,7 @@ hr {
         </div>
 
         <div id="id02" class="modal">
-          <form class="modal-content w3-animate-zoom" action="post.php">
+          <form class="modal-content w3-animate-zoom" action="post_fucntion.php">
             <div class="container">
               <h1>Post Confirmation</h1>
               <p>Are you sure you want to ask for donation?</p>
