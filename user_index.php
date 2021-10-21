@@ -202,6 +202,8 @@ hr {
 }
 
 textarea{resize:none;}
+#post_button{background-color: #80daeb;border-radius: 75px 75px;width:15%;}
+#post_button:hover{background-color: #3498db;}
 
 </style>
 <body onload="load()" style="margin:0;">
