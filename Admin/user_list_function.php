@@ -32,7 +32,7 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
 	}
 }
 function UpdateUserInformation(){
-	print_r($_POST);
+	//print_r($_POST);
 	$con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
 		if(!$con)
 			{

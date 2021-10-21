@@ -18,7 +18,7 @@ session_start();
 }else if(isset($_POST['updateUser'])){
 
   $msg=UpdateUserInformation();
-  	header( "refresh:1; url=user_list.php?msg=".$msg);
+  header("Location:user_list.php");
 }
 
 

@@ -3,17 +3,28 @@ include "post.php";
 
 session_start();
 
-if(isSet($_POST['postbutton']) ){
-  // echo $_SESSION['email'];
-  $status = create_post();
-  echo "<script>
-  			alert('Your post is successfully posted!');
-  			window.location.href='post_function.php';
-  			</script>";
+
+if(isset($_POST['postButton'])){
+    //echo $_SESSION['id']
+    $post_result = create_post();
+
+    if($post_result== ""){
+      header("Location:user_index.php");
+      die;
+
+    }else{
+      echo "<div style='text-align:center;font-size:12px;color:white;backgroud-color:grey;'>";
+      echo "<br><The following errors occured:<br><br>";
+      echo $post_result;
+      echo "</div>";
+    }
+  //$User_Email = $_SESSION['email'];
+
+
+    //echo $post_display;
+
 }
-else{
-  echo "Error";
-}
+
 
 
  ?>

@@ -1,9 +1,40 @@
 <?php
+  session_start();
+
+  include "post.php";
+  //include "processPost.php";
+
 //For Posting
-  //if($_SERVER['REQUEST METHOD'] == "POST")
-  //{
-    //print_r($_POST);
-  //}
+$id = $_SESSION['id'];
+
+  if($_SERVER['REQUEST_METHOD'] == "POST")
+  {
+    if(isset($_POST['postButton'])){
+        echo $_SESSION['id'];
+
+        $post_result = create_post();
+
+        if($post_result== ""){
+          header("Location:user_index.php");
+          die;
+
+        }else{
+          echo "<div style='text-align:center;font-size:12px;color:white;backgroud-color:grey;'>";
+          echo "<br><The following errors occured:<br><br>";
+          echo $post_result;
+          echo "</div>";
+        }
+      //$User_Email = $_SESSION['email'];
+      //  $id = $_SESSION['id'];
+      //  $post_display = getpost();
+        //echo $post_display;
+
+    }
+
+    //  print_r($_POST);
+
+    //$post_display = getpost();
+  }
  ?>
 
 <!DOCTYPE html>
@@ -273,71 +304,22 @@ hr {
 
       <!-- Middle Column -->
       <div class="w3-col m7">
-
-        <?php
-        //For Posting
-        //  if($_SERVER['REQUEST_METHOD'] == "POST")
-        //  {
-           //print_r($_POST);
-          //}
-         ?>
-
         <div class="w3-row-padding">
 
           <div class="w3-col m12">
-                <form action="processPost.php" method="POST">
+
+                <form  method="post"  >
                   <textarea name="post" placeholder="Ask For Donation..."></textarea>
                   <!-- <button type="button" class="w3-button w3-theme-d2" onclick="document.getElementById('id02').style.display='block'" style="border-radius:25px 25px;"><i class="fa fa-pencil" st></i>  Post</button> -->
-                    <button name="postbutton" type="submit"> Post </button>
+                    <input   id="post_button" type="submit" name="postButton" value="Post">
                   <br>
                 </form>
           </div>
         </div>
 
-
-        <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
-          <img src="avatar2.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
-          <span class="w3-right w3-opacity">1 min</span>
-          <h4>Ann Hong</h4><br>
-          <hr class="w3-clear">
-          <p>Hello everyone, I need some money for my children to further thier degree study.</p>
-            <div class="w3-row-padding" style="margin:0 -16px">
-              <div class="w3-half">
-                <img src="lights.jpg" style="width:100%" alt="Northern Lights" class="w3-margin-bottom">
-              </div>
-              <div class="w3-half">
-                <img src="nature.jpg" style="width:100%" alt="Nature" class="w3-margin-bottom">
-            </div>
-          </div>
-          <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom" onclick="document.getElementById('id01').style.display='block'" style="border-radius:25px 25px;"><i class="fa fa-thumbs-up" ></i>  Donate</button>
-          <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom" style="border-radius:25px 25px;"><i class="fa fa-comment"></i>  Comment</button>
-
-        </div>
-
-        <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
-          <img src="avatar5.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
-          <span class="w3-right w3-opacity">16 min</span>
-          <h4>Sheng Earn</h4><br>
-          <hr class="w3-clear">
-          <p>Hello everyone, I need some money for my children to further thier degree study.</p>
-          <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom" onclick="document.getElementById('id01').style.display='block'" style="border-radius:25px 25px;"><i class="fa fa-thumbs-up"></i>  Donate</button>
-          <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom" style="border-radius:25px 25px;"><i class="fa fa-comment"></i>  Comment</button>
-
-        </div>
-
-        <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
-          <img src="avatar6.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
-          <span class="w3-right w3-opacity">32 min</span>
-          <h4>Zhi Hao</h4><br>
-          <hr class="w3-clear">
-          <p>Please...I'm really need your help</p>
-          <img src="snow.jpg" style="width:100%" class="w3-margin-bottom">
-          <p>Hello everyone, I need some money for my children to further thier degree study.</p>
-          <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom" onclick="document.getElementById('id01').style.display='block'" style="border-radius:25px 25px;"><i class="fa fa-thumbs-up"></i>  Donate</button>
-
-          <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom" style="border-radius:25px 25px;"><i class="fa fa-comment"></i>  Comment</button>
-
-        </div>
+        <?php
+                  include "post_display.php";
+         ?>
 
         <div id="id01" class="modal">
           <form class="modal-content w3-animate-zoom" action="/action_page.php">
