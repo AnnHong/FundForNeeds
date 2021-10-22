@@ -296,7 +296,7 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
                             <div class="form-group">
                               <label>Paypal Account</label>
                                 <?php
-																echo '<input class="form-control" type="text" style="border-radius:25px 25px;" id="paypal" name = "paypal" value="'.$userRecord['Paypal'].'" disabled>';
+																echo '<input class="form-control" type="text" style="border-radius:25px 25px;" id="paypal" name ="paypal" value="'.$userRecord['Paypal'].'" disabled>';
 																?>
                             </div>
                           </div>

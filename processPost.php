@@ -7,9 +7,9 @@ session_start();
 if(isset($_POST['postButton'])){
     //echo $_SESSION['id']
     $post_result = create_post();
-
+header("Location:user_index.php");
     if($post_result== ""){
-      header("Location:user_index.php");
+
       die;
 
     }else{
