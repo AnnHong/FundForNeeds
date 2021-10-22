@@ -8,11 +8,11 @@
      echo mysqli_error();
    }else{
 
-      $User_Id = $_SESSION['id'];
+      $User_Email = $_SESSION['email'];
      //$User_Id = $_SESSION['User_Id'];
      $post_content = $_POST['post'];
      //$date = date('Y/m/d h:i:s');
-     $sql = "insert into posts(User_Id, Post_Content) values('$User_Id', '$post_content')";
+     $sql = "insert into posts(User_Email, Post_Content) values('$User_Email', '$post_content')";
  //
  if(!mysqli_query($con, $sql)){
     return mysqli_error($con);
