@@ -37,8 +37,8 @@ input{
 
 .size_image{
   width:150px;
-  margin-left: 35%;
-  margin-right: 50%;
+  margin-left: 325px;
+  margin-right: 50px;
   border-radius: 100px 100px;
   box-shadow: 8px 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19);
 }
@@ -109,4 +109,3 @@ input{
 </div>
 </body>
 </html>
->>>>>>> before discard
