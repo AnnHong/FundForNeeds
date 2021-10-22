@@ -13,8 +13,9 @@ if(isset($_POST['verifyUserButton'])){
       $update = $con->query("UPDATE users SET user_verify = 1 WHERE email ='$email'");
 
       if($update){
+
         echo"<script>
-              alert('Your have verified the user successfully.');
+              
               window.location.href='user_list.php';
               </script>";
 

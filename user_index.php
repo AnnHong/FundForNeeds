@@ -10,7 +10,7 @@ $id = $_SESSION['id'];
   if($_SERVER['REQUEST_METHOD'] == "POST")
   {
     if(isset($_POST['postButton'])){
-        echo $_SESSION['id'];
+        //echo $_SESSION['id'];
 
         $post_result = create_post();
 
@@ -312,7 +312,7 @@ textarea{resize:none;}
 
           <div class="w3-col m12">
 
-                <form  method="post"  >
+                <form  method="post" action="processPost.php" >
                   <textarea name="post" placeholder="Ask For Donation..."></textarea>
                   <!-- <button type="button" class="w3-button w3-theme-d2" onclick="document.getElementById('id02').style.display='block'" style="border-radius:25px 25px;"><i class="fa fa-pencil" st></i>  Post</button> -->
                     <input   id="post_button" type="submit" name="postButton" value="Post">
