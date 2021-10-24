@@ -9,15 +9,14 @@ function Addnewuser()
 	else
 	{
 		$email = $_POST['email'];
-		$password = $_POST['password'];
+		$password = password_hash($_POST['password'], PASSWORD_DEFAULT);
     $password_repeat = $_POST['password_repeat'];
 		$usernames = $_POST['usernames'];
 		$fullname= $_POST['fullname'];
 
 		$token = md5( rand(0,1000) );
-		$hashed = hash('sha512',$password);
 		$sql = "insert into users(email,password,token,usernames,fullname)
-						   values('$email','$hashed','$token','$usernames','$fullname')";
+						   values('$email','$password','$token','$usernames','$fullname')";
 	    //echo $sql;
 		//3.run insert query
 		if(!mysqli_query($con,$sql))
@@ -35,7 +34,7 @@ function Addnewuser()
 
 				------------------------
 				Email: '.$email.'
-				Password: '.$password.'
+				Password: '.$password_repeat.'
 				------------------------
 
 				Please click this link to activate your account:
