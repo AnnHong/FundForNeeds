@@ -7,9 +7,9 @@ session_start();
 if(isset($_POST['postButton'])){
     //echo $_SESSION['id']
     $post_result = create_post();
-header("Location:user_index.php");
+//header("Location:user_index.php");
     if($post_result== ""){
-
+      header("Location:user_index.php");
       die;
 
     }else{
@@ -18,9 +18,12 @@ header("Location:user_index.php");
       echo $post_result;
       echo "</div>";
     }
-  //$User_Email = $_SESSION['email'];
 
+    // $User_Email = $_SESSION['email'];
+    // $post_display = get_posts();
 
+    // echo $result;
+    // var_dump($result);
     //echo $post_display;
 
 }

@@ -24,6 +24,14 @@
 
  }
 
+// function get_posts(){
+//   $con=  mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
+//
+//     $User_Email = $_SESSION['email'];
+//   $sql = "select * from posts where User_Email = '$User_Email'";
+//
+//   $result = mysqli_query($con,$sql);
+// }
 
 
 

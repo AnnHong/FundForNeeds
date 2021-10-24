@@ -24,11 +24,9 @@ $id = $_SESSION['id'];
           echo $post_result;
           echo "</div>";
         }
-      //$User_Email = $_SESSION['email'];
-      //  $id = $_SESSION['id'];
-      //  $post_display = getpost();
-        //echo $post_display;
 
+        // $post_display = get_posts();
+        // var_dump($post_diplay);
     }
 
     //  print_r($_POST);
@@ -312,7 +310,7 @@ textarea{resize:none;}
 
           <div class="w3-col m12">
 
-                <form  method="post" action="processPost.php" >
+                <form  method="post"  action ="processPost.php">
                   <textarea name="post" placeholder="Ask For Donation..."></textarea>
                   <!-- <button type="button" class="w3-button w3-theme-d2" onclick="document.getElementById('id02').style.display='block'" style="border-radius:25px 25px;"><i class="fa fa-pencil" st></i>  Post</button> -->
                     <input   id="post_button" type="submit" name="postButton" value="Post">
@@ -322,7 +320,10 @@ textarea{resize:none;}
         </div>
 
         <?php
-                  include "post_display.php";
+
+                        include "post_display.php";
+                
+
          ?>
 
         <div id="id01" class="modal">
