@@ -37,8 +37,7 @@ input{
 
 .size_image{
   width:150px;
-  margin-left: 325px;
-  margin-right: 50px;
+  margin-left: 33%;
   border-radius: 100px 100px;
   box-shadow: 8px 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19);
 }

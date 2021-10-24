@@ -15,10 +15,9 @@ function Addnewuser()
 		$fullname= $_POST['fullname'];
 
 		$token = md5( rand(0,1000) );
-
+		$hashed = hash('sha512',$password);
 		$sql = "insert into users(email,password,token,usernames,fullname)
-						   values('$email','$password','$token','$usernames','$fullname')";
-
+						   values('$email','$hashed','$token','$usernames','$fullname')";
 	    //echo $sql;
 		//3.run insert query
 		if(!mysqli_query($con,$sql))
