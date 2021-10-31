@@ -94,6 +94,16 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
     body{
         margin-top:25px;
     }
+
+		button[name=back]{
+			background-color: #04AA6D;
+			color: white;
+			border-radius:75px 25px;
+			border:0px;
+			cursor:pointer;
+			padding:10px 35px 10px 35px;
+			margin: 45px 0 0 628px;
+		}
     </style>
     <script>
     function newFunction() {
@@ -238,6 +248,7 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
           </div>
         </div>
       </div>
+			<button type="submit"  name="back" onclick="goBack()">Back to Previous Page</button>
 			<script type="text/javascript">
 			function updateFunction() {
 				document.getElementById('fullname').disabled = !document.getElementById('fullname').disabled;
@@ -258,9 +269,13 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
             input.setCustomValidity('Password Must be Matching.');
         }
     }
+
+		function goBack() {
+      window.history.back();
+    }
 			</script>
 
-<div>
+<div style="position:absolute;width:100%;margin-top:58px;">
   <footer class="w3-container w3-theme-d2 w3-padding-16">
   <div style="text-align:center;">
     <a href="user_tnc.php" style="color:white;text-shadow: 2px 2px 20px #000000;">Terms and Conditions</a>&emsp;
