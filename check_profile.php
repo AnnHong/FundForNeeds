@@ -1,6 +1,5 @@
 <?php
-session_start();
-$email = $_SESSION['email'];
+$email = $_GET['email']; //GET parameter from ?
 
 function getUserInformation($email){
 $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
@@ -152,7 +151,7 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
                 <div class="col-12 col-sm-auto mb-3">
 									<?php
 
-									$email = $_SESSION['email'];
+									$email =$_GET['email'];
 
     							$con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
     							$q = mysqli_query($con,'SELECT * FROM users WHERE  email ="'.$email.'" ');
@@ -172,97 +171,15 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
                     <?php
 
                   //  $email = $_SESSION['email'];
-                    $qryUserData = getUserInformation($_SESSION['email']);
+                    $qryUserData = getUserInformation($_GET['email']);
                     $userRecord = mysqli_fetch_assoc($qryUserData);
                         echo '<h4 class="pt-sm-2 pb-1 mb-0 text-nowrap">' .$userRecord['fullname']. '</h4>' ;
                         echo '<p class="mb-0">@'.$userRecord['usernames']. '</p>';
 
                         ?>
 
-                    <div class="mt-2">
-                      <button class="btn" id="myBtn" type="submit" name="changePic"style="background-color:#80daeb; color: white;border-radius:75px 25px;">
-                        <i class="fa fa-fw fa-camera"></i>
-                        <span>Change Photo</span>
-                      </button>
-											<div id="myModal" class="modal">
-												<!-- Modal content -->
-												<div class="modal-content w3-animate-zoom" style=" text-align:right !important;">
-													<span class="close">&times;</span>
-													<input type="file" name="image" value="upload your profile picture" id="upload" hidden>
-													<div style="display:inline-block;text-align:center;">
-														<form action="upload_img2.php" method="post" enctype="multipart/form-data">
-															<b><p>Please upload your profile picture.</p></b>
-															<input type="file" id="myFile" name="image" style="margin:0 0 25px 80px;">
-															<input type="submit" name ="uploadPic_button" class="btn">
-														</form>
-													</div>
-												</div>
-											</div>
-                    </div>
 
-                    <div class="mt-2">
 
-                      <div>
-                        <!-- Trigger/Open The Modal -->
-                        <button id="myBtn2" class="btn" style="background-color:#80daeb; color: white;border-radius:75px 25px;">Verify</button>
-
-                        <!-- The Modal -->
-                        <div id="myModal2" class="modal">
-                          <!-- Modal content -->
-                          <div class="modal-content w3-animate-zoom" style=" text-align:right !important;">
-                            <span class="cancel">&times;</span>
-                            <input type="file" name="Upload IC" value="Upload your IC" id="upload" hidden>
-                            <div style="display:inline-block;text-align:center;">
-                              <form action="upload_img2.php" method="post" enctype="multipart/form-data">
-                                <b><p>Please upload your IC to verify.</p></b>
-                                <input type="file" id="myFile" name="file_name" style="margin:0 0 25px 80px;">
-                                <input type="submit" name ="upload_button" class="btn">
-                              </form>
-                            </div>
-                          </div>
-                        </div>
-                        <script>
-                    // Get the modal
-                    var modal = document.getElementById("myModal");
-										var modal2 = document.getElementById("myModal2");
-                    // Get the button that opens the modal
-                    var btn = document.getElementById("myBtn");
-										var btn2 = document.getElementById("myBtn2");
-                    // Get the <span> element that closes the modal
-                    var span = document.getElementsByClassName("close")[0];
-										var span2 = document.getElementsByClassName("cancel")[0];
-										  //var span2 = document.getElementsByClassName("close")[0];
-                    // When the user clicks the button, open the modal
-                    btn.onclick = function() {
-                      modal.style.display = "block";
-                    }
-
-										btn2.onclick = function() {
-											modal2.style.display = "block";
-										}
-
-                    // When the user clicks on <span> (x), close the modal
-                    span.onclick = function() {
-                   		modal.style.display = "none" ;
-                    }
-
-										span2.onclick = function() {
-                   		modal2.style.display = "none" ;
-                    }
-
-                    // When the user clicks anywhere outside of the modal, close it
-                    window.onclick = function(event) {
-                      if (event.target == modal) {
-                        modal.style.display = "none";
-
-                      }else if(event.target == modal2){
-												modal2.style.display = "none";
-											}
-                    }
-
-                    </script>
-                      </div>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -271,7 +188,7 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
               </ul>
               <div class="tab-content pt-3">
                 <div class="tab-pane active">
-                  <form class="form" action="update_function.php" method="POST">
+                  <!-- <form class="form" action="update_function.php" method="POST"> -->
                     <div class="row">
                       <div class="col">
                         <div class="row">
@@ -312,38 +229,9 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
                         </div>
                       </div>
                     </div>
-                    <div class="row">
-                      <div class="col-12 col-sm-6 mb-3">
-                        <div class="mb-2"><b>Change Password</b></div>
-                        <div class="row">
-                          <div class="col">
-                            <div class="form-group">
-                              <label>New Password</label>
-                              <input class="form-control" type="password" name="newpassword" id="newpassword" style="border-radius:25px 25px;" minlength="8" maxlength="16" disabled>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="row">
-                          <div class="col">
-                            <div class="form-group">
-                              <label>Confirm <span class="d-none d-xl-inline">Password</span></label>
-                              <input class="form-control" type="password" name="confirmpassword" id="confirmpassword" style="border-radius:25px 25px;" minlength="8" maxlength="16" oninput="check(input)" disabled></div>
-                              <input type="checkbox" onclick="newFunction()" id="showpassword" disabled> Show Password<br>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div>
-											<div style="float:left;">
-												<button class="btn" type="button" style="background-color:#80daeb; color: white;border-radius:75px 25px;"name="UpdatePassBtn" onclick="updatePassword()">Update Password</button>
-												<button class="btn" id="chgpass" type="submit" style="background-color:#80daeb; color: white;border-radius:75px 25px;margin-left:25px;"name="ChangePassBtn" disabled>Change Password</button>
-											</div>
-												<div style="float:right;">
-													<button class="btn" type="button" style="background-color:#80daeb; color: white; margin-right:25px;border-radius:75px 25px;"  onclick="updateFunction()">Update Profile</button>
-		                      <button class="btn" id="save" type="submit" style="background-color:#80daeb; color: white;border-radius:75px 25px;" name="SaveBtn" disabled>Save Changes</button>
-												</div>
-									  </div>
-                  </form>
+
+
+                  <!-- </form> -->
                 </div>
               </div>
             </div>
