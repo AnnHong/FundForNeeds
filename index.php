@@ -97,55 +97,30 @@
           </div>
         </div>
 
-        <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
-          <img src="avatar2.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
-          <span class="w3-right w3-opacity">1 min</span>
-          <h4>Ann Hong</h4><br>
-          <hr class="w3-clear">
-          <p>Hello everyone, I need some money for my children to further thier degree study.</p>
-            <div class="w3-row-padding" style="margin:0 -16px">
-              <div class="w3-half">
-                <img src="lights.jpg" style="width:100%" alt="Northern Lights" class="w3-margin-bottom">
-              </div>
-              <div class="w3-half">
-                <img src="nature.jpg" style="width:100%" alt="Nature" class="w3-margin-bottom">
-            </div>
-          </div>
-          <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom" onclick="window.location.href='user_signin.php';" style="border-radius:25px 25px;"><i class="fa fa-thumbs-up"></i>  Donate</button>
-          <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom" onclick="window.location.href='user_signin.php';" style="border-radius:25px 25px;"><i class="fa fa-comment"></i>  Comment</button>
-          <button type="button" class="w3-button w3-margin-bottom" onclick="window.location.href='user_signin.php';" style="background-color:red;color:white;border-radius:25px 25px;">Report</button>
-        </div>
-
-        <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
-          <img src="avatar5.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
-          <span class="w3-right w3-opacity">16 min</span>
-          <h4>Sheng Earn</h4><br>
-          <hr class="w3-clear">
-          <p>Hello everyone, I need some money for my children to further thier degree study.</p>
-          <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom" onclick="window.location.href='user_signin.php';" style="border-radius:25px 25px;"><i class="fa fa-thumbs-up"></i>  Donate</button>
-          <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom" onclick="window.location.href='user_signin.php';" style="border-radius:25px 25px;"><i class="fa fa-comment"></i>  Comment</button>
-          <button type="button" class="w3-button w3-margin-bottom" onclick="window.location.href='user_signin.php';" style="background-color:red;color:white;border-radius:25px 25px;">Report</button>
-        </div>
-
-        <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
-          <img src="avatar6.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
-          <span class="w3-right w3-opacity">32 min</span>
-          <h4>Zhi Hao</h4><br>
-          <hr class="w3-clear">
-          <p>Please...I'm really need your help</p>
-          <img src="snow.jpg" style="width:100%" class="w3-margin-bottom">
-          <p>Hello everyone, I need some money for my children to further thier degree study.</p>
-          <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom" onclick="window.location.href='user_signin.php';" style="border-radius:25px 25px;"><i class="fa fa-thumbs-up"></i>  Donate</button>
-          <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom" onclick="window.location.href='user_signin.php';" style="border-radius:25px 25px;"><i class="fa fa-comment"></i>  Comment</button>
-          <button type="button" class="w3-button w3-margin-bottom" onclick="window.location.href='user_signin.php';" style="background-color:red;color:white;border-radius:25px 25px;">Report</button>
-        </div>
-
+        <?php
+          $con=  mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
+          if(!$con){
+            echo mysqli_error();
+          }
+          else{
+            $sql = "select posts.*, users.usernames, users.email from posts inner join users on posts.User_Email = users.email";
+            if(!mysqli_query($con, $sql)){
+              return mysqli_error($con);
+            }
+            else{
+              $q = mysqli_query($con, $sql);
+              $datas = mysqli_fetch_all($q);
+              foreach($datas as $data){ // call count_array for post table
+                include "post_display_index.php";
+                //var_dump($data);
+              }
+            }
+          }
+         ?>
       <!-- End Middle Column -->
       </div>
-
     <!-- End Grid -->
     </div>
-
   <!-- End Page Container -->
   </div>
   <br>

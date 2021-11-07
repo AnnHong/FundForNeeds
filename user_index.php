@@ -2,37 +2,7 @@
   session_start();
 
   include "post.php";
-  //include "processPost.php";
-
-//For Posting
-$id = $_SESSION['id'];
-
-  if($_SERVER['REQUEST_METHOD'] == "POST")
-  {
-    if(isset($_POST['postButton'])){
-        //echo $_SESSION['id'];
-
-        $post_result = create_post();
-
-        if($post_result== ""){
-          header("Location:user_index.php");
-          die;
-
-        }else{
-          echo "<div style='text-align:center;font-size:12px;color:white;backgroud-color:grey;'>";
-          echo "<br><The following errors occured:<br><br>";
-          echo $post_result;
-          echo "</div>";
-        }
-
-        // $post_display = get_posts();
-        // var_dump($post_diplay);
-    }
-
-    //  print_r($_POST);
-
-    //$post_display = getpost();
-  }
+  //include "processPost.php"
  ?>
 
 <!DOCTYPE html>
@@ -307,13 +277,10 @@ textarea{resize:none;}
       <!-- Middle Column -->
       <div class="w3-col m7">
         <div class="w3-row-padding">
-
           <div class="w3-col m12">
-
                 <form  method="post"  action ="processPost.php">
                   <textarea name="post" placeholder="Ask For Donation..."></textarea>
-                  <!-- <button type="button" class="w3-button w3-theme-d2" onclick="document.getElementById('id02').style.display='block'" style="border-radius:25px 25px;"><i class="fa fa-pencil" st></i>  Post</button> -->
-                    <input   id="post_button" type="submit" name="postButton" value="Post">
+                    <input id="post_button" type="submit" name="postButton" value="Post">
                   <br>
                 </form>
           </div>
@@ -332,7 +299,7 @@ textarea{resize:none;}
             else{
               $q = mysqli_query($con, $sql);
               $datas = mysqli_fetch_all($q);
-              foreach($datas as $data){ // call count_array for post table 
+              foreach($datas as $data){ // call count_array for post table
                 include "post_display.php";
                 //var_dump($data);
               }
@@ -366,29 +333,6 @@ textarea{resize:none;}
           </form>
         </div>
 
-        <div id="id03" class="modal">
-          <form class="modal-content w3-animate-zoom" action="/action_page.php">
-            <div class="container">
-              <h1>Report Submission</h1>
-              <div class="clearfix">
-                  <form action="/action_page.php">
-                    <label for="problem" style="margin-right:23%;">Please select a problem</label><br>
-                    <select id="problem" name="problem" style="border-radius:25px 25px;width:50%;">
-                      <option>Pretending to Be Someone</option>
-                      <option>Harmful or spam</option>
-                      <option>Not using a real name</option>
-                      <option>Posting Inappropriate Things</option>
-                      <option>Something Else</option>
-                    </select>
-                    <br>
-                    <label for="description" style="margin-right:440px;">Description</label><br>
-                    <textarea id="description" name="description" placeholder="Describe the problem..." style="height:170px;border-radius:25px 25px;width:75%;"></textarea>
-                  </form>
-              </div>
-            </div>
-          </form>
-        </div>
-
         <script>
         // Get the modal
         var modal = document.getElementById('id01');
@@ -404,17 +348,11 @@ textarea{resize:none;}
         </script>
       <!-- End Middle Column -->
       </div>
-
       <!-- Right Column -->
-
-
     <!-- End Grid -->
     </div>
-
   <!-- End Page Container -->
   </div>
-
-
   <script>
   // Accordion
   function myFunction(id) {
