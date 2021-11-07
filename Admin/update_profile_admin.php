@@ -32,7 +32,7 @@ if(!$con){
   echo mysqli_error();
 }else{
 
-  $sql = 'UPDATE admin SET password="'.$_POST['newpassword'].'"  WHERE admin_email= "'.$_SESSION['admin_email'].'"';
+  $sql = 'UPDATE admin SET password="'.sha1($_POST['newpassword']).'"  WHERE admin_email= "'.$_SESSION['admin_email'].'"';
 
   $qry=mysqli_query($con,$sql);
 	return $qry;

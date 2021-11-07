@@ -29,7 +29,7 @@ function login()
     //  $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
       $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
       $admin_email = $_POST['admin_email'];
-  		$password = $_POST['password'];
+      $password = sha1($_POST['password']);
 
       if(!$con){
   			echo mysqli_error();
@@ -67,7 +67,7 @@ function verifyemailadmin(){
   {
 
     $admin_email = $_POST['admin_email'];
-    $password = $_POST['password'];
+    $password = sha1($_POST['password']);
     $password_repeat = $_POST['repeat_password'];
     $admin_fullname = $_POST['admin_fullname'];
     $admin_staffid = $_POST['admin_staffid'];
@@ -92,7 +92,7 @@ function verifyemailadmin(){
 
         ------------------------
         Email: '.$admin_email.'
-        Password : '.$password.'
+        Password : '.$password_repeat.'
         ------------------------
 
         Please click this link to activate your account:

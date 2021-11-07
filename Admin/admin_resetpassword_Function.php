@@ -20,7 +20,7 @@ $result = mysqli_query($con,$sql);
 
   if(mysqli_num_rows($result) >0){
 
-    $reset_token = time(). md5($email);
+    $reset_token = time(). md5($admin_email);
     $sql = "UPDATE admin SET reset_token='$reset_token' WHERE admin_email='$admin_email'";
 
 

@@ -1,7 +1,7 @@
 <?php
 $admin_email = $_POST["admin_email"];
 $reset_token = $_POST["reset_token"];
-$new_password = $_POST["new_password"];
+$new_password = sha1($_POST['new_password']);
 
 $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
 
