@@ -48,7 +48,7 @@ if(!$con){
   echo mysqli_error();
 }else{
 
-  $sql = 'UPDATE users SET password="'.$_POST['newpassword'].'"  WHERE email= "'.$_SESSION['email'].'"';
+  $sql = 'UPDATE users SET password="'.sha1($_POST['newpassword']).'"  WHERE email= "'.$_SESSION['email'].'"';
 
   $qry=mysqli_query($con,$sql);
   			return $qry;

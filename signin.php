@@ -15,7 +15,7 @@ function signin()
         $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
 
 		$email = $_POST['email'];
-		$password = $_POST['password'];
+		$password = sha1($_POST['password']);
 
 		if(!$con){
 			echo mysqli_error();

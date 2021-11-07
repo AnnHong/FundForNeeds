@@ -9,7 +9,7 @@ function Addnewuser()
 	else
 	{
 		$email = $_POST['email'];
-		$password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+		$password = sha1($_POST['password']);
     $password_repeat = $_POST['password_repeat'];
 		$usernames = $_POST['usernames'];
 		$fullname= $_POST['fullname'];
