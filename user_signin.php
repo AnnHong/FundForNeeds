@@ -7,6 +7,7 @@
 <link rel='stylesheet' href='index_font.css'>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="user_signin.css">
+<script src="https://unpkg.com/vue@next"></script>
 <title>Sign In</title>
 <style>
 button{
@@ -15,6 +16,10 @@ button{
 
 input{
   border-radius: 50px 50px;
+}
+
+#showpass{
+  cursor: pointer;
 }
 
 /* Add animation to "page content" */
@@ -43,46 +48,17 @@ input{
 }
 </style>
 </head>
-<body class="animate-bottom">
+<body class="animate-bottom" id="app">
   <div class="w3-top">
    <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
     <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
-    <a href="index.php" class="w3-bar-item w3-button w3-padding-large w3-theme-d4 w3-hover-white" style="border-radius: 15px 15px;"><i class="fa fa-home w3-margin-right"></i> <b>Fund For Needs</b> </a>
-    <a href="user_signin.php" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="Sign In" style="background-color: #04AA6D; color: white;border-radius: 25px 25px;">Sign In</a>
+    <a v-bind:href="index_page" class="w3-bar-item w3-button w3-padding-large w3-theme-d4 w3-hover-white" style="border-radius: 15px 15px;"><i class="fa fa-home w3-margin-right"></i> <b>{{brand}}</b> </a>
+    <a v-bind:href="login_page" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="Sign In" style="background-color: #04AA6D; color: white;border-radius: 25px 25px;">{{login}}</a>
    </div>
   </div>
 
-<form action="signin.php" method="post" style="margin:100px 500px 75px 500px;border-radius: 15px 15px;">
+<login-form></login-form>
 
-  <div class="container">
-    <img class="size_image" src="FundForNeedsV2.png"><br>
-    <label for="email"><b>Email</b></label>
-    <input type="text" placeholder="Enter Email" name="email" required>
-
-    <label for="password"><b>Password</b></label>
-    <input id="pass" type="password" placeholder="Enter Password" name="password" required>
-    <input type="checkbox" onclick="showpass()" style="margin-bottom:10px;"> Show Password
-    <script>
-    function showpass() {
-      var x = document.getElementById("pass");
-      if (x.type === "password") {
-        x.type = "text";
-      } else {
-        x.type = "password";
-        }
-      }
-    </script>
-
-    <div class="clearfix">
-      <button type="submit" class="signinbtn" name="signinbtn" style="margin-bottom:10px;">Sign In</button>
-      <button type="button" class="cancelbtn" onclick="location.href = 'index.php';">Cancel</button>
-    </div>
-  </div>
-
-  <div class="container" style="background-color:#f1f1f1">
-      <p>Don't have an account? <a href="user_signup.php">Sign Up Now</a> <span class="password">Forgot <a href="user_reset_password.php">password?</a></span></p>
-  </div>
-</form>
 <div style="position:absolute; width:100%; bottom: -90px;">
   <footer class="w3-container w3-theme-d2 w3-padding-16">
   <div style="text-align:center;">
@@ -106,5 +82,10 @@ input{
 
   </footer>
 </div>
+<script src="./main.js" charset="utf-8"></script>
+<script src="./login_form.js" charset="utf-8"></script>
+<script type="text/javascript">
+  const mountedApp = app.mount('#app')
+</script>
 </body>
 </html>
