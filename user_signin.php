@@ -83,7 +83,7 @@ input{
   </footer>
 </div>
 <script src="./main.js" charset="utf-8"></script>
-<script src="./login_form.js" charset="utf-8"></script>
+<script src="./components.js" charset="utf-8"></script>
 <script type="text/javascript">
   const mountedApp = app.mount('#app')
 </script>
