@@ -119,8 +119,11 @@ app.component('signup-form',{
 
 app.component('payment-succeed',{
   template:
-  `<h1>Payment Succeed</h1>
-  <button v-on:click="user_hpage">Back to Home</button>`,
+  `
+  <div>
+  <h1 class="title is-1"><span class="mdi mdi-check-circle has-text-success"></span>Payment Succeed</h1>
+  <button class="button is-primary is-rounded" v-on:click="user_hpage">Back to Home</button>
+  </div>`,
 
   methods:{
     user_hpage(){
@@ -131,8 +134,10 @@ app.component('payment-succeed',{
 
 app.component('payment-failed',{
   template:
-  `<h1>Payment Failed</h1>
-  <button v-on:click="user_hpage">Back to Home</button>`,
+  `<div>
+  <h1 class="title is-1"><span class="mdi mdi-close-octagon has-text-danger"></span>Payment Failed</h1>
+  <button class="button is-primary is-rounded" v-on:click="user_hpage">Back to Home</button>
+  </div>`,
 
   methods:{
     user_hpage(){
