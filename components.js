@@ -116,3 +116,27 @@ app.component('signup-form',{
       }
   }
 })
+
+app.component('payment-succeed',{
+  template:
+  `<h1>Payment Succeed</h1>
+  <button v-on:click="user_hpage">Back to Home</button>`,
+
+  methods:{
+    user_hpage(){
+      location.href = 'user_index.php';
+    },
+  }
+})
+
+app.component('payment-failed',{
+  template:
+  `<h1>Payment Failed</h1>
+  <button v-on:click="user_hpage">Back to Home</button>`,
+
+  methods:{
+    user_hpage(){
+      location.href = 'user_index.php';
+    },
+  }
+})
