@@ -4,6 +4,6 @@
 	<?php echo '<a href="check_profile.php?email='.$data[5].'">'.$data[4].'</a>' ?><br>
 	<hr class="w3-clear">
 	<p><?php echo $data[2] ?></p>
-	<button type="button" class="w3-button w3-theme-d1 w3-margin-bottom" onclick="document.getElementById('id01').style.display='block'" style="border-radius:25px 25px;"><i class="fa fa-thumbs-up"></i>  Donate</button>
+	<?php echo '<a href="processPayment.php?email='.$data[5].'">Donate</a>' ?>
 	<button type="button" class="w3-button w3-theme-d2 w3-margin-bottom" style="border-radius:25px 25px;"><i class="fa fa-comment"></i>  Comment</button>
 </div>
