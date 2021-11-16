@@ -121,7 +121,7 @@ app.component('payment-succeed',{
   template:
   `
   <div>
-  <h1 class="title is-1"><span class="mdi mdi-check-circle has-text-success"></span>Payment Successful</h1>
+  <h1 class="title is-1"><span class="mdi mdi-check-circle has-text-success"></span>Payment Succeed</h1>
   <button class="button is-primary is-rounded" v-on:click="user_hpage">Back to Home</button>
   </div>`,
 
