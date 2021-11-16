@@ -62,9 +62,9 @@ input{
 <div style="position:absolute; width:100%; bottom: -90px;">
   <footer class="w3-container w3-theme-d2 w3-padding-16">
   <div style="text-align:center;">
-    <a href="tnc.html" style="color:white;text-shadow: 2px 2px 20px #000000;">Terms and Conditions</a>&emsp;
-    <a href="contact_us.html" style="color:white;text-shadow: 2px 2px 20px #000000;">Contact Us</a>&emsp;
-    <a href="about_us.html" style="color:white;text-shadow: 2px 2px 20px #000000;">About Us</a>&emsp;
+    <a v-bind:href="tnc_page" style="color:white;text-shadow: 2px 2px 20px #000000;">{{tnc}}</a>&emsp;
+    <a v-bind:href="contact_page" style="color:white;text-shadow: 2px 2px 20px #000000;">{{contact}}</a>&emsp;
+    <a v-bind:href="about_page" style="color:white;text-shadow: 2px 2px 20px #000000;">{{about}}</a>&emsp;
   </div>
   </footer>
 
