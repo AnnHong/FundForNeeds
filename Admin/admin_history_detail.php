@@ -10,7 +10,7 @@
               <th hidden>Details</th>
             </tr>
             <tr>
-              <td><b class="pay">Toyyi</b><b class="Pay">Pal</b></td>
+              <td><b class="pay">Toyyi</b><b class="Pay">Pay</b></td>
             </tr>
             <tr>
               <td>Status</td>
