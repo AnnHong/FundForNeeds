@@ -299,6 +299,7 @@ textarea{resize:none;}
             else{
               $q = mysqli_query($con, $sql);
               $datas = mysqli_fetch_all($q);
+              
               foreach($datas as $data){ // call count_array for post table
                 include "post_display.php";
                 //var_dump($data);

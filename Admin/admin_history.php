@@ -97,7 +97,7 @@ if(!$con){
   echo mysqli_error();
 }
 else{
-  $sql = 'select * from payment_history ';
+  $sql = 'select * from payment_history';
   if(!mysqli_query($con, $sql)){
     return mysqli_error($con);
   }
