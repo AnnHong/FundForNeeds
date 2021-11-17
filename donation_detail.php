@@ -1,5 +1,3 @@
-
-
   <div class="w3-row">
     <div class="w3-col m7" style="margin-left: 20%;">
       <div class="w3-container w3-card w3-white w3-round w3-margin w3-animate-left"><br>
@@ -38,7 +36,7 @@
                 <td>Receiver Phone Number</td>
                 <td>:&emsp;<b><?php echo $data[4]; ?></b></td>
               </tr>
-            
+
             </table>
         </details>
         <br>

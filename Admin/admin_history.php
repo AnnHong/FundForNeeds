@@ -91,7 +91,29 @@ details > summary{
   <a href="#" class="w3-bar-item w3-button w3-padding-large">My Profile</a>
 </div>
 
+<?php
+$con=  mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
+if(!$con){
+  echo mysqli_error();
+}
+else{
+  $sql = 'select * from payment_history ';
+  if(!mysqli_query($con, $sql)){
+    return mysqli_error($con);
+  }
+  else{
+    $q = mysqli_query($con, $sql);
+    $datas = mysqli_fetch_all($q);
+    echo '<div class="w3-container w3-content" style="max-width:1400px;margin-top:80px">
+      <h1 style="text-align:center;">User Donation History</h1></div>';
 
+      foreach($datas as $data){ // call count_array for post table
+      include "admin_history_detail.php";
+      var_dump($data);
+    }
+  }
+}
+ ?>
 
 <br>
 
