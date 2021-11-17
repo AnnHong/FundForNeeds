@@ -8,6 +8,7 @@
 <link rel='stylesheet' href='index_font.css'>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <title>Reset Password</title>
+<script src="https://unpkg.com/vue@next"></script>
 <style media="screen">
 /* Add animation to "page content" */
 .animate-bottom {
@@ -28,37 +29,23 @@
 }
 </style>
 </head>
-<body class="animate-bottom">
+<body class="animate-bottom" id="app">
 <div class="w3-top">
  <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
   <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()" style="border-radius:15px 15px;"><i class="fa fa-bars"></i></a>
-  <a href="index.php" class="w3-bar-item w3-button w3-padding-large w3-theme-d4 w3-hover-white" style="border-radius:15px 15px;"><i class="fa fa-home w3-margin-right"></i> <b>Fund For Needs</b> </a>
-  <a href="user_signin.php" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="Sign In" style="background-color: #04AA6D; color: white;border-radius:15px 15px;">Sign In</a>
+  <a v-bind:href="index_page" class="w3-bar-item w3-button w3-padding-large w3-theme-d4 w3-hover-white" style="border-radius:15px 15px;"><i class="fa fa-home w3-margin-right"></i> <b>{{brand}}</b> </a>
+  <a v-bind:href="login_page" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="Sign In" style="background-color: #04AA6D; color: white;border-radius:15px 15px;">{{login}}</a>
  </div>
 </div>
-<form action="resetpassword_Function.php" method="POST" style="margin:125px 500px 75px 500px;">
-  <div class="container">
-    <label for="email"><b>Email</b></label>
-    <input type="text" placeholder="Enter Email" name="email" required style="border-radius:50px 50px;">
-<br><br>
-    <div class="clearfix">
-      <button type="submit" class="resetbtn" name = "resetbtn" style="border-radius:75px 25px;">Reset Password</button>
-      <button type="button" class="cancelbtn" onclick="location.href = 'user_signin.php';" style="border-radius:75px 25px;">Cancel</button>
-    </div>
-    <br><br>
-  </div>
 
-  <div class="container signin" style="border-radius:25px 25px;">
-    <p>Already have an account? <a href="user_signin.php">Sign in</a>.</p>
-  </div>
-</form>
+<reset-pass-form></reset-pass-form>
 
 <div style="position:absolute; width:100%; bottom: 0px;">
   <footer class="w3-container w3-theme-d2 w3-padding-16">
   <div style="text-align:center;">
-    <a href="tnc.html" style="color:white;text-shadow: 2px 2px 20px #000000;">Terms and Conditions</a>&emsp;
-    <a href="contact_us.html" style="color:white;text-shadow: 2px 2px 20px #000000;">Contact Us</a>&emsp;
-    <a href="about_us.html" style="color:white;text-shadow: 2px 2px 20px #000000;">About Us</a>&emsp;
+    <a v-bind:href="tnc_page" style="color:white;text-shadow: 2px 2px 20px #000000;">{{tnc}}</a>&emsp;
+    <a v-bind:href="contact_page" style="color:white;text-shadow: 2px 2px 20px #000000;">{{contact}}</a>&emsp;
+    <a v-bind:href="about_page" style="color:white;text-shadow: 2px 2px 20px #000000;">{{about}}</a>&emsp;
   </div>
   </footer>
 
@@ -75,5 +62,10 @@
     </div>
     </footer>
   </div>
+  <script src="./main.js" charset="utf-8"></script>
+  <script src="./components.js" charset="utf-8"></script>
+  <script type="text/javascript">
+    const mountedApp = app.mount('#app')
+  </script>
 </body>
 </html>

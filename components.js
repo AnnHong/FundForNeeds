@@ -226,3 +226,39 @@ app.component('admin-signup-form',{
       }
   }
 })
+
+app.component('reset-pass-form',{
+  template:
+  `<form action="resetpassword_Function.php" method="POST" style="margin:125px 500px 75px 500px;">
+    <div class="container">
+      <label for="email"><b>{{email}}</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required style="border-radius:50px 50px;">
+  <br><br>
+      <div class="clearfix">
+        <button type="submit" class="resetbtn" name = "resetbtn" style="border-radius:75px 25px;">{{reset}}</button>
+        <button type="button" class="cancelbtn" v-on:click="signin_page" style="border-radius:75px 25px;">{{cancel}}</button>
+      </div>
+      <br><br>
+    </div>
+
+    <div class="container signin" style="border-radius:25px 25px;">
+      <p>Already have an account? <a v-bind:href="login_page">{{login}}</a>.</p>
+    </div>
+  </form>`,
+
+  data: function(){
+    return{
+      login: 'Sign in',
+      email: 'Email',
+      reset: 'Reset Password',
+      login_page: './user_signin.php',
+      cancel: 'Cancel',
+    }
+  },
+
+  methods: {
+      signin_page(){
+        location.href = 'user_signin.php';
+      }
+  }
+})
