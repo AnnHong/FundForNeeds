@@ -19,6 +19,7 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
   $qryUserData = getUserInformation($_GET['email']);
   $userRecord = mysqli_fetch_assoc($qryUserData);
 
+
   $some_data = array(
     'userSecretKey'=>'h1d3ccrf-u2b8-cnm2-po2g-aes1cl2qmyi4',
     'categoryCode'=>'xgtxjj71',
@@ -30,9 +31,9 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
     'billReturnUrl'=>'http://localhost/MasterFundForNeeds/payment_status.php',
     'billCallbackUrl'=>'http://bizapp.my/paystatus',
     'billExternalReferenceNo' => 'AFR341DFI',
-    'billTo'=>$userRecord['usernames'],
+    'billTo'=>$userRecord['fullname'],
     'billEmail'=>$email,
-    'billPhone'=>'0194342411',
+    'billPhone'=>$userRecord['phoneNumber'],
     'billSplitPayment'=>0,
     'billSplitPaymentArgs'=>'',
     'billPaymentChannel'=>'0',

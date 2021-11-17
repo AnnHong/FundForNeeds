@@ -1,3 +1,10 @@
+<?php
+session_start();
+  $email = $_SESSION['email'];
+  $con=  mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
+	$q = mysqli_query($con,'SELECT * FROM payment_history WHERE  User_email ="'.$email.'" ');
+
+ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -88,240 +95,30 @@ details > summary{
   <a href="#" class="w3-bar-item w3-button w3-padding-large">My Profile</a>
 </div>
 
-<div class="w3-container w3-content" style="max-width:1400px;margin-top:80px">
-  <h1 style="text-align:center;">Donation History</h1>
-  <div class="w3-row">
-    <div class="w3-col m7" style="margin-left: 20%;">
-      <div class="w3-container w3-card w3-white w3-round w3-margin w3-animate-left"><br>
-          <p>You have donated RM5.00 to @zhaolin_lau</p>
-        <details id="details">
-          <summary>Show Details</summary>
-            <table style="width:50%;">
-              <tr>
-                <th hidden>PayPal</th>
-                <th hidden>Details</th>
-              </tr>
-              <tr>
-                <td><b class="pay">Pay</b><b class="pal">Pal</b></td>
-              </tr>
-              <tr>
-                <td>Status</td>
-                <td>:&emsp;<b class="success">Successful</b></td>
-              </tr>
-              <tr>
-                <td>Reference Number</td>
-                <td>:&emsp;<b>1234567890</b></td>
-              </tr>
-              <tr>
-                <td>Transaction Date</td>
-                <td>:&emsp;<b>03/10/2021 15:22:30</b></td>
-              </tr>
-              <tr>
-                <td>Amount</td>
-                <td>:&emsp;<b>RM5.00</b></td>
-              </tr>
-              <tr>
-                <td>Beneficiary Name</td>
-                <td>:&emsp;<b>LAU ZHAO LIN</b></td>
-              </tr>
-              <tr>
-                <td>Beneficiary Account</td>
-                <td>:&emsp;<b>334455661188</b></td>
-              </tr>
-              <tr>
-                <td>Recipient Reference</td>
-                <td>:&emsp;<b>fund for needs!</b></td>
-              </tr>
-            </table>
-        </details>
-        <br>
-      </div>
+<?php
+  $con=  mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
+  if(!$con){
+    echo mysqli_error();
+  }
+  else{
+    $sql = 'select * from payment_history where User_Email ="'.$email.'" ';
+    if(!mysqli_query($con, $sql)){
+      return mysqli_error($con);
+    }
+    else{
+      $q = mysqli_query($con, $sql);
+      $datas = mysqli_fetch_all($q);
+      echo '<div class="w3-container w3-content" style="max-width:1400px;margin-top:80px">
+        <h1 style="text-align:center;">Donation History</h1></div>';
 
-      <div class="w3-container w3-card w3-white w3-round w3-margin w3-animate-left" style="animation-delay:0.1s;"><br>
-        <p>You have failed to donate RM5.00 to @zhaolin_lau</p>
-      <details id="details">
-        <summary>Show Details</summary>
-          <table style="width:50%;">
-            <tr>
-              <th hidden>PayPal</th>
-              <th hidden>Details</th>
-            </tr>
-            <tr>
-              <td><b class="pay">Pay</b><b class="pal">Pal</b></td>
-            </tr>
-            <tr>
-              <td>Status</td>
-              <td>:&emsp;<b class="fail">Failed</b></td>
-            </tr>
-            <tr>
-              <td>Reference Number</td>
-              <td>:&emsp;<b>1234567890</b></td>
-            </tr>
-            <tr>
-              <td>Transaction Date</td>
-              <td>:&emsp;<b>03/10/2021 15:22:30</b></td>
-            </tr>
-            <tr>
-              <td>Amount</td>
-              <td>:&emsp;<b>RM5.00</b></td>
-            </tr>
-            <tr>
-              <td>Beneficiary Name</td>
-              <td>:&emsp;<b>LAU ZHAO LIN</b></td>
-            </tr>
-            <tr>
-              <td>Beneficiary Account</td>
-              <td>:&emsp;<b>334455661188</b></td>
-            </tr>
-            <tr>
-              <td>Recipient Reference</td>
-              <td>:&emsp;<b>fund for needs!</b></td>
-            </tr>
-          </table>
-      </details>
-      <br>
-      </div>
-
-      <div class="w3-container w3-card w3-white w3-round w3-margin w3-animate-left" style="animation-delay:0.2s;"><br>
-        <p>You have collected RM8.00 from @zhaolin_lau</p>
-      <details id="details">
-        <summary>Show Details</summary>
-          <table style="width:50%;">
-            <tr>
-              <th hidden>PayPal</th>
-              <th hidden>Details</th>
-            </tr>
-            <tr>
-              <td><b class="pay">Pay</b><b class="pal">Pal</b></td>
-            </tr>
-            <tr>
-              <td>Status</td>
-              <td>:&emsp;<b class="success">Successful</b></td>
-            </tr>
-            <tr>
-              <td>Reference Number</td>
-              <td>:&emsp;<b>1234567890</b></td>
-            </tr>
-            <tr>
-              <td>Transaction Date</td>
-              <td>:&emsp;<b>03/10/2021 15:22:30</b></td>
-            </tr>
-            <tr>
-              <td>Amount</td>
-              <td>:&emsp;<b>RM8.00</b></td>
-            </tr>
-            <tr>
-              <td>Beneficiary Name</td>
-              <td>:&emsp;<b>LAU ZHAO LIN</b></td>
-            </tr>
-            <tr>
-              <td>Beneficiary Account</td>
-              <td>:&emsp;<b>334455661188</b></td>
-            </tr>
-            <tr>
-              <td>Recipient Reference</td>
-              <td>:&emsp;<b>fund for needs!</b></td>
-            </tr>
-          </table>
-      </details>
-      <br>
-      </div>
-
-      <div class="w3-container w3-card w3-white w3-round w3-margin w3-animate-left" style="animation-delay:0.3s;"><br>
-        <p>You have failed to collect RM8.00 from @zhaolin_lau</p>
-      <details id="details">
-        <summary>Show Details</summary>
-          <table style="width:50%;">
-            <tr>
-              <th hidden>PayPal</th>
-              <th hidden>Details</th>
-            </tr>
-            <tr>
-              <td><b class="pay">Pay</b><b class="pal">Pal</b></td>
-            </tr>
-            <tr>
-              <td>Status</td>
-              <td>:&emsp;<b class="fail">Failed</b></td>
-            </tr>
-            <tr>
-              <td>Reference Number</td>
-              <td>:&emsp;<b>1234567890</b></td>
-            </tr>
-            <tr>
-              <td>Transaction Date</td>
-              <td>:&emsp;<b>03/10/2021 15:22:30</b></td>
-            </tr>
-            <tr>
-              <td>Amount</td>
-              <td>:&emsp;<b>RM8.00</b></td>
-            </tr>
-            <tr>
-              <td>Beneficiary Name</td>
-              <td>:&emsp;<b>LAU ZHAO LIN</b></td>
-            </tr>
-            <tr>
-              <td>Beneficiary Account</td>
-              <td>:&emsp;<b>334455661188</b></td>
-            </tr>
-            <tr>
-              <td>Recipient Reference</td>
-              <td>:&emsp;<b>fund for needs!</b></td>
-            </tr>
-          </table>
-      </details>
-      <br>
-      </div>
-
-      <div class="w3-container w3-card w3-white w3-round w3-margin w3-animate-left" style="animation-delay:0.4s;"><br>
-        <p>You have donated RM12.00 to @zhaolin_lau</p>
-      <details id="details">
-        <summary>Show Details</summary>
-          <table style="width:50%;">
-            <tr>
-              <th hidden>PayPal</th>
-              <th hidden>Details</th>
-            </tr>
-            <tr>
-              <td><b class="pay">Pay</b><b class="pal">Pal</b></td>
-            </tr>
-            <tr>
-              <td>Status</td>
-              <td>:&emsp;<b class="success">Successful</b></td>
-            </tr>
-            <tr>
-              <td>Reference Number</td>
-              <td>:&emsp;<b>1234567890</b></td>
-            </tr>
-            <tr>
-              <td>Transaction Date</td>
-              <td>:&emsp;<b>03/10/2021 15:22:30</b></td>
-            </tr>
-            <tr>
-              <td>Amount</td>
-              <td>:&emsp;<b>RM12.00</b></td>
-            </tr>
-            <tr>
-              <td>Beneficiary Name</td>
-              <td>:&emsp;<b>LAU ZHAO LIN</b></td>
-            </tr>
-            <tr>
-              <td>Beneficiary Account</td>
-              <td>:&emsp;<b>334455661188</b></td>
-            </tr>
-            <tr>
-              <td>Recipient Reference</td>
-              <td>:&emsp;<b>fund for needs!</b></td>
-            </tr>
-          </table>
-      </details>
-      <br>
-      </div>
-    </div>
-  </div>
-</div>
-
+        foreach($datas as $data){ // call count_array for post table
+        include "donation_detail.php";
+      //  var_dump($data);
+      }
+    }
+  }
+ ?>
 <br>
-
 <div style="bottom: 0px;">
   <footer class="w3-container w3-theme-d2 w3-padding-16">
   <div style="text-align:center;">
@@ -342,7 +139,6 @@ details > summary{
       document.write(document.lastModified);
     </script>
   </div>
-
   </footer>
 </div>
 </body>

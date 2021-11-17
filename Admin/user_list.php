@@ -195,8 +195,6 @@ echo   '</table>';
 
 
  ?>
-
-
   <!-- End Grid -->
   </div>
 

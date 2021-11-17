@@ -23,7 +23,7 @@ $billcode = $_GET['billcode'];
   $billpaymentStatus = $result[0]['billpaymentStatus'];
   $billTo = $result[0]['billTo'];
   $billEmail = $result[0]['billEmail'];
-  //$billPhone = $result[0]['billPhone'];
+  $billPhone = $result[0]['billPhone'];
   $billpaymentAmount = $result[0]['billpaymentAmount'];
   $billpaymentInvoiceNo = $result[0]['billpaymentInvoiceNo'];
 
@@ -31,10 +31,15 @@ $billcode = $_GET['billcode'];
 
 
     if($billpaymentStatus == 1 ){
-      $sql = "insert into payment_history(Transaction_ID,User_email	,username_receiver,email_receiver,amount_donation,status)
-  						   values('$billpaymentInvoiceNo','$email','$billTo','$billEmail','$billpaymentAmount','$billpaymentStatus')";
+       $query = mysqli_query($con, "SELECT * FROM users WHERE email='$billEmail' ");
+       $row = mysqli_fetch_array($query);
+       $fullname = $row['fullname'];
 
-      header("Location:payment_succeed.php");
+      $sql = "insert into payment_history(Transaction_ID,User_email	,fullname_receiver,email_receiver,phoneNumber_receiver,amount_donation,status)
+  						   values('$billpaymentInvoiceNo','$email','$fullname','$billEmail','$billPhone','$billpaymentAmount','$billpaymentStatus')";
+      if($con->query($sql)==TRUE){
+        header("Location:payment_succeed.php");
+      }
 
     }else if($billpaymentStatus == 3){
       header("Location:payment_failed.php");
