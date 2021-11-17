@@ -1,7 +1,7 @@
 <?php
 
 // status : Payment status. 1= success, 2=pending, 3=fail
-  $billcode = $_GET['billcode'];
+$billcode = $_GET['billcode'];
   $some_data = array(
     'billCode' =>$billcode,
     'billpaymentStatus' => ''
@@ -25,7 +25,11 @@
   $billPhone = $result[0]['billPhone'];
   $billpaymentAmount = $result[0]['billpaymentAmount'];
   $billpaymentInvoiceNo = $result[0]['billpaymentInvoiceNo'];
-  echo $billTo;
-  echo $billpaymentAmount
-  //echo $result;
+
+if($billpaymentStatus == 1 ){
+ header("Location:payment_succeed.php");
+}else if($billpaymentStatus == 3){
+  header("Location:payment_failed.php");
+}
+
 ?>
