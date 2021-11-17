@@ -119,27 +119,5 @@ details > summary{
   }
  ?>
 <br>
-<div style="bottom: 0px;">
-  <footer class="w3-container w3-theme-d2 w3-padding-16">
-  <div style="text-align:center;">
-    <a href="user_tnc.php" style="color:white;text-shadow: 2px 2px 4px #000000;">Terms and Conditions</a>&emsp;
-    <a href="user_contactus.php" style="color:white;text-shadow: 2px 2px 4px #000000;">Contact Us</a>&emsp;
-    <a href="user_aboutus.php" style="color:white;text-shadow: 2px 2px 4px #000000;">About Us</a>&emsp;
-  </div>
-  </footer>
-
-  <footer class="w3-container w3-theme-d5">
-    <div class="copyright" align="center">
-    <script>
-      document.write('&copy;' );
-      document.write(' 2021 - ');
-      document.write(new Date().getFullYear());
-      document.write(' Fund For Needs - All Rights Reserved.');
-      document.write('<br/>Last Updated : ');
-      document.write(document.lastModified);
-    </script>
-  </div>
-  </footer>
-</div>
 </body>
 </html>
