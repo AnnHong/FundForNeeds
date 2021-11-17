@@ -262,3 +262,32 @@ app.component('reset-pass-form',{
       }
   }
 })
+
+app.component('admin-reset-pass-form',{
+  template:
+  `<form action="admin_resetpassword_Function.php" method="POST" style="margin:125px 500px 75px 500px;">
+    <div class="container">
+      <label for="email"><b>{{email}}</b></label>
+      <input type="text" placeholder="Enter Email" name="admin_email" style="border-radius: 25px 25px;" required>
+
+      <div class="clearfix">
+        <button type="submit" class="verifybtn" name = "adminresetbtn" style="margin: 8px 0;width: 100%;border-radius: 75px 25px;">{{reset}}</button>
+        <button type="button" class="cancelbtn" v-on:click="signin_page" style="margin: 8px 0;width: 100%;border-radius: 75px 25px;">{{cancel}}</button>
+      </div>
+    </div>
+  </form>`,
+
+  data: function(){
+    return{
+      email: 'Email',
+      reset: 'Reset Password',
+      cancel: 'Cancel',
+    }
+  },
+
+  methods: {
+      signin_page(){
+        location.href = 'Admin_Login.php';
+      }
+  }
+})

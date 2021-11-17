@@ -7,6 +7,7 @@
 <link rel='stylesheet' href='index_font.css'>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="admin_resetpassword.css">
+<script src="https://unpkg.com/vue@next"></script>
 <title>Reset Password</title>
 <style media="screen">
 /* Add animation to "page content" */
@@ -28,31 +29,21 @@
 }
 </style>
 </head>
-<body class="animate-bottom">
+<body class="animate-bottom" id="app">
   <div class="w3-top">
    <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
     <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
-    <a href="Admin_Login.php" class="w3-bar-item w3-button w3-padding-large w3-theme-d4 w3-hover-white" style="border-radius: 15px 15px;"><i class="fa fa-home w3-margin-right"></i> <b>Fund For Needs</b> </a>
-      <a href="Admin_Login.php" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="Sign In" style="background-color: #04AA6D; color: white;border-radius: 25px 25px;">Sign In</a>
+    <a v-bind:href="admin_login" class="w3-bar-item w3-button w3-padding-large w3-theme-d4 w3-hover-white" style="border-radius: 15px 15px;"><i class="fa fa-home w3-margin-right"></i> <b>{{brand}}</b> </a>
+      <a v-bind:href="admin_login" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="Sign In" style="background-color: #04AA6D; color: white;border-radius: 25px 25px;">{{login}}</a>
    </div>
   </div>
   <br>
-<form action="admin_resetpassword_Function.php" method="POST" style="margin:125px 500px 75px 500px;">
-  <div class="container">
-    <label for="email"><b>Email</b></label>
-    <input type="text" placeholder="Enter Email" name="admin_email" style="border-radius: 25px 25px;" required>
-
-    <div class="clearfix">
-      <button type="submit" class="verifybtn" name = "adminresetbtn" style="margin: 8px 0;width: 100%;border-radius: 75px 25px;">Reset Password</button>
-      <button type="button" class="cancelbtn" onclick="location.href = 'Admin_Login.php';" style="margin: 8px 0;width: 100%;border-radius: 75px 25px;">Cancel</button>
-    </div>
-  </div>
-</form>
+<admin-reset-pass-form></admin-reset-pass-form>
 <div style="position:absolute; width:100%; bottom: 0px;">
   <footer class="w3-container w3-theme-d2 w3-padding-16">
   <div style="text-align:center;">
-    <a href="admin_tnc.php" style="color:white;">Terms and Conditions</a>&emsp;
-    <a href="admin_aboutus.php" style="color:white;">About Us</a>&emsp;
+    <a v-bind:href="admin_tnc" style="color:white;">{{tnc}}</a>&emsp;
+    <a v-bind:href="admin_about" style="color:white;">{{about}}</a>&emsp;
   </div>
   </footer>
   <footer class="w3-container w3-theme-d5">
@@ -68,5 +59,10 @@
   </div>
   </footer>
 </div>
+<script src="../main.js" charset="utf-8"></script>
+<script src="../components.js" charset="utf-8"></script>
+<script type="text/javascript">
+  const mountedApp = app.mount('#app')
+</script>
 </body>
 </html>
