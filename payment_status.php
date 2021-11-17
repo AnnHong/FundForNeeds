@@ -1,4 +1,6 @@
 <?php
+
+// status : Payment status. 1= success, 2=pending, 3=fail
   $billcode = $_GET['billcode'];
   $some_data = array(
     'billCode' =>$billcode,
@@ -23,6 +25,7 @@
   $billPhone = $result[0]['billPhone'];
   $billpaymentAmount = $result[0]['billpaymentAmount'];
   $billpaymentInvoiceNo = $result[0]['billpaymentInvoiceNo'];
-
+  echo $billTo;
+  echo $billpaymentAmount
   //echo $result;
 ?>

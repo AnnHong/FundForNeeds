@@ -14,9 +14,11 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
 		return $qry;
 	}
 }
-
+$qryUserData = getUserInformation($_GET['email']);
+$userRecord = mysqli_fetch_assoc($qryUserData);
 echo 'Confirm Your Donation Person Information<br>';
 echo 'Email : '.$email.'<br>Username';
+echo
 
 
  ?>

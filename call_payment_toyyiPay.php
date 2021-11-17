@@ -1,19 +1,37 @@
 <?php
-$username = $_GET[''];
+$email = $_GET['email'];
+
+function getUserInformation($email){
+$con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
+	if(!$con)
+		{
+		echo mysqli_error();
+		}
+	else
+	{
+		//echo 'connected';
+		$sql='select * from users where email = "'.$email.'"';
+		$qry=mysqli_query($con,$sql);
+		return $qry;
+	}
+}
+
+  $qryUserData = getUserInformation($_GET['email']);
+  $userRecord = mysqli_fetch_assoc($qryUserData);
 
   $some_data = array(
     'userSecretKey'=>'h1d3ccrf-u2b8-cnm2-po2g-aes1cl2qmyi4',
     'categoryCode'=>'xgtxjj71',
     'billName'=>'Fund For Needs Check Out',
-    'billDescription'=>'FundForNeeds CheckOut',
+    'billDescription'=>'Donation',
     'billPriceSetting'=>0,
     'billPayorInfo'=>1,
     'billAmount'=>100,
     'billReturnUrl'=>'http://localhost/MasterFundForNeeds/payment_status.php',
     'billCallbackUrl'=>'http://bizapp.my/paystatus',
     'billExternalReferenceNo' => 'AFR341DFI',
-    'billTo'=>'John Doe',
-    'billEmail'=>'jd@gmail.com',
+    'billTo'=>$userRecord['usernames'],
+    'billEmail'=>$email,
     'billPhone'=>'0194342411',
     'billSplitPayment'=>0,
     'billSplitPaymentArgs'=>'',
@@ -34,4 +52,6 @@ $username = $_GET[''];
   $obj = json_decode($result,true);
   $billcode = $obj[0]['BillCode'];
 ?>
-<script type="text/javascript">   window.location.href = "https://dev.toyyibpay.com/<?php echo $billcode; ?>"; </script>
+<script type="text/javascript">
+  window.location.href = "https://dev.toyyibpay.com/<?php echo $billcode; ?>";
+</script>
