@@ -65,6 +65,9 @@ app.component('signup-form',{
       <label for="email"><b>{{email}}</b></label>
       <input type="text" placeholder="Enter Email" name="email" required>
 
+      <label for="phoneNumber"><b>{{phone}}</b></label>
+      <input type="text" placeholder="Enter Phone Number" name="phoneNumber" required>
+
       <label for="password"><b>{{pass}}</b></label>
       <input id="pass" type="password" placeholder="Enter Password" name="password" minlength="8" maxlength="16" required>
       <label for="password-repeat"><b>{{rpass}}</b></label>
@@ -95,6 +98,7 @@ app.component('signup-form',{
       spass: ' Show Password',
       signin_page: './user_signin.php',
       tnc_page: './tnc.html',
+      phone: 'Phone Number',
     }
   },
 

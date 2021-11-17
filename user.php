@@ -12,11 +12,12 @@ function Addnewuser()
 		$password = sha1($_POST['password']);
     $password_repeat = $_POST['password_repeat'];
 		$usernames = $_POST['usernames'];
-		$fullname= $_POST['fullname'];
+		$fullname = $_POST['fullname'];
+		$phoneNumber = $_POST['phoneNumber'];
 
 		$token = md5( rand(0,1000) );
-		$sql = "insert into users(email,password,token,usernames,fullname)
-						   values('$email','$password','$token','$usernames','$fullname')";
+		$sql = "insert into users(email,password,token,usernames,fullname,phoneNumber)
+						   values('$email','$password','$token','$usernames','$fullname','$phoneNumber')";
 	    //echo $sql;
 		//3.run insert query
 		if(!mysqli_query($con,$sql))
