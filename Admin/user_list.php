@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="index_theme.css">
   <link rel="stylesheet" href="index_font.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
   <style>
   /* Add animation to "page content" */
   .animate-bottom {
@@ -56,7 +57,7 @@ tr:nth-child(even) {
   cursor: pointer;
 }
 
-.delete{
+input[name=deleteUserButton]{
   background-color: red;
   border: none;
   color: white;
@@ -125,13 +126,13 @@ input{
 
 
 
-    <h2 style="text-align:center;">List of Users</h2>
+    <h2 class="title" style="text-align:center;">List of Users</h2>
 <?php
 include 'user_list_function.php';
 
 	$qryUserList = getListOfUser();
 
-  echo '<table>
+  echo '<table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
     <tr>
     <th>No</th>
       <th>Full Name</th>
@@ -182,8 +183,7 @@ include 'user_list_function.php';
           echo '<input type="hidden" name="emailToDelete"
             value="'.$emailSelected.'" >';
 
-          echo '<input type="submit" value="Delete"
-          name="deleteUserButton" class="delete">';
+          echo '<input type="submit" name="deleteUserButton" value="Delete">';
         echo '</form>';
 
         echo '</tr>';
@@ -229,8 +229,8 @@ function openNav() {
 <div class="w3-theme-d2" style="position:absolute; width:100%; bottom: 0px;">
   <footer class="w3-container w3-padding-16">
   <div style="text-align:center;">
-    <a href="login_tnc.php">Terms and Conditions</a>&emsp;
-    <a href="login_aboutus.php">About Us</a>&emsp;
+    <a href="login_tnc.php" class="has-text-white">Terms and Conditions</a>&emsp;
+    <a href="login_aboutus.php" class="has-text-white">About Us</a>&emsp;
   </div>
   </footer>
   <footer class="w3-container w3-theme-d5">
