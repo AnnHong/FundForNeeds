@@ -139,7 +139,7 @@ include 'user_list_function.php';
       <th>Email</th>
       <th>Password</th>
       <th>IC File</th>
-      <th>Paypal Account</th>
+      <th>Phone Number</th>
 
       <th>Verification Status</th>
       <th>Verification</th>
@@ -157,7 +157,7 @@ include 'user_list_function.php';
   					echo '<td>'.$row['email'].'</td>';
   					echo '<td>'.$row['password'].'</td>';
             echo '<td>'.$row['file_name'].'</td>';
-            echo '<td>'.$row['Paypal'].'</td>';
+            echo '<td>'.$row['phoneNumber'].'</td>';
             //echo "<td><img width='140' height='140' src='C:/xampp/htdocs/user_photos/".$row['image']."' alt='Profile Pic'></td>";
   echo '<td>'.$row['user_verify'].'</td>';
             $emailSelected=$row['email'];

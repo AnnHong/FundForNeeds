@@ -29,7 +29,7 @@ if(!$con){
   echo mysqli_error();
 }else{
 
-  $sql = 'UPDATE users SET usernames ="'.$_POST['usernames'].'", fullname="'.$_POST['fullname'].'", Paypal="'.$_POST['paypal'].'" WHERE email= "'.$_SESSION['email'].'"';
+  $sql = 'UPDATE users SET usernames ="'.$_POST['usernames'].'", fullname="'.$_POST['fullname'].'", phoneNumber="'.$_POST['phoneNumber'].'" WHERE email= "'.$_SESSION['email'].'"';
   $qry=mysqli_query($con,$sql);
   			return $qry;
 
