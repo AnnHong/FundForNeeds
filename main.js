@@ -11,6 +11,9 @@ const app = Vue.createApp({
       tnc: 'Terms and Conditions',
       contact: 'Contact Us',
       about: 'About Us',
+      admin_tnc: './admin_tnc.php',
+      admin_about: './admin_aboutus.php',
+      admin_login: './Admin_Login.php',
     }
   },
 })
