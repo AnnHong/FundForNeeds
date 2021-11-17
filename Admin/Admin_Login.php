@@ -7,6 +7,7 @@
 <link rel='stylesheet' href='index_font.css'>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="admin_login.css">
+<script src="https://unpkg.com/vue@next"></script>
 <title>Sign In</title>
 <style media="screen">
 /* Add animation to "page content" */
@@ -28,7 +29,7 @@
 }
 </style>
 </head>
-<body class="animate-bottom">
+<body class="animate-bottom" id="app">
 <div class="w3-top">
  <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
   <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
@@ -38,24 +39,7 @@
 </div>
 
 <div style="margin-top:150px;">
-  <form action="processAdmin.php" method="post" style="width:40%;margin:auto;border-radius:25px 25px;">
-
-    <div class="container" style="margin-top:25px;border-radius:25px 25px;">
-      <label for="admin_email" ><b>Admin Email</b></label>
-      <input type="text" placeholder="Enter Admin Email" name="admin_email" style="border-radius:25px 25px;" required>
-
-      <label for="password"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="password" style="border-radius:25px 25px;" required>
-      <br><br>
-      <button type="submit" class="signinbtn" name="login" style="margin: 8px 0; width:49%;margin-left:5px;border-radius:75px 25px;">Sign In</button>
-      <button type="button" class="cancelbtn" style="width:49%;border-radius:75px 25px;">Cancel</button>
-    </div>
-
-    <div >
-        <span class="password">Forgot <a href="Admin_resetpassword.php">password?</a>&emsp;</span>
-        <span class="password">Create  <a href="admin_verifyemail.php">New Admin ID</a>&emsp;|&emsp;</span>
-    </div>
-  </form>
+  <admin-login-form></admin-login-form>
 </div>
 <div style="position:absolute; width:100%; bottom: 0px;">
   <footer class="w3-container w3-theme-d2 w3-padding-16">
@@ -79,5 +63,10 @@
 
   </footer>
 </div>
+<script src="../main.js" charset="utf-8"></script>
+<script src="../components.js" charset="utf-8"></script>
+<script type="text/javascript">
+  const mountedApp = app.mount('#app')
+</script>
 </body>
 </html>

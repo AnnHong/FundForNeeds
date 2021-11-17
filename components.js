@@ -145,3 +145,80 @@ app.component('payment-failed',{
     },
   }
 })
+
+app.component('admin-login-form',{
+  template:
+  `<form action="processAdmin.php" method="post" style="width:40%;margin:auto;border-radius:25px 25px;">
+
+    <div class="container" style="margin-top:25px;border-radius:25px 25px;">
+      <label for="admin_email" ><b>{{email}}</b></label>
+      <input type="text" placeholder="Enter Admin Email" name="admin_email" style="border-radius:25px 25px;" required>
+
+      <label for="password"><b>{{pass}}</b></label>
+      <input type="password" placeholder="Enter Password" name="password" style="border-radius:25px 25px;" required>
+      <br><br>
+      <button type="submit" class="signinbtn" name="login" style="margin: 8px 0; width:49%;margin-left:5px;border-radius:75px 25px;">{{login}}</button>
+      <button type="button" class="cancelbtn" style="width:49%;border-radius:75px 25px;">{{cancel}}</button>
+    </div>
+
+    <div >
+        <span class="password">Forgot <a v-bind:href="resetpass_page">password?</a>&emsp;</span>
+        <span class="password">Create  <a v-bind:href="signup_page">New Admin ID</a>&emsp;|&emsp;</span>
+    </div>
+  </form>`,
+
+  data: function(){
+    return{
+      email: 'Admin Email',
+      pass: 'Password',
+      login: 'Sign In',
+      cancel: 'Cancel',
+      signup_page: './admin_verifyemail.php',
+      resetpass_page: './Admin_resetpassword.php',
+    }
+  }
+})
+
+app.component('admin-signup-form',{
+  template:
+  `<form action="processAdmin.php" method="POST" style="margin:75px 500px 25px 500px;">
+    <div class="container">
+      <label for="fullname"><b>{{fname}}</b></label>
+      <input type="text" placeholder="Enter Full name" name="admin_fullname" style="border-radius: 25px 25px;" required>
+
+      <label for="staffid"><b>{{sid}}</b></label>
+      <input type="text" placeholder="Enter Staff ID" name="admin_staffid" style="border-radius: 25px 25px;" required>
+
+      <label for="email"><b>{{email}}</b></label>
+      <input type="text" placeholder="Enter Email" name="admin_email" style="border-radius: 25px 25px;" required>
+
+      <label for="password"><b>{{pass}}</b></label>
+      <input type="password" placeholder="Enter password" name="password" style="border-radius: 25px 25px;" minlength="8" maxlength="16" required>
+
+      <label for="password"><b>{{rpass}}</b></label>
+        <input type="password" placeholder="Enter repeat password" name="repeat_password" style="border-radius: 25px 25px;" minlength="8" maxlength="16" required>
+      <div class="clearfix">
+        <button type="submit" class="verifybtn" name = "verify" style="margin: 8px 0;width: 100%;border-radius: 75px 25px;">{{signup}}</button>
+        <button type="button" class="cancelbtn"  v-on:click="signin_page" style="margin: 8px 0;width: 100%;border-radius: 75px 25px;">{{cancel}}</button>
+      </div>
+    </div>
+  </form>`,
+
+  data: function(){
+    return{
+      fname: 'Full Name',
+      email: 'Email',
+      sid: 'Staff ID',
+      pass: 'Password',
+      rpass: 'Repeat Password',
+      signup: 'Verify',
+      cancel: 'Cancel',
+    }
+  },
+
+  methods: {
+      signin_page(){
+        location.href = 'Admin_Login.php';
+      }
+  }
+})
