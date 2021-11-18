@@ -113,7 +113,7 @@ details > summary{
 
         foreach($datas as $data){ // call count_array for post table
         include "donation_detail.php";
-      //  var_dump($data);
+        //var_dump($data);
       }
     }
   }

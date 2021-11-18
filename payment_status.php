@@ -35,8 +35,12 @@ $billcode = $_GET['billcode'];
        $row = mysqli_fetch_array($query);
        $fullname = $row['fullname'];
 
-      $sql = "insert into payment_history(Transaction_ID,User_email	,fullname_receiver,email_receiver,phoneNumber_receiver,amount_donation,status)
-  						   values('$billpaymentInvoiceNo','$email','$fullname','$billEmail','$billPhone','$billpaymentAmount','$billpaymentStatus')";
+       $query2 = mysqli_query($con, "SELECT * FROM users WHERE email='$email' ");
+       $row2 = mysqli_fetch_array($query2);
+       $User_fullname = $row2['fullname'];
+
+      $sql = "insert into payment_history(Transaction_ID,User_email,User_fullname,fullname_receiver,email_receiver,phoneNumber_receiver,amount_donation,status)
+  						   values('$billpaymentInvoiceNo','$email','$User_fullname','$fullname','$billEmail','$billPhone','$billpaymentAmount','$billpaymentStatus')";
       if($con->query($sql)==TRUE){
         header("Location:payment_succeed.php");
       }

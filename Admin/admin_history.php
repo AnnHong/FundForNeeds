@@ -109,7 +109,7 @@ else{
 
       foreach($datas as $data){ // call count_array for post table
       include "admin_history_detail.php";
-      // var_dump($data);
+      //var_dump($data);
     }
   }
 }
