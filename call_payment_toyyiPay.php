@@ -37,7 +37,7 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
     'billSplitPayment'=>0,
     'billSplitPaymentArgs'=>'',
     'billPaymentChannel'=>'0',
-    'billContentEmail'=>'Thank you for purchasing our product!',
+    'billContentEmail'=>'Good news! You have received a donation!',
     'billChargeToCustomer'=>1
   );
 
