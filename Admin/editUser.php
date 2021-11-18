@@ -54,7 +54,7 @@ $userRecord  =mysqli_fetch_assoc($userQry);
         <input type="text"  name="usernames"  placeholder="Username" value="'.$userRecord['usernames'].'"required><br><br>
         <label>Email :</label><br>
         <input type="text"  name="email" placeholder="Email"value="'.$_POST['EditUser'].'" required><br><br>
-        <label>Paypal Account :</label><br>
+        <label>Phone Number :</label><br>
         <input type="text"  name="phoneNumber" placeholder="Phone Number" value="'.$userRecord['phoneNumber'].'" required><br><br>
         <label>Password :</label><br>
         <input type="password" placeholder="Enter Password" name="password" id="myInput"  value="'.$userRecord['password'].'"><br>
