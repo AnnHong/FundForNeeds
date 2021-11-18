@@ -51,7 +51,7 @@ else if(isset($_POST['uploadPic_button'])){
         }
 
 }else if(isset($_POST['uploadPicVerified_button'])){
-  move_uploaded_file($_FILES['image']['tmp_name'],"C:/xampp/htdocs/verifyuser_photos/".$_FILES['image']['name']);
+  move_uploaded_file($_FILES['image']['tmp_name'],"C:/xampp/htdocs/user_photos/".$_FILES['image']['name']);
   $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
 
   if(!$con){
