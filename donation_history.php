@@ -25,12 +25,10 @@ session_start();
   animation-name: animatebottom;
   animation-duration: 1s
 }
-
 @-webkit-keyframes animatebottom {
   from { bottom:-100px; opacity:0 }
   to { bottom:0px; opacity:1 }
 }
-
 @keyframes animatebottom {
   from{ bottom:-100px; opacity:0 }
   to{ bottom:0; opacity:1 }
@@ -86,7 +84,6 @@ details > summary{
   </div>
  </div>
 </div>
-
 <!-- Navbar on small screens -->
 <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium w3-large">
   <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 1</a>

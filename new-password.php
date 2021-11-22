@@ -14,8 +14,6 @@ if (mysqli_num_rows($result) > 0)
     {
         $sql = "UPDATE users SET password='$new_password' WHERE email='$email' AND reset_token='$reset_token'";
         mysqli_query($con, $sql);
-
-        //echo "Password has been changed";
         echo  "<script>
           			alert('Your password has been changed.');
           			window.location.href='user_signin.php';

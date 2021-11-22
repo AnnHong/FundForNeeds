@@ -36,7 +36,6 @@
                 <td>Receiver Phone Number</td>
                 <td>:&emsp;<b><?php echo $data[5]; ?></b></td>
               </tr>
-
             </table>
         </details>
         <br>

@@ -29,7 +29,6 @@ $billcode = $_GET['billcode'];
 
   $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
 
-
     if($billpaymentStatus == 1 ){
        $query = mysqli_query($con, "SELECT * FROM users WHERE email='$billEmail' ");
        $row = mysqli_fetch_array($query);
@@ -44,13 +43,9 @@ $billcode = $_GET['billcode'];
       if($con->query($sql)==TRUE){
         header("Location:payment_succeed.php");
       }
-
     }else if($billpaymentStatus == 3){
       header("Location:payment_failed.php");
    }else{
      echo "pending";
    }
-
-
-
 ?>

@@ -1,6 +1,5 @@
 <?php
 include "user.php";
-
 if(isSet($_POST['signupbtn']) )
 {
   Addnewuser();

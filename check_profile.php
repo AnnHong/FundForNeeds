@@ -160,14 +160,10 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
               <div class="row">
                 <div class="col-12 col-sm-auto mb-3">
 									<?php
-
 									$email =$_GET['email'];
-
     							$con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
     							$q = mysqli_query($con,'SELECT * FROM users WHERE  email ="'.$email.'" ');
     							while($row=mysqli_fetch_assoc($q)){
-      						//echo $row ['username'].'<br>';
-
 									if($row['image']==''){
         						echo "<img width='140' height='140' src='../user_photos/default.jpg' alt='Default Profile Pic'>";
       						}else{
@@ -179,17 +175,11 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
                 <div class="col d-flex flex-column flex-sm-row justify-content-between mb-3">
                   <div class="text-center text-sm-left mb-2 mb-sm-0">
                     <?php
-
-                  //  $email = $_SESSION['email'];
                     $qryUserData = getUserInformation($_GET['email']);
                     $userRecord = mysqli_fetch_assoc($qryUserData);
                         echo '<h4 class="pt-sm-2 pb-1 mb-0 text-nowrap">' .$userRecord['fullname']. '</h4>' ;
                         echo '<p class="mb-0">@'.$userRecord['usernames']. '</p>';
-
                         ?>
-
-
-
                   </div>
                 </div>
               </div>
@@ -239,8 +229,6 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
                         </div>
                       </div>
                     </div>
-
-
                   <!-- </form> -->
                 </div>
               </div>

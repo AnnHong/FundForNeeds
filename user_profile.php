@@ -151,14 +151,11 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
               <div class="row">
                 <div class="col-12 col-sm-auto mb-3">
 									<?php
-
 									$email = $_SESSION['email'];
 
     							$con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
     							$q = mysqli_query($con,'SELECT * FROM users WHERE  email ="'.$email.'" ');
     							while($row=mysqli_fetch_assoc($q)){
-      						//echo $row ['username'].'<br>';
-
 									if($row['image']==''){
         						echo "<img width='140' height='140' src='../user_photos/default.jpg' alt='Default Profile Pic'>";
       						}else{
@@ -170,15 +167,11 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
                 <div class="col d-flex flex-column flex-sm-row justify-content-between mb-3">
                   <div class="text-center text-sm-left mb-2 mb-sm-0">
                     <?php
-
-                  //  $email = $_SESSION['email'];
                     $qryUserData = getUserInformation($_SESSION['email']);
                     $userRecord = mysqli_fetch_assoc($qryUserData);
                         echo '<h4 class="pt-sm-2 pb-1 mb-0 text-nowrap">' .$userRecord['fullname']. '</h4>' ;
                         echo '<p class="mb-0">@'.$userRecord['usernames']. '</p>';
-
                         ?>
-
                     <div class="mt-2">
                       <button class="btn" id="myBtn" type="submit" name="changePic"style="background-color:#80daeb; color: white;border-radius:75px 25px;">
                         <i class="fa fa-fw fa-camera"></i>
@@ -201,11 +194,9 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
                     </div>
 
                     <div class="mt-2">
-
                       <div>
                         <!-- Trigger/Open The Modal -->
                         <button id="myBtn2" class="btn" style="background-color:#80daeb; color: white;border-radius:75px 25px;">Verify</button>
-
                         <!-- The Modal -->
                         <div id="myModal2" class="modal">
                           <!-- Modal content -->
@@ -249,7 +240,6 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
 										span2.onclick = function() {
                    		modal2.style.display = "none" ;
                     }
-
                     // When the user clicks anywhere outside of the modal, close it
                     window.onclick = function(event) {
                       if (event.target == modal) {
@@ -259,7 +249,6 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
 												modal2.style.display = "none";
 											}
                     }
-
                     </script>
                       </div>
                     </div>
@@ -371,7 +360,6 @@ $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
         }
     }
 			</script>
-
 <div>
   <footer class="w3-container w3-theme-d2 w3-padding-16">
   <div style="text-align:center;">

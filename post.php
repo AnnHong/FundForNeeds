@@ -1,6 +1,4 @@
 <?php
-//session_start();
-
 function create_post(){
 
   $con=  mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
