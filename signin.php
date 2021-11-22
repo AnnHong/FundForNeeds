@@ -2,17 +2,15 @@
 session_start();
 
 if(isset($_POST['signinbtn'])){
-
-signin();
+  signin();
 }
 
 ?>
 <?php
 
-function signin()
-    {
-        //print_r($_POST);
-        $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
+function signin(){
+
+    $con = mysqli_connect("localhost","fundforneeds","fundforneeds","fundforneeds");
 
 		$email = $_POST['email'];
 		$password = sha1($_POST['password']);
@@ -34,16 +32,12 @@ function signin()
 				header("Location: user_index.php");
 			}else{
 				//echo '<br>signin failed';
-
       echo  "<script>
           			alert('Please verify your email first. Or Invalid email and password.');
           			window.location.href='user_signin.php';
           			</script>";;
 			}
     }
-
-    //$sql = "select * from users WHERE email = '$email' AND verified = 1 AND password = '$password' AND user_verify = 1 ";
-    //go verified_user.php
 }
 
 ?>

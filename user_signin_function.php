@@ -2,17 +2,14 @@
 session_start();
 
 if(isset($_POST['signinbtn'])){
-
-signin();
+  signin();
 }
 
 ?>
 <?php
 
-function signin()
-    {
-        //print_r($_POST);
-        $con = mysqli_connect("localhost", "fundforneeds", "fundforneeds", "fundforneeds");
+function signin(){
+    $con = mysqli_connect("localhost", "fundforneeds", "fundforneeds", "fundforneeds");
 
 		$email = $_POST['email'];
     $password = $_POST['password'];
